@@ -1,242 +1,57 @@
-<body style="margin:0; padding:0; background-color: #0f172a;">
-
-    <header style="padding: 120px 20px 80px 20px; text-align: center; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #334155;">
-        
-        <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); color: #d4af37; font-weight: 800; margin: 0 0 20px 0; letter-spacing: -1px; line-height: 1.1;">
-            Nigel Anthony Thomas
-        </h1>
-
-        <div style="display: block; height: 2px; width: 60px; background: #d4af37; margin: 20px auto;"></div>
-
-        <h2 style="font-size: 1.4rem; color: #ffffff; text-transform: uppercase; letter-spacing: 4px; font-weight: 300; margin-bottom: 15px;">
-            Luxury Resort Background
-        </h2>
-
-        <p style="font-size: 1.1rem; color: #94a3b8; max-width: 700px; margin: 0 auto; line-height: 1.6; font-weight: 400;">
-            General Manager | Global Hospitality & Resort Operations Leader
-        </p>
-        
-        <p style="font-size: 0.9rem; color: #64748b; margin-top: 15px; font-style: italic;">
-            20+ years of international leadership across land and sea.
-        </p>
-
-    </header>
-        .expertise-item {
-            background: rgba(26, 26, 46, 0.8);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-        .expertise-item:hover {
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid #d4af37;
-        }
-        ul {
-            list-style: none;
-        }
-        ul li {
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        ul li::before {
-            content: "▸";
-            color: #d4af37;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        .social {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .social a {
-            color: #f4f4f4;
-            text-decoration: none;
-            font-size: 1.2rem;
-            padding: 1rem 2rem;
-            background: rgba(212, 175, 55, 0.2);
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
-        .social a:hover {
-            background: #d4af37;
-            color: #1a1a2e;
-        }
-        .contact {
-            text-align: center;
-        }
-        .schedule-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #d4af37, #f4d03f);
-            color: #1a1a2e;
-            padding: 1rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 2rem;
-            transition: transform 0.3s;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-        }
-        .schedule-btn:hover {
-            transform: scale(1.05);
-        }
-        .calendly-embed {
-            margin-top: 2rem;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            nav li { margin: 0 1rem; }
-            .metrics { grid-template-columns: 1fr; }
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel Anthony Thomas | Executive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; }
+        .gold { color: #d4af37; }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#bio">Bio</a></li>
-            <li><a href="#metrics">Metrics</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#chronology">Chronology</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <section id="hero">
-        <h1>Nigel Anthony Thomas [cite:103][cite:157]</h1>
-        <p class="tagline">General Manager | Global Hospitality & Resort Operations Leader [cite:104][cite:158]</p>
-        <p>"Bridging high-level strategy with gritty, practical operational reality across land and sea." [cite:110][cite:143]</p>
-        <p>20+ years of international leadership (USA, Middle East, India, and Global Maritime). [cite:108][cite:143]</p>
-    </section>
-
-    <section id="bio">
-        <h2>Professional Identity</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p>Senior Global Hospitality Leader with a proven track record in luxury resort operations.</p>
+    <header class="w-full pt-24 pb-16 px-6 text-center border-b border-slate-800 bg-slate-900/50">
+        <h1 class="text-4xl md:text-6xl font-bold gold mb-4">Nigel Anthony Thomas</h1>
+        <p class="text-xl md:text-2xl uppercase tracking-widest text-white mb-4">General Manager</p>
+        <p class="text-slate-400 italic">Global Hospitality & Resort Operations Leader</p>
+        <div class="mt-8 text-slate-300 space-x-4">
+            <span>+91 97693 51231</span> | <span>restgenmgr1952@gmail.com</span>
         </div>
-    </section>
+    </header>
 
-    <section id="metrics">
-        <h2>Key Performance Metrics</h2>
-        <div class="metrics">
-            <div class="metric">
-                <h3>Cost Optimization</h3>
-                <p>Reduced operating costs by 10-12% via lean methodology. [cite:117][cite:149]</p>
+    <main class="max-w-5xl mx-auto py-16 px-6 space-y-20">
+        
+        <section>
+            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Verified Credentials</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700">
+                    <h3 class="font-bold text-lg">Certified Hospitality Supervisor (CHS)</h3>
+                    <p class="text-sm text-slate-400">American Hotel & Lodging Educational Institute</p>
+                </div>
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700">
+                    <h3 class="font-bold text-lg">ServSafe Food Protection Manager</h3>
+                    <p class="text-sm text-slate-400">ANSI Accredited Standard</p>
+                </div>
             </div>
-            <div class="metric">
-                <h3>Guest Satisfaction</h3>
-                <p>Increased scores by 15% in premium resort environments. [cite:121][cite:174]</p>
-            </div>
-            <div class="metric">
-                <h3>Revenue Management</h3>
-                <p>Managed multi-outlet revenues exceeding $250,000/month. [cite:129][cite:165]</p>
-            </div>
-            <div class="metric">
-                <h3>Leadership</h3>
-                <p>Led multicultural teams of 80+ staff with a 20% reduction in attrition. [cite:121][cite:124][cite:173]</p>
-            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Maritime Leadership</h2>
+            <p class="text-lg text-slate-300 leading-relaxed">
+                20+ years of F&B leadership across prestigious fleets including Holland America Line, Carnival, and Royal Caribbean.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="py-20 px-6 text-center border-t border-slate-800">
+        <div class="flex justify-center gap-8">
+            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="text-slate-400 hover:text-white font-bold underline">LinkedIn</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="text-slate-400 hover:text-white font-bold underline">Facebook</a>
         </div>
-    </section>
-
-    <section id="expertise">
-        <h2>Core Expertise</h2>
-        <div class="expertise">
-            <div class="expertise-item">
-                <strong>1. Global Asset Management:</strong> Full P&L responsibility in diverse international markets. [cite:113]
-            </div>
-            <div class="expertise-item">
-                <strong>2. Operational Backbone:</strong> Front Office, Housekeeping, Engineering, and high-volume F&B. [cite:114][cite:151]
-            </div>
-            <div class="expertise-item">
-                <strong>3. Compliance Mastery:</strong> Expert in USPH, HACCP, ServSafe, and FSSAI standards. [cite:116][cite:152]
-            </div>
-            <div class="expertise-item">
-                <strong>4. Pre-Opening & Refurbishment:</strong> Specialist in dry dock refurbishments and ship pre-openings. [cite:128][cite:164]
-            </div>
-        </div>
-    </section>
-
-    <section id="chronology">
-        <h2>Professional Chronology</h2>
-        <ul>
-            <li>General Manager (Resort & Multi-Unit): India (2018–2025). Led Nanidam, The Ofen, and Klayworks Barista. [cite:119][cite:169]</li>
-            <li>Global Operations Leadership: Land-based roles in the Middle East and USA; Sea-based leadership on international cruise lines. [cite:125][cite:126][cite:127]</li>
-        </ul>
-    </section>
-
-    <section id="certifications">
-        <h2>Certifications & Education</h2>
-        <ul>
-            <li>Certified Hospitality Supervisor (CHS): American Hotel & Lodging Educational Institute (2002). [cite:8][cite:11]</li>
-            <li>Food & Beverage Management: Certificate of Specialization, AH&LA (2001). [cite:57][cite:60][cite:61]</li>
-            <li>Planning & Control of F&B Operations: Educational Institute of AH&LA (2002). [cite:48][cite:50]</li>
-            <li>Vessel Sanitation Management: CDC National Center for Environmental Health (1995). [cite:67][cite:76][cite:77]</li>
-            <li>Leadership Skills & Mentoring: Carnival College of Management (2006). [cite:22][cite:23][cite:25]</li>
-            <li>ServSafe Food Protection Manager: ANSI Accredited (Expired 2022). [cite:88][cite:90][cite:97]</li>
-            <li>Guest Service Management: Johnson & Wales University (1996). [cite:38][cite:40]</li>
-        </ul>
-    </section>
-
-    <section id="social">
-        <h2>Connect</h2>
-        <div class="social">
-            <a href="https://www.linkedin.com/in/nigelthomas-hospitality" target="_blank">LinkedIn [cite:104]</a>
-            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank">Facebook</a>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact & Mobility</h2>
-        <p>Location: Mumbai, India (Willing to relocate globally). [cite:104][cite:106][cite:138]</p>
-        <p><em>"A General Manager’s strength is proven in crisis." [cite:145]</em></p>
-        <a href="#" class="schedule-btn" onclick="openCalendly()">Schedule an Interview</a>
-        <div id="calendly-embed" class="calendly-embed" style="display:none; max-width:800px; margin:0 auto;">
-            <!-- Replace with your Calendly embed code. Sign up at calendly.com, create an event, and get the embed code. [web:13][web:16] -->
-            <iframe src="https://calendly.com/your-link-here/30min" width="100%" height="600" frameborder="0"></iframe>
-        </div>
-    </section>
-
-    <script>
-        function openCalendly() {
-            const embed = document.getElementById('calendly-embed');
-            embed.style.display = 'block';
-            embed.scrollIntoView({ behavior: 'smooth' });
-        }
-        // Smooth scroll for nav links
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-    <footer class="max-w-5xl mx-auto text-center pt-10 border-t border-slate-800">
-        <p class="text-slate-500 mb-6 font-semibold">General Manager | Global Hospitality & Resort Operations</p>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
-            <a href="mailto:restgenmgr1952@gmail.com" class="bg-[#d4af37] text-black font-bold px-10 py-4 rounded hover:bg-yellow-600 transition w-full md:w-auto">Contact Nigel Thomas</a>
-            
-            <div class="flex gap-4">
-                <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-2 font-bold">
-                    LinkedIn
-                </a>
-                <span class="text-slate-700">|</span>
-                <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-2 font-bold">
-                    Facebook
-                </a>
-            </div>
-        </div>
-        <p class="font-mono gold text-sm tracking-widest">+91 97693 51231</p>
     </footer>
+
 </body>
 </html>
