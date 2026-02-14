@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel Anthony Thomas | Global Hospitality Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 2rem;
+        }
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4af37;
+        }
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #hero {
+            text-align: center;
+            padding-top: 8rem;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%231a1a2e"/><stop offset="100%" stop-color="%230f3460"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/><text x="50%" y="50%" font-size="20" fill="%23f4f4f4" text-anchor="middle" dominant-baseline="middle">Luxury Resort Background</text></svg>') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #e0e0e0;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .metric {
+            background: rgba(80, 80, 80, 0.3);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #d4af37;
+        }
+        .metric:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        .expertise {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .expertise-item {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .expertise-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ul li::before {
+            content: "▸";
+            color: #d4af37;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .social a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .social a:hover {
+            background: #d4af37;
+            color: #1a1a2e;
+        }
+        .contact {
+            text-align: center;
+        }
+        .schedule-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #d4af37, #f4d03f);
+            color: #1a1a2e;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+        .schedule-btn:hover {
+            transform: scale(1.05);
+        }
+        .calendly-embed {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            nav li { margin: 0 1rem; }
+            .metrics { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#metrics">Metrics</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#chronology">Chronology</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <h1>Nigel Anthony Thomas [cite:103][cite:157]</h1>
+        <p class="tagline">General Manager | Global Hospitality & Resort Operations Leader [cite:104][cite:158]</p>
+        <p>"Bridging high-level strategy with gritty, practical operational reality across land and sea." [cite:110][cite:143]</p>
+        <p>20+ years of international leadership (USA, Middle East, India, and Global Maritime). [cite:108][cite:143]</p>
+    </section>
+
+    <section id="bio">
+        <h2>Professional Identity</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>Senior Global Hospitality Leader with a proven track record in luxury resort operations.</p>
+        </div>
+    </section>
+
+    <section id="metrics">
+        <h2>Key Performance Metrics</h2>
+        <div class="metrics">
+            <div class="metric">
+                <h3>Cost Optimization</h3>
+                <p>Reduced operating costs by 10-12% via lean methodology. [cite:117][cite:149]</p>
+            </div>
+            <div class="metric">
+                <h3>Guest Satisfaction</h3>
+                <p>Increased scores by 15% in premium resort environments. [cite:121][cite:174]</p>
+            </div>
+            <div class="metric">
+                <h3>Revenue Management</h3>
+                <p>Managed multi-outlet revenues exceeding $250,000/month. [cite:129][cite:165]</p>
+            </div>
+            <div class="metric">
+                <h3>Leadership</h3>
+                <p>Led multicultural teams of 80+ staff with a 20% reduction in attrition. [cite:121][cite:124][cite:173]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <h2>Core Expertise</h2>
+        <div class="expertise">
+            <div class="expertise-item">
+                <strong>1. Global Asset Management:</strong> Full P&L responsibility in diverse international markets. [cite:113]
+            </div>
+            <div class="expertise-item">
+                <strong>2. Operational Backbone:</strong> Front Office, Housekeeping, Engineering, and high-volume F&B. [cite:114][cite:151]
+            </div>
+            <div class="expertise-item">
+                <strong>3. Compliance Mastery:</strong> Expert in USPH, HACCP, ServSafe, and FSSAI standards. [cite:116][cite:152]
+            </div>
+            <div class="expertise-item">
+                <strong>4. Pre-Opening & Refurbishment:</strong> Specialist in dry dock refurbishments and ship pre-openings. [cite:128][cite:164]
+            </div>
+        </div>
+    </section>
+
+    <section id="chronology">
+        <h2>Professional Chronology</h2>
+        <ul>
+            <li>General Manager (Resort & Multi-Unit): India (2018–2025). Led Nanidam, The Ofen, and Klayworks Barista. [cite:119][cite:169]</li>
+            <li>Global Operations Leadership: Land-based roles in the Middle East and USA; Sea-based leadership on international cruise lines. [cite:125][cite:126][cite:127]</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Education</h2>
+        <ul>
+            <li>Certified Hospitality Supervisor (CHS): American Hotel & Lodging Educational Institute (2002). [cite:8][cite:11]</li>
+            <li>Food & Beverage Management: Certificate of Specialization, AH&LA (2001). [cite:57][cite:60][cite:61]</li>
+            <li>Planning & Control of F&B Operations: Educational Institute of AH&LA (2002). [cite:48][cite:50]</li>
+            <li>Vessel Sanitation Management: CDC National Center for Environmental Health (1995). [cite:67][cite:76][cite:77]</li>
+            <li>Leadership Skills & Mentoring: Carnival College of Management (2006). [cite:22][cite:23][cite:25]</li>
+            <li>ServSafe Food Protection Manager: ANSI Accredited (Expired 2022). [cite:88][cite:90][cite:97]</li>
+            <li>Guest Service Management: Johnson & Wales University (1996). [cite:38][cite:40]</li>
+        </ul>
+    </section>
+
+    <section id="social">
+        <h2>Connect</h2>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/nigelthomas-hospitality" target="_blank">LinkedIn [cite:104]</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank">Facebook</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact & Mobility</h2>
+        <p>Location: Mumbai, India (Willing to relocate globally). [cite:104][cite:106][cite:138]</p>
+        <p><em>"A General Manager’s strength is proven in crisis." [cite:145]</em></p>
+        <a href="#" class="schedule-btn" onclick="openCalendly()">Schedule an Interview</a>
+        <div id="calendly-embed" class="calendly-embed" style="display:none; max-width:800px; margin:0 auto;">
+            <!-- Replace with your Calendly embed code. Sign up at calendly.com, create an event, and get the embed code. [web:13][web:16] -->
+            <iframe src="https://calendly.com/your-link-here/30min" width="100%" height="600" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <script>
+        function openCalendly() {
+            const embed = document.getElementById('calendly-embed');
+            embed.style.display = 'block';
+            embed.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel Anthony Thomas | Global Hospitality Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 2rem;
+        }
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4af37;
+        }
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #hero {
+            text-align: center;
+            padding-top: 8rem;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%231a1a2e"/><stop offset="100%" stop-color="%230f3460"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/><text x="50%" y="50%" font-size="20" fill="%23f4f4f4" text-anchor="middle" dominant-baseline="middle">Luxury Resort Background</text></svg>') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #e0e0e0;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .metric {
+            background: rgba(80, 80, 80, 0.3);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #d4af37;
+        }
+        .metric:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        .expertise {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .expertise-item {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .expertise-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ul li::before {
+            content: "▸";
+            color: #d4af37;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .social a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .social a:hover {
+            background: #d4af37;
+            color: #1a1a2e;
+        }
+        .contact {
+            text-align: center;
+        }
+        .schedule-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #d4af37, #f4d03f);
+            color: #1a1a2e;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+        .schedule-btn:hover {
+            transform: scale(1.05);
+        }
+        .calendly-embed {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            nav li { margin: 0 1rem; }
+            .metrics { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#metrics">Metrics</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#chronology">Chronology</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <h1>Nigel Anthony Thomas [cite:103][cite:157]</h1>
+        <p class="tagline">General Manager | Global Hospitality & Resort Operations Leader [cite:104][cite:158]</p>
+        <p>"Bridging high-level strategy with gritty, practical operational reality across land and sea." [cite:110][cite:143]</p>
+        <p>20+ years of international leadership (USA, Middle East, India, and Global Maritime). [cite:108][cite:143]</p>
+    </section>
+
+    <section id="bio">
+        <h2>Professional Identity</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>Senior Global Hospitality Leader with a proven track record in luxury resort operations.</p>
+        </div>
+    </section>
+
+    <section id="metrics">
+        <h2>Key Performance Metrics</h2>
+        <div class="metrics">
+            <div class="metric">
+                <h3>Cost Optimization</h3>
+                <p>Reduced operating costs by 10-12% via lean methodology. [cite:117][cite:149]</p>
+            </div>
+            <div class="metric">
+                <h3>Guest Satisfaction</h3>
+                <p>Increased scores by 15% in premium resort environments. [cite:121][cite:174]</p>
+            </div>
+            <div class="metric">
+                <h3>Revenue Management</h3>
+                <p>Managed multi-outlet revenues exceeding $250,000/month. [cite:129][cite:165]</p>
+            </div>
+            <div class="metric">
+                <h3>Leadership</h3>
+                <p>Led multicultural teams of 80+ staff with a 20% reduction in attrition. [cite:121][cite:124][cite:173]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <h2>Core Expertise</h2>
+        <div class="expertise">
+            <div class="expertise-item">
+                <strong>1. Global Asset Management:</strong> Full P&L responsibility in diverse international markets. [cite:113]
+            </div>
+            <div class="expertise-item">
+                <strong>2. Operational Backbone:</strong> Front Office, Housekeeping, Engineering, and high-volume F&B. [cite:114][cite:151]
+            </div>
+            <div class="expertise-item">
+                <strong>3. Compliance Mastery:</strong> Expert in USPH, HACCP, ServSafe, and FSSAI standards. [cite:116][cite:152]
+            </div>
+            <div class="expertise-item">
+                <strong>4. Pre-Opening & Refurbishment:</strong> Specialist in dry dock refurbishments and ship pre-openings. [cite:128][cite:164]
+            </div>
+        </div>
+    </section>
+
+    <section id="chronology">
+        <h2>Professional Chronology</h2>
+        <ul>
+            <li>General Manager (Resort & Multi-Unit): India (2018–2025). Led Nanidam, The Ofen, and Klayworks Barista. [cite:119][cite:169]</li>
+            <li>Global Operations Leadership: Land-based roles in the Middle East and USA; Sea-based leadership on international cruise lines. [cite:125][cite:126][cite:127]</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Education</h2>
+        <ul>
+            <li>Certified Hospitality Supervisor (CHS): American Hotel & Lodging Educational Institute (2002). [cite:8][cite:11]</li>
+            <li>Food & Beverage Management: Certificate of Specialization, AH&LA (2001). [cite:57][cite:60][cite:61]</li>
+            <li>Planning & Control of F&B Operations: Educational Institute of AH&LA (2002). [cite:48][cite:50]</li>
+            <li>Vessel Sanitation Management: CDC National Center for Environmental Health (1995). [cite:67][cite:76][cite:77]</li>
+            <li>Leadership Skills & Mentoring: Carnival College of Management (2006). [cite:22][cite:23][cite:25]</li>
+            <li>ServSafe Food Protection Manager: ANSI Accredited (Expired 2022). [cite:88][cite:90][cite:97]</li>
+            <li>Guest Service Management: Johnson & Wales University (1996). [cite:38][cite:40]</li>
+        </ul>
+    </section>
+
+    <section id="social">
+        <h2>Connect</h2>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/nigelthomas-hospitality" target="_blank">LinkedIn [cite:104]</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank">Facebook</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact & Mobility</h2>
+        <p>Location: Mumbai, India (Willing to relocate globally). [cite:104][cite:106][cite:138]</p>
+        <p><em>"A General Manager’s strength is proven in crisis." [cite:145]</em></p>
+        <a href="#" class="schedule-btn" onclick="openCalendly()">Schedule an Interview</a>
+        <div id="calendly-embed" class="calendly-embed" style="display:none; max-width:800px; margin:0 auto;">
+            <!-- Replace with your Calendly embed code. Sign up at calendly.com, create an event, and get the embed code. [web:13][web:16] -->
+            <iframe src="https://calendly.com/your-link-here/30min" width="100%" height="600" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <script>
+        function openCalendly() {
+            const embed = document.getElementById('calendly-embed');
+            embed.style.display = 'block';
+            embed.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel Anthony Thomas | Global Hospitality Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 2rem;
+        }
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4af37;
+        }
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #hero {
+            text-align: center;
+            padding-top: 8rem;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%231a1a2e"/><stop offset="100%" stop-color="%230f3460"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/><text x="50%" y="50%" font-size="20" fill="%23f4f4f4" text-anchor="middle" dominant-baseline="middle">Luxury Resort Background</text></svg>') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #e0e0e0;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .metric {
+            background: rgba(80, 80, 80, 0.3);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #d4af37;
+        }
+        .metric:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        .expertise {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .expertise-item {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .expertise-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ul li::before {
+            content: "▸";
+            color: #d4af37;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .social a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .social a:hover {
+            background: #d4af37;
+            color: #1a1a2e;
+        }
+        .contact {
+            text-align: center;
+        }
+        .schedule-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #d4af37, #f4d03f);
+            color: #1a1a2e;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+        .schedule-btn:hover {
+            transform: scale(1.05);
+        }
+        .calendly-embed {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            nav li { margin: 0 1rem; }
+            .metrics { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#metrics">Metrics</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#chronology">Chronology</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <h1>Nigel Anthony Thomas [cite:103][cite:157]</h1>
+        <p class="tagline">General Manager | Global Hospitality & Resort Operations Leader [cite:104][cite:158]</p>
+        <p>"Bridging high-level strategy with gritty, practical operational reality across land and sea." [cite:110][cite:143]</p>
+        <p>20+ years of international leadership (USA, Middle East, India, and Global Maritime). [cite:108][cite:143]</p>
+    </section>
+
+    <section id="bio">
+        <h2>Professional Identity</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>Senior Global Hospitality Leader with a proven track record in luxury resort operations.</p>
+        </div>
+    </section>
+
+    <section id="metrics">
+        <h2>Key Performance Metrics</h2>
+        <div class="metrics">
+            <div class="metric">
+                <h3>Cost Optimization</h3>
+                <p>Reduced operating costs by 10-12% via lean methodology. [cite:117][cite:149]</p>
+            </div>
+            <div class="metric">
+                <h3>Guest Satisfaction</h3>
+                <p>Increased scores by 15% in premium resort environments. [cite:121][cite:174]</p>
+            </div>
+            <div class="metric">
+                <h3>Revenue Management</h3>
+                <p>Managed multi-outlet revenues exceeding $250,000/month. [cite:129][cite:165]</p>
+            </div>
+            <div class="metric">
+                <h3>Leadership</h3>
+                <p>Led multicultural teams of 80+ staff with a 20% reduction in attrition. [cite:121][cite:124][cite:173]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <h2>Core Expertise</h2>
+        <div class="expertise">
+            <div class="expertise-item">
+                <strong>1. Global Asset Management:</strong> Full P&L responsibility in diverse international markets. [cite:113]
+            </div>
+            <div class="expertise-item">
+                <strong>2. Operational Backbone:</strong> Front Office, Housekeeping, Engineering, and high-volume F&B. [cite:114][cite:151]
+            </div>
+            <div class="expertise-item">
+                <strong>3. Compliance Mastery:</strong> Expert in USPH, HACCP, ServSafe, and FSSAI standards. [cite:116][cite:152]
+            </div>
+            <div class="expertise-item">
+                <strong>4. Pre-Opening & Refurbishment:</strong> Specialist in dry dock refurbishments and ship pre-openings. [cite:128][cite:164]
+            </div>
+        </div>
+    </section>
+
+    <section id="chronology">
+        <h2>Professional Chronology</h2>
+        <ul>
+            <li>General Manager (Resort & Multi-Unit): India (2018–2025). Led Nanidam, The Ofen, and Klayworks Barista. [cite:119][cite:169]</li>
+            <li>Global Operations Leadership: Land-based roles in the Middle East and USA; Sea-based leadership on international cruise lines. [cite:125][cite:126][cite:127]</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Education</h2>
+        <ul>
+            <li>Certified Hospitality Supervisor (CHS): American Hotel & Lodging Educational Institute (2002). [cite:8][cite:11]</li>
+            <li>Food & Beverage Management: Certificate of Specialization, AH&LA (2001). [cite:57][cite:60][cite:61]</li>
+            <li>Planning & Control of F&B Operations: Educational Institute of AH&LA (2002). [cite:48][cite:50]</li>
+            <li>Vessel Sanitation Management: CDC National Center for Environmental Health (1995). [cite:67][cite:76][cite:77]</li>
+            <li>Leadership Skills & Mentoring: Carnival College of Management (2006). [cite:22][cite:23][cite:25]</li>
+            <li>ServSafe Food Protection Manager: ANSI Accredited (Expired 2022). [cite:88][cite:90][cite:97]</li>
+            <li>Guest Service Management: Johnson & Wales University (1996). [cite:38][cite:40]</li>
+        </ul>
+    </section>
+
+    <section id="social">
+        <h2>Connect</h2>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/nigelthomas-hospitality" target="_blank">LinkedIn [cite:104]</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank">Facebook</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact & Mobility</h2>
+        <p>Location: Mumbai, India (Willing to relocate globally). [cite:104][cite:106][cite:138]</p>
+        <p><em>"A General Manager’s strength is proven in crisis." [cite:145]</em></p>
+        <a href="#" class="schedule-btn" onclick="openCalendly()">Schedule an Interview</a>
+        <div id="calendly-embed" class="calendly-embed" style="display:none; max-width:800px; margin:0 auto;">
+            <!-- Replace with your Calendly embed code. Sign up at calendly.com, create an event, and get the embed code. [web:13][web:16] -->
+            <iframe src="https://calendly.com/your-link-here/30min" width="100%" height="600" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <script>
+        function openCalendly() {
+            const embed = document.getElementById('calendly-embed');
+            embed.style.display = 'block';
+            embed.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel Anthony Thomas | Global Hospitality Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 2rem;
+        }
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4af37;
+        }
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #hero {
+            text-align: center;
+            padding-top: 8rem;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%231a1a2e"/><stop offset="100%" stop-color="%230f3460"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/><text x="50%" y="50%" font-size="20" fill="%23f4f4f4" text-anchor="middle" dominant-baseline="middle">Luxury Resort Background</text></svg>') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #e0e0e0;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .metric {
+            background: rgba(80, 80, 80, 0.3);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #d4af37;
+        }
+        .metric:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        .expertise {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .expertise-item {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .expertise-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ul li::before {
+            content: "▸";
+            color: #d4af37;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .social a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .social a:hover {
+            background: #d4af37;
+            color: #1a1a2e;
+        }
+        .contact {
+            text-align: center;
+        }
+        .schedule-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #d4af37, #f4d03f);
+            color: #1a1a2e;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+        .schedule-btn:hover {
+            transform: scale(1.05);
+        }
+        .calendly-embed {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            nav li { margin: 0 1rem; }
+            .metrics { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#metrics">Metrics</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#chronology">Chronology</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <h1>Nigel Anthony Thomas [cite:103][cite:157]</h1>
+        <p class="tagline">General Manager | Global Hospitality & Resort Operations Leader [cite:104][cite:158]</p>
+        <p>"Bridging high-level strategy with gritty, practical operational reality across land and sea." [cite:110][cite:143]</p>
+        <p>20+ years of international leadership (USA, Middle East, India, and Global Maritime). [cite:108][cite:143]</p>
+    </section>
+
+    <section id="bio">
+        <h2>Professional Identity</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>Senior Global Hospitality Leader with a proven track record in luxury resort operations.</p>
+        </div>
+    </section>
+
+    <section id="metrics">
+        <h2>Key Performance Metrics</h2>
+        <div class="metrics">
+            <div class="metric">
+                <h3>Cost Optimization</h3>
+                <p>Reduced operating costs by 10-12% via lean methodology. [cite:117][cite:149]</p>
+            </div>
+            <div class="metric">
+                <h3>Guest Satisfaction</h3>
+                <p>Increased scores by 15% in premium resort environments. [cite:121][cite:174]</p>
+            </div>
+            <div class="metric">
+                <h3>Revenue Management</h3>
+                <p>Managed multi-outlet revenues exceeding $250,000/month. [cite:129][cite:165]</p>
+            </div>
+            <div class="metric">
+                <h3>Leadership</h3>
+                <p>Led multicultural teams of 80+ staff with a 20% reduction in attrition. [cite:121][cite:124][cite:173]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <h2>Core Expertise</h2>
+        <div class="expertise">
+            <div class="expertise-item">
+                <strong>1. Global Asset Management:</strong> Full P&L responsibility in diverse international markets. [cite:113]
+            </div>
+            <div class="expertise-item">
+                <strong>2. Operational Backbone:</strong> Front Office, Housekeeping, Engineering, and high-volume F&B. [cite:114][cite:151]
+            </div>
+            <div class="expertise-item">
+                <strong>3. Compliance Mastery:</strong> Expert in USPH, HACCP, ServSafe, and FSSAI standards. [cite:116][cite:152]
+            </div>
+            <div class="expertise-item">
+                <strong>4. Pre-Opening & Refurbishment:</strong> Specialist in dry dock refurbishments and ship pre-openings. [cite:128][cite:164]
+            </div>
+        </div>
+    </section>
+
+    <section id="chronology">
+        <h2>Professional Chronology</h2>
+        <ul>
+            <li>General Manager (Resort & Multi-Unit): India (2018–2025). Led Nanidam, The Ofen, and Klayworks Barista. [cite:119][cite:169]</li>
+            <li>Global Operations Leadership: Land-based roles in the Middle East and USA; Sea-based leadership on international cruise lines. [cite:125][cite:126][cite:127]</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Education</h2>
+        <ul>
+            <li>Certified Hospitality Supervisor (CHS): American Hotel & Lodging Educational Institute (2002). [cite:8][cite:11]</li>
+            <li>Food & Beverage Management: Certificate of Specialization, AH&LA (2001). [cite:57][cite:60][cite:61]</li>
+            <li>Planning & Control of F&B Operations: Educational Institute of AH&LA (2002). [cite:48][cite:50]</li>
+            <li>Vessel Sanitation Management: CDC National Center for Environmental Health (1995). [cite:67][cite:76][cite:77]</li>
+            <li>Leadership Skills & Mentoring: Carnival College of Management (2006). [cite:22][cite:23][cite:25]</li>
+            <li>ServSafe Food Protection Manager: ANSI Accredited (Expired 2022). [cite:88][cite:90][cite:97]</li>
+            <li>Guest Service Management: Johnson & Wales University (1996). [cite:38][cite:40]</li>
+        </ul>
+    </section>
+
+    <section id="social">
+        <h2>Connect</h2>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/nigelthomas-hospitality" target="_blank">LinkedIn [cite:104]</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank">Facebook</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact & Mobility</h2>
+        <p>Location: Mumbai, India (Willing to relocate globally). [cite:104][cite:106][cite:138]</p>
+        <p><em>"A General Manager’s strength is proven in crisis." [cite:145]</em></p>
+        <a href="#" class="schedule-btn" onclick="openCalendly()">Schedule an Interview</a>
+        <div id="calendly-embed" class="calendly-embed" style="display:none; max-width:800px; margin:0 auto;">
+            <!-- Replace with your Calendly embed code. Sign up at calendly.com, create an event, and get the embed code. [web:13][web:16] -->
+            <iframe src="https://calendly.com/your-link-here/30min" width="100%" height="600" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <script>
+        function openCalendly() {
+            const embed = document.getElementById('calendly-embed');
+            embed.style.display = 'block';
+            embed.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
