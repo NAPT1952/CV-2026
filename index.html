@@ -1,128 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigel Anthony Thomas | Executive Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; scroll-behavior: smooth; }
-        .gold { color: #d4af37; }
-        .hero-bg { 
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
-            url('https://images.unsplash.com/photo-1548544149-4835e62ee5b3?auto=format&fit=crop&q=80&w=2000'); 
-            background-size: cover; 
-            background-position: center;
-        }
-        .btn-gold {
-            background: linear-gradient(45deg, #c6a75e, #e8c77a);
-            color: #0f172a;
-            transition: all 0.3s ease;
-        }
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(198, 167, 94, 0.3);
-        }
-    </style>
-</head>
-<body>
-
-    <header class="w-full pt-16 pb-20 px-6 text-center border-b border-slate-800 hero-bg">
-        <nav class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-xs md:text-sm font-bold uppercase tracking-widest">
-            <a href="#credentials" class="gold hover:text-white transition">Credentials</a>
-            <a href="#skills" class="gold hover:text-white transition">Expertise</a>
-            <a href="#vision" class="gold hover:text-white transition">Vision</a>
-            <a href="#achievements" class="gold hover:text-white transition">Impact</a>
-            <a href="#land" class="gold hover:text-white transition">Land Based</a>
-            <a href="#contact" class="px-4 py-1 border border-gold rounded-full gold hover:bg-gold hover:text-slate-900 transition">Book Now</a>
-        </nav>
-
-        <h1 class="text-4xl md:text-6xl font-bold gold mb-4 tracking-tight">Nigel Anthony Thomas</h1>
-        <p class="text-xl md:text-2xl uppercase tracking-widest text-white mb-4">General Manager</p>
-        <p class="text-slate-400 italic">Global Hospitality & Resort Operations Leader</p>
+<body x-data="{ 
+    chatOpen: false, 
+    userInput: '', 
+    messages: [{role: 'bot', text: 'Hello! I am Nigel\'s AI assistant. Ask me about his 20+ years of experience, budget management, or his AI automation projects.'}],
+    async askAI() {
+        if (!this.userInput) return;
+        let q = this.userInput.toLowerCase();
+        this.messages.push({role: 'user', text: this.userInput});
+        this.userInput = '';
         
-        <div class="mt-10 text-slate-300 flex flex-col md:flex-row justify-center items-center gap-4 font-semibold">
-            <span>+91 97693 51231</span> 
-            <span class="hidden md:inline text-slate-600">|</span> 
-            <span>restgenmgr1952@gmail.com</span>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto py-16 px-6 space-y-24">
+        let reply = 'I don\'t have a specific answer for that. Please contact Nigel directly at restgenmgr1952@gmail.com for more details.';
         
-        <section id="vision">
-            <h2 class="text-2xl font-bold mb-10 gold border-l-4 border-gold pl-4 uppercase tracking-wider">Vision & Strategy</h2>
-            <div class="bg-slate-800/20 p-8 md:p-12 rounded-2xl border border-slate-800 shadow-xl text-center md:text-left">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-2xl font-bold gold mb-6 italic">"High-Tech Meets High-Touch"</h3>
-                        <p class="text-slate-300 leading-relaxed mb-6">
-                            Bridging legacy hospitality standards with the digital frontier to define modern luxury through seamless efficiency and authentic connection.
-                        </p>
-                        <a href="#contact" class="btn-gold px-8 py-3 rounded-full font-bold uppercase text-sm tracking-widest inline-block">Consult With Me</a>
-                    </div>
-                    <div class="hidden md:block">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800" alt="Executive Strategy" class="rounded-xl border border-slate-700 shadow-2xl">
-                    </div>
-                </div>
-            </div>
-        </section>
+        // Career & Experience Logic
+        if (q.includes('experience') || q.includes('years')) {
+            reply = 'Nigel has over 20 years of global hospitality experience, specializing in senior operations across the USA, Middle East, and India.';
+        }
+        else if (q.includes('relocate') || q.includes('mumbai')) {
+            reply = 'He is a resident of Mumbai but is fully open to relocation for global leadership opportunities.';
+        }
+        else if (q.includes('maritime') || q.includes('cruise')) {
+            reply = 'His maritime career spans 20+ years on major cruise lines, including Holland America, Carnival, and Royal Caribbean.';
+        }
 
-        <section id="contact" class="pt-10">
-            <h2 class="text-2xl font-bold mb-10 gold border-l-4 border-gold pl-4 uppercase tracking-wider">Contact & Consultation</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <p class="text-slate-300 text-lg">
-                        Available for executive leadership roles, operational consulting, and project-based hospitality management across India, the Middle East, and global maritime routes.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-slate-800 rounded-lg gold">📧</span>
-                            <div>
-                                <h4 class="text-xs uppercase text-slate-500 font-bold">Email</h4>
-                                <p class="text-white">restgenmgr1952@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-slate-800 rounded-lg gold">📱</span>
-                            <div>
-                                <h4 class="text-xs uppercase text-slate-500 font-bold">Phone</h4>
-                                <p class="text-white">+91 97693 51231</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-slate-800 rounded-lg gold">📍</span>
-                            <div>
-                                <h4 class="text-xs uppercase text-slate-500 font-bold">Location</h4>
-                                <p class="text-white">Mumbai, India | Open to Relocation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // Budget & Financial Logic
+        else if (q.includes('budget') || q.includes('revenue') || q.includes('money') || q.includes('cost')) {
+            reply = 'Nigel manages annual budgets and outlet revenues exceeding ₹2Cr monthly in India, or approximately $250,000 USD. He consistently achieves 8-10% margin improvements.';
+        }
 
-                <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-700 text-center flex flex-col justify-center">
-                    <h3 class="text-xl font-bold gold mb-4 uppercase">Direct Consultation</h3>
-                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                        Book a 30-minute strategy session to discuss F&B operational optimization, margin improvement frameworks, or multicultural team leadership.
-                    </p>
-                    <a href="mailto:restgenmgr1952@gmail.com?subject=Consultation%20Request" class="btn-gold w-full py-4 rounded-xl font-bold uppercase tracking-widest">
-                        Book Your Consultation
-                    </a>
-                    <p class="mt-4 text-xs text-slate-500 italic">Response time: Usually within 24 hours</p>
-                </div>
-            </div>
-        </section>
+        // AI & Automation Logic
+        else if (q.includes('n8n') || q.includes('automation') || q.includes('ai') || q.includes('joblynk')) {
+            reply = 'Nigel is highly skilled in AI automation. He has built a local n8n instance using Docker for job search agents and developed the JobLynk.live domain for automated career services.';
+        }
+        else if (q.includes('tech') || q.includes('software')) {
+            reply = 'Beyond hospitality, Nigel is an expert in leveraging AI for professional tasks, including building hotel management apps and autonomous agents like OpenClaw.';
+        }
 
-    </main>
-
-    <footer class="py-24 px-6 text-center border-t border-slate-800">
-        <h3 class="text-xl gold mb-8 tracking-widest font-bold uppercase">Connect for Opportunities</h3>
-        <div class="flex justify-center gap-10">
-            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="text-slate-400 hover:text-white font-bold transition">LinkedIn</a>
-            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="text-slate-400 hover:text-white font-bold transition">Facebook</a>
-        </div>
-        <p class="mt-12 text-slate-600 text-xs tracking-widest">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
-    </footer>
-
-</body>
-</html>
+        // Skills & Certificates
+        else if (q.includes('skill') || q.includes('expert')) {
+            reply = 'His strategic expertise includes Global Team Leadership (98%), Budget Management (95%), and USPH Compliance (100%).';
+        }
+        
+        setTimeout(() => { 
+            this.messages.push({role: 'bot', text: reply}); 
+            // Auto-scroll logic
+            const chatContainer = document.querySelector('.chat-messages');
+            if(chatContainer) chatContainer.scrollTop = chatContainer.scrollHeight;
+        }, 400);
+    }
+}">
