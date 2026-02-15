@@ -8,11 +8,8 @@
     <style>
         body { background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; scroll-behavior: smooth; }
         .gold { color: #d4af37; }
-        
-        /* RESTORING YOUR SEA BACKGROUND */
         .hero-bg { 
-            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
-            url('background.jpg'); /* Ensure this filename matches your Sea image */
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('background.jpg'); 
             background-size: cover; 
             background-position: center;
         }
@@ -21,10 +18,10 @@
 <body>
 
     <header class="w-full pt-16 pb-20 px-6 text-center border-b border-slate-800 hero-bg">
-        
-        <nav class="flex justify-center gap-8 mb-12 text-xs md:text-sm font-bold uppercase tracking-widest">
+        <nav class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-xs md:text-sm font-bold uppercase tracking-widest">
             <a href="#credentials" class="gold hover:text-white transition">Credentials</a>
-            <a href="#maritime" class="gold hover:text-white transition">Maritime</a>
+            <a href="#maritime" class="gold hover:text-white transition">Sea Based</a>
+            <a href="#land" class="gold hover:text-white transition">Land Based</a>
             <a href="#contact" class="gold hover:text-white transition">Contact</a>
         </nav>
 
@@ -41,11 +38,11 @@
 
     <main class="max-w-5xl mx-auto py-16 px-6 space-y-20">
         
-        <section id="credentials" class="pt-10">
+        <section id="credentials">
             <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Verified Credentials</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
-                    <h3 class="font-bold text-lg gold">Certified Hospitality Supervisor (CHS)</h3>
+                    <h3 class="font-bold text-lg gold">Certified Hospitality Supervisor</h3>
                     <p class="text-sm text-slate-400">AHLEI</p>
                 </div>
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
@@ -57,7 +54,7 @@
                     <p class="text-sm text-slate-400">AHLEI</p>
                 </div>
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
-                    <h3 class="font-bold text-lg gold">ServSafe Food Protection Manager</h3>
+                    <h3 class="font-bold text-lg gold">ServSafe Food Manager</h3>
                     <p class="text-sm text-slate-400">ANSI Accredited</p>
                 </div>
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
@@ -67,17 +64,36 @@
             </div>
         </section>
 
-        <section id="maritime" class="pt-10">
-            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Maritime Leadership</h2>
-            <div class="flex flex-col md:flex-row gap-8 items-center bg-slate-800/40 p-8 rounded-xl border border-slate-700">
-                <div class="flex-1">
-                    <p class="text-lg text-slate-300 leading-relaxed">
-                        20+ years of F&B leadership across prestigious fleets including <span class="text-white font-bold">Holland America Line</span>, <span class="text-white font-bold">Carnival</span>, and <span class="text-white font-bold">Royal Caribbean</span>. 
-                        Specialized in high-volume luxury operations and international sanitation standards.
+        <section id="maritime">
+            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Sea Based Operations (1992-2013)</h2>
+            <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-800/40">
+                <img src="ship.jpg" alt="Maritime Operations" class="w-full h-72 object-cover">
+                <div class="p-8">
+                    <p class="text-lg text-slate-300 leading-relaxed mb-4">
+                        Senior hospitality operations roles onboard international fleets including <strong>Holland America, Carnival, and Royal Caribbean</strong>[cite: 3].
                     </p>
+                    <ul class="text-slate-400 space-y-2 text-sm">
+                        <li>• Operated under USPH, ServSafe, and international maritime compliance standards[cite: 3].</li>
+                        <li>• Managed high-volume guest operations with strict service timelines[cite: 3].</li>
+                        <li>• Participated in dry dock refurbishments and ship pre-openings[cite: 3].</li>
+                    </ul>
                 </div>
-                <div class="w-full md:w-72 h-48 rounded-lg overflow-hidden border border-slate-600">
-                    <img src="ship.jpg" alt="Maritime Operations" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <section id="land">
+            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Land Based Operations (2013-2025)</h2>
+            <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-800/40">
+                <img src="resort.jpg" alt="Land Based Hospitality" class="w-full h-72 object-cover">
+                <div class="p-8">
+                    <p class="text-lg text-slate-300 leading-relaxed mb-4">
+                        Leadership across India and the Middle East, managing multi-outlet F&B operations including restaurants, bars, and banquets[cite: 2].
+                    </p>
+                    <ul class="text-slate-400 space-y-2 text-sm">
+                        <li>• Managed annual budgets exceeding $250,000 USD per month[cite: 2].</li>
+                        <li>• Achieved 8–10% margin improvement through strict cost-control frameworks[cite: 2].</li>
+                        <li>• Led recruitment and training for diverse, multicultural teams[cite: 2].</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -86,9 +102,9 @@
 
     <footer id="contact" class="py-20 px-6 text-center border-t border-slate-800">
         <h3 class="text-xl gold mb-8">Connect for Opportunities</h3>
-        <div class="flex flex-col md:flex-row justify-center gap-8 text-slate-400">
-            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="hover:text-white font-bold underline decoration-gold underline-offset-4">LinkedIn Profile</a>
-            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="hover:text-white font-bold underline decoration-gold underline-offset-4">Facebook Page</a>
+        <div class="flex justify-center gap-8 text-slate-400 font-bold">
+            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="hover:text-white underline decoration-gold underline-offset-4">LinkedIn Profile</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="hover:text-white underline decoration-gold underline-offset-4">Facebook Page</a>
         </div>
         <p class="mt-10 text-slate-600 text-sm">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
     </footer>
