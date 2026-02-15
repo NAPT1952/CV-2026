@@ -8,9 +8,11 @@
     <style>
         body { background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; scroll-behavior: smooth; }
         .gold { color: #d4af37; }
-        /* This adds back a background image effect if you had one */
+        
+        /* RESTORING YOUR SEA BACKGROUND */
         .hero-bg { 
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('background.jpg'); 
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+            url('background.jpg'); /* Ensure this filename matches your Sea image */
             background-size: cover; 
             background-position: center;
         }
@@ -18,23 +20,19 @@
 </head>
 <body>
 
-    <header class="w-full pt-10 pb-16 px-6 text-center border-b border-slate-800 hero-bg sticky top-0 backdrop-blur-md z-50">
+    <header class="w-full pt-16 pb-20 px-6 text-center border-b border-slate-800 hero-bg">
         
-        <nav class="flex justify-center gap-8 mb-10 text-xs md:text-sm font-bold uppercase tracking-widest">
+        <nav class="flex justify-center gap-8 mb-12 text-xs md:text-sm font-bold uppercase tracking-widest">
             <a href="#credentials" class="gold hover:text-white transition">Credentials</a>
             <a href="#maritime" class="gold hover:text-white transition">Maritime</a>
             <a href="#contact" class="gold hover:text-white transition">Contact</a>
         </nav>
 
-        <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-6 border-4 border-yellow-600 shadow-xl">
-            <img src="nigel.jpg" alt="Nigel Anthony Thomas" class="w-full h-full object-cover">
-        </div>
-
         <h1 class="text-4xl md:text-6xl font-bold gold mb-4">Nigel Anthony Thomas</h1>
         <p class="text-xl md:text-2xl uppercase tracking-widest text-white mb-4">General Manager</p>
         <p class="text-slate-400 italic">Global Hospitality & Resort Operations Leader</p>
         
-        <div class="mt-8 text-slate-300 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 font-semibold">
+        <div class="mt-10 text-slate-300 flex flex-col md:flex-row justify-center items-center gap-4 font-semibold">
             <span>+91 97693 51231</span> 
             <span class="hidden md:inline">|</span> 
             <span>restgenmgr1952@gmail.com</span>
@@ -45,26 +43,26 @@
         
         <section id="credentials" class="pt-10">
             <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Verified Credentials</h2>
-            <div class="grid md:grid-cols-2 gap-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
                     <h3 class="font-bold text-lg gold">Certified Hospitality Supervisor (CHS)</h3>
-                    <p class="text-sm text-slate-400">American Hotel & Lodging Educational Institute</p>
+                    <p class="text-sm text-slate-400">AHLEI</p>
+                </div>
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
+                    <h3 class="font-bold text-lg gold">F&B Management</h3>
+                    <p class="text-sm text-slate-400">AHLEI</p>
+                </div>
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
+                    <h3 class="font-bold text-lg gold">F&B Cost Controls</h3>
+                    <p class="text-sm text-slate-400">AHLEI</p>
                 </div>
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
                     <h3 class="font-bold text-lg gold">ServSafe Food Protection Manager</h3>
-                    <p class="text-sm text-slate-400">ANSI Accredited Standard</p>
+                    <p class="text-sm text-slate-400">ANSI Accredited</p>
                 </div>
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
                     <h3 class="font-bold text-lg gold">Vessel Sanitation (USPH)</h3>
                     <p class="text-sm text-slate-400">Nova Southeastern University</p>
-                </div>
-                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
-                    <h3 class="font-bold text-lg gold">F&B Management</h3>
-                    <p class="text-sm text-slate-400">American Hotel & Lodging Educational Institute</p>
-                </div>
-                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
-                    <h3 class="font-bold text-lg gold">F&B Cost Controls</h3>
-                    <p class="text-sm text-slate-400">American Hotel & Lodging Educational Institute</p>
                 </div>
             </div>
         </section>
@@ -78,7 +76,7 @@
                         Specialized in high-volume luxury operations and international sanitation standards.
                     </p>
                 </div>
-                <div class="w-full md:w-64 h-40 rounded-lg overflow-hidden border border-slate-600">
+                <div class="w-full md:w-72 h-48 rounded-lg overflow-hidden border border-slate-600">
                     <img src="ship.jpg" alt="Maritime Operations" class="w-full h-full object-cover">
                 </div>
             </div>
@@ -88,9 +86,9 @@
 
     <footer id="contact" class="py-20 px-6 text-center border-t border-slate-800">
         <h3 class="text-xl gold mb-8">Connect for Opportunities</h3>
-        <div class="flex flex-col md:flex-row justify-center gap-8">
-            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="text-slate-400 hover:text-white font-bold underline decoration-gold underline-offset-4">LinkedIn Profile</a>
-            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="text-slate-400 hover:text-white font-bold underline decoration-gold underline-offset-4">Facebook Page</a>
+        <div class="flex flex-col md:flex-row justify-center gap-8 text-slate-400">
+            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="hover:text-white font-bold underline decoration-gold underline-offset-4">LinkedIn Profile</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="hover:text-white font-bold underline decoration-gold underline-offset-4">Facebook Page</a>
         </div>
         <p class="mt-10 text-slate-600 text-sm">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
     </footer>
