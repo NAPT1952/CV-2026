@@ -4,53 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <style>
         body { background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; scroll-behavior: smooth; }
         .gold { color: #d4af37; }
-        /* This ensures the image fills the circle and nothing else (like text) can get inside */
-        .profile-frame {
-            width: 12rem;
-            height: 12rem;
-            border-radius: 9999px;
-            border: 4px solid #d4af37;
-            overflow: hidden;
-            margin: 0 auto 2rem;
-            position: relative;
-            background-color: #1e293b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .profile-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+        [x-cloak] { display: none !important; }
     </style>
 </head>
-<body>
+<body x-data="{ mobileMenu: false }">
 
-    <header class="w-full pt-10 pb-16 px-6 text-center border-b border-slate-800 bg-slate-900 relative z-50">
+    <header class="w-full pt-10 pb-16 px-6 text-center border-b border-slate-800 bg-slate-900/50 sticky top-0 backdrop-blur-md z-50">
         
-        <nav class="flex justify-center gap-4 md:gap-8 mb-10 text-[10px] md:text-sm font-bold uppercase tracking-widest flex-wrap">
-            <a href="#credentials" class="gold hover:text-white transition cursor-pointer">Credentials</a>
-            <a href="#maritime" class="gold hover:text-white transition cursor-pointer">Maritime</a>
-            <a href="#landbased" class="gold hover:text-white transition cursor-pointer border-b border-yellow-600/50 pb-1">Land Based</a>
-            <a href="#contact" class="gold hover:text-white transition cursor-pointer">Contact</a>
+        <nav class="hidden md:flex justify-center gap-8 mb-10 text-sm font-bold uppercase tracking-widest">
+            <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                <button class="gold hover:text-white transition flex items-center gap-1">
+                    Credentials 
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div x-show="open" x-transition x-cloak class="absolute left-0 mt-2 w-56 bg-slate-800 border border-slate-700 rounded-lg shadow-2xl py-2 text-left normal-case tracking-normal">
+                    <a href="#credentials" class="block px-4 py-3 hover:bg-slate-700 border-b border-slate-700/50">Industry Certifications</a>
+                    <a href="#maritime" class="block px-4 py-3 hover:bg-slate-700">Maritime Leadership</a>
+                </div>
+            </div>
+            <a href="#maritime" class="gold hover:text-white transition">Maritime</a>
+            <a href="#contact" class="gold hover:text-white transition">Contact</a>
         </nav>
 
-        <div class="profile-frame shadow-2xl shadow-yellow-900/20">
-            <img src="final%20formal2.jpg" alt="Nigel Anthony Thomas">
+        <div class="md:hidden mb-6">
+            <button @click="mobileMenu = !mobileMenu" class="gold p-2 border border-gold rounded-md uppercase text-xs font-bold tracking-widest">
+                Menu <span x-text="mobileMenu ? '✕' : '☰'"></span>
+            </button>
+        </div>
+
+        <div x-show="mobileMenu" x-transition x-cloak class="md:hidden bg-slate-800 p-6 rounded-xl mb-6 space-y-4 text-sm font-bold uppercase">
+            <a @click="mobileMenu = false" href="#credentials" class="block gold">Credentials</a>
+            <a @click="mobileMenu = false" href="#maritime" class="block gold">Maritime</a>
+            <a @click="mobileMenu = false" href="#contact" class="block gold">Contact</a>
         </div>
 
         <h1 class="text-4xl md:text-6xl font-bold gold mb-4">Nigel Anthony Thomas</h1>
         <p class="text-xl md:text-2xl uppercase tracking-widest text-white mb-4">General Manager</p>
         <p class="text-slate-400 italic">Global Hospitality & Resort Operations Leader</p>
         
-        <div class="mt-8 text-slate-300 space-x-4">
-            <span>+91 97693 51231</span> | <span>restgenmgr1952@gmail.com</span>
+        <div class="mt-8 text-slate-300 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
+            <span>+91 97693 51231</span> 
+            <span class="hidden md:inline">|</span> 
+            <span>restgenmgr1952@gmail.com</span>
         </div>
     </header>
 
@@ -61,115 +63,46 @@
             <div class="grid md:grid-cols-2 gap-4">
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
                     <h3 class="font-bold text-lg gold">Certified Hospitality Supervisor (CHS)</h3>
-                    <p class="text-sm text-slate-400">AH&LAE USA</p>
+                    <p class="text-sm text-slate-400">American Hotel & Lodging Educational Institute</p>
                 </div>
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
                     <h3 class="font-bold text-lg gold">ServSafe Food Protection Manager</h3>
                     <p class="text-sm text-slate-400">ANSI Accredited Standard</p>
                 </div>
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
+                    <h3 class="font-bold text-lg gold">Vessel Sanitation (USPH)</h3>
+                    <p class="text-sm text-slate-400">Nova Southeastern University</p>
+                </div>
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
                     <h3 class="font-bold text-lg gold">F&B Management</h3>
-                    <p class="text-sm text-slate-400">AH&LAE USA</p>
+                    <p class="text-sm text-slate-400">American Hotel & Lodging Educational Institute</p>
                 </div>
                 <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
                     <h3 class="font-bold text-lg gold">F&B Cost Controls</h3>
-                    <p class="text-sm text-slate-400">AH&LAE USA</p>
+                    <p class="text-sm text-slate-400">American Hotel & Lodging Educational Institute</p>
                 </div>
             </div>
         </section>
 
         <section id="maritime" class="pt-10">
             <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Maritime Leadership</h2>
-            
-            <div class="bg-slate-800/60 p-8 rounded-xl border border-slate-700 mb-10 shadow-lg shadow-black/20">
-                <h3 class="text-xl text-white font-bold mb-2 tracking-wide text-center">INTERNATIONAL CRUISE LINE OPERATIONS</h3>
-                <p class="text-yellow-500 text-sm uppercase tracking-wider mb-6 font-semibold text-center">USA | Bahamas | Global Routes (1992-2013)</p>
-                <ul class="list-disc list-outside ml-5 space-y-3 text-slate-300 leading-relaxed">
-                    <li>Held senior hospitality operations roles onboard international cruise lines.</li>
-                    <li>Participated in dry dock refurbishments and ship pre-openings.</li>
-                    <li>Operated under <span class="text-white font-bold">USPH, ServSafe</span>, and international maritime compliance standards.</li>
-                    <li>Managed high-volume guest operations with strict service timelines.</li>
-                    <li>Led diverse multinational teams while maintaining brand consistency.</li>
-                </ul>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="rounded-xl overflow-hidden shadow-lg shadow-slate-900/50 border border-slate-800">
-                    <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=2187&auto=format&fit=crop" alt="Cruise Ship" class="w-full h-56 object-cover">
-                    <div class="p-3 bg-slate-900/80 text-center font-bold text-gold uppercase text-xs">International Fleets</div>
-                </div>
-                <div class="rounded-xl overflow-hidden shadow-lg shadow-slate-900/50 border border-slate-800">
-                    <img src="https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?q=80&w=2370&auto=format&fit=crop" alt="Galley Kitchen" class="w-full h-56 object-cover">
-                    <div class="p-3 bg-slate-900/80 text-center font-bold text-gold uppercase text-xs">High-Volume Galley Ops</div>
-                </div>
-                <div class="rounded-xl overflow-hidden shadow-lg shadow-slate-900/50 border border-slate-800">
-                    <img src="https://images.unsplash.com/photo-1533106497172-025576405155?q=80&w=2370&auto=format&fit=crop" alt="Pool Deck" class="w-full h-56 object-cover">
-                    <div class="p-3 bg-slate-900/80 text-center font-bold text-gold uppercase text-xs">Luxury Guest Experience</div>
-                </div>
-                <div class="rounded-xl overflow-hidden shadow-lg shadow-slate-900/50 border border-slate-800">
-                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2370&auto=format&fit=crop" alt="Dining Room" class="w-full h-56 object-cover">
-                    <div class="p-3 bg-slate-900/80 text-center font-bold text-gold uppercase text-xs">Fine Dining Standards</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="landbased" class="pt-10">
-            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Land Based Operations</h2>
-            
-            <div class="bg-slate-800/60 p-8 rounded-xl border border-slate-700 mb-10 shadow-lg shadow-black/20">
-                <h3 class="text-xl text-white font-bold mb-2 tracking-wide text-center">SENIOR OPERATIONS & F&B LEADERSHIP ROLES</h3>
-                <p class="text-yellow-500 text-sm uppercase tracking-wider mb-6 font-semibold text-center">Hotels, Resorts & Restaurant Groups | India & Middle East (2013-2025)</p>
-                <ul class="list-disc list-outside ml-5 space-y-3 text-slate-300 leading-relaxed">
-                    <li>Oversaw multi-outlet F&B operations including restaurants, bars, banquets, and cafés.</li>
-                    <li>Managed annual budgets & outlet revenues exceeding <span class="text-white font-bold">₹2Cr (India) / $250,000 pm</span>.</li>
-                    <li>Implemented cost-control frameworks achieving <span class="text-white font-bold">8–10% margin improvement</span>.</li>
-                    <li>Led recruitment, onboarding, and training of multicultural teams.</li>
-                    <li>Ensured compliance with brand standards, audits, and food safety regulations.</li>
-                </ul>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-6 bg-slate-800/60 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
-                    <h3 class="font-bold text-lg text-white">Ramada & Meridien</h3>
-                    <p class="text-sm text-yellow-500 uppercase tracking-wider mb-2">Abu Dhabi</p>
-                </div>
-                <div class="p-6 bg-slate-800/60 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
-                    <h3 class="font-bold text-lg text-white">Al Hamra Hotel</h3>
-                    <p class="text-sm text-yellow-500 uppercase tracking-wider mb-2">Baghdad, Iraq</p>
-                </div>
-                <div class="p-6 bg-slate-800/60 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
-                    <h3 class="font-bold text-lg text-white">Klayworkz Barista</h3>
-                    <p class="text-sm text-yellow-500 uppercase tracking-wider mb-2">Bangalore</p>
-                </div>
-                <div class="p-6 bg-slate-800/60 rounded-xl border border-slate-700 hover:border-yellow-600 transition md:col-span-2 lg:col-span-3">
-                    <h3 class="font-bold text-lg text-white text-center">NANIDAM Resort</h3>
-                    <p class="text-sm text-yellow-500 uppercase tracking-wider mb-2 text-center">Nandi Hills</p>
-                    <p class="text-sm text-slate-400 text-center">General Manager | Operations & Guest Experience</p>
-                </div>
+            <div class="bg-slate-800/40 p-8 rounded-xl border border-slate-700">
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    20+ years of F&B leadership across prestigious fleets including <span class="text-white font-bold">Holland America Line</span>, <span class="text-white font-bold">Carnival</span>, and <span class="text-white font-bold">Royal Caribbean</span>. 
+                    Specialized in high-volume luxury operations and international sanitation standards.
+                </p>
             </div>
         </section>
 
     </main>
 
-    <footer id="contact" class="py-20 px-6 border-t border-slate-800 bg-slate-900/30">
-        <div class="max-w-xl mx-auto">
-            <h3 class="text-2xl gold mb-8 uppercase tracking-widest text-center">Contact Me Directly</h3>
-            <form action="https://formsubmit.co/restgenmgr1952@gmail.com" method="POST" class="space-y-6">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="name" required class="w-full p-4 rounded-lg" placeholder="Your Name">
-                <input type="text" name="phone" required class="w-full p-4 rounded-lg" placeholder="Contact Number">
-                <input type="email" name="email" required class="w-full p-4 rounded-lg" placeholder="Email Address">
-                <textarea name="message" rows="3" class="w-full p-4 rounded-lg" placeholder="Message"></textarea>
-                <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-4 rounded-lg uppercase tracking-widest transition">
-                    Send Message
-                </button>
-            </form>
-            <div class="mt-12 text-center border-t border-slate-800 pt-8 flex justify-center gap-8">
-                <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="text-slate-400 hover:text-white font-bold underline decoration-gold underline-offset-4">LinkedIn</a>
-                <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="text-slate-400 hover:text-white font-bold underline decoration-gold underline-offset-4">Facebook</a>
-            </div>
-            <p class="mt-8 text-center text-slate-600 text-sm">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
+    <footer id="contact" class="py-20 px-6 text-center border-t border-slate-800">
+        <h3 class="text-xl gold mb-8">Connect for Opportunities</h3>
+        <div class="flex flex-col md:flex-row justify-center gap-8">
+            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="text-slate-400 hover:text-white font-bold underline decoration-gold underline-offset-4">LinkedIn Profile</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="text-slate-400 hover:text-white font-bold underline decoration-gold underline-offset-4">Facebook Page</a>
         </div>
+        <p class="mt-10 text-slate-600 text-sm">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
     </footer>
 
 </body>
