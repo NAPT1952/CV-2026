@@ -4,33 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-
     <style>
         body { background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; scroll-behavior: smooth; }
         .gold { color: #d4af37; }
+        /* This adds back a background image effect if you had one */
+        .hero-bg { 
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('background.jpg'); 
+            background-size: cover; 
+            background-position: center;
+        }
     </style>
 </head>
 <body>
 
-    <header class="w-full pt-10 pb-16 px-6 text-center border-b border-slate-800 bg-slate-900/50 sticky top-0 backdrop-blur-md z-50">
+    <header class="w-full pt-10 pb-16 px-6 text-center border-b border-slate-800 hero-bg sticky top-0 backdrop-blur-md z-50">
         
         <nav class="flex justify-center gap-8 mb-10 text-xs md:text-sm font-bold uppercase tracking-widest">
-            <a href="#credentials" class="gold hover:text-white transition cursor-pointer">Credentials</a>
-            <a href="#maritime" class="gold hover:text-white transition cursor-pointer">Maritime</a>
-            <a href="#contact" class="gold hover:text-white transition cursor-pointer">Contact</a>
+            <a href="#credentials" class="gold hover:text-white transition">Credentials</a>
+            <a href="#maritime" class="gold hover:text-white transition">Maritime</a>
+            <a href="#contact" class="gold hover:text-white transition">Contact</a>
         </nav>
 
-        <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-6 border-4 border-yellow-600">
-            <img src="nigel.jpg" alt="Executive Profile" class="w-full h-full object-cover">
+        <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-6 border-4 border-yellow-600 shadow-xl">
+            <img src="nigel.jpg" alt="Nigel Anthony Thomas" class="w-full h-full object-cover">
         </div>
 
         <h1 class="text-4xl md:text-6xl font-bold gold mb-4">Nigel Anthony Thomas</h1>
         <p class="text-xl md:text-2xl uppercase tracking-widest text-white mb-4">General Manager</p>
         <p class="text-slate-400 italic">Global Hospitality & Resort Operations Leader</p>
         
-        <div class="mt-8 text-slate-300 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
+        <div class="mt-8 text-slate-300 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 font-semibold">
             <span>+91 97693 51231</span> 
             <span class="hidden md:inline">|</span> 
             <span>restgenmgr1952@gmail.com</span>
@@ -67,11 +71,16 @@
 
         <section id="maritime" class="pt-10">
             <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Maritime Leadership</h2>
-            <div class="bg-slate-800/40 p-8 rounded-xl border border-slate-700">
-                <p class="text-lg text-slate-300 leading-relaxed">
-                    20+ years of F&B leadership across prestigious fleets including <span class="text-white font-bold">Holland America Line</span>, <span class="text-white font-bold">Carnival</span>, and <span class="text-white font-bold">Royal Caribbean</span>. 
-                    Specialized in high-volume luxury operations and international sanitation standards.
-                </p>
+            <div class="flex flex-col md:flex-row gap-8 items-center bg-slate-800/40 p-8 rounded-xl border border-slate-700">
+                <div class="flex-1">
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        20+ years of F&B leadership across prestigious fleets including <span class="text-white font-bold">Holland America Line</span>, <span class="text-white font-bold">Carnival</span>, and <span class="text-white font-bold">Royal Caribbean</span>. 
+                        Specialized in high-volume luxury operations and international sanitation standards.
+                    </p>
+                </div>
+                <div class="w-full md:w-64 h-40 rounded-lg overflow-hidden border border-slate-600">
+                    <img src="ship.jpg" alt="Maritime Operations" class="w-full h-full object-cover">
+                </div>
             </div>
         </section>
 
