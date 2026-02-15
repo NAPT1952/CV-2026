@@ -3,126 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigel Anthony Thomas | Executive Portfolio</title>
+    <title>Nigel Anthony Thomas | World-Class Executive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; scroll-behavior: smooth; }
-        .gold { color: #d4af37; }
-        .hero-bg { 
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
-            url('https://images.unsplash.com/photo-1548544149-4835e62ee5b3?auto=format&fit=crop&q=80&w=2000'); 
-            background-size: cover; 
-            background-position: center;
-        }
-        .btn-gold {
-            background: linear-gradient(45deg, #c6a75e, #e8c77a);
-            color: #0f172a;
-            transition: all 0.3s ease;
-        }
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(198, 167, 94, 0.3);
-        }
+        :root { --gold: #D4AF37; --deep: #020617; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--deep); color: #f8fafc; scroll-behavior: smooth; overflow-x: hidden; }
+        h1, h2, h3, .luxury { font-family: 'Playfair Display', serif; }
+        .glass-nav { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .gold-text { background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.5s ease; }
+        .card-glass:hover { border-color: var(--gold); background: rgba(255, 255, 255, 0.05); transform: translateY(-10px); }
+        [x-cloak] { display: none !important; }
     </style>
 </head>
-<body>
+<body x-data="careerBot()">
 
-    <header class="w-full pt-16 pb-20 px-6 text-center border-b border-slate-800 hero-bg">
-        <nav class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-xs md:text-sm font-bold uppercase tracking-widest">
-            <a href="#credentials" class="gold hover:text-white transition">Credentials</a>
-            <a href="#skills" class="gold hover:text-white transition">Expertise</a>
-            <a href="#vision" class="gold hover:text-white transition">Vision</a>
-            <a href="#achievements" class="gold hover:text-white transition">Impact</a>
-            <a href="#land" class="gold hover:text-white transition">Land Based</a>
-            <a href="#contact" class="px-4 py-1 border border-gold rounded-full gold hover:bg-gold hover:text-slate-900 transition">Book Now</a>
-        </nav>
-
-        <h1 class="text-4xl md:text-6xl font-bold gold mb-4 tracking-tight">Nigel Anthony Thomas</h1>
-        <p class="text-xl md:text-2xl uppercase tracking-widest text-white mb-4">General Manager</p>
-        <p class="text-slate-400 italic">Global Hospitality & Resort Operations Leader</p>
-        
-        <div class="mt-10 text-slate-300 flex flex-col md:flex-row justify-center items-center gap-4 font-semibold">
-            <span>+91 97693 51231</span> 
-            <span class="hidden md:inline text-slate-600">|</span> 
-            <span>restgenmgr1952@gmail.com</span>
+    <nav class="fixed top-0 w-full z-[100] glass-nav px-8 py-5 flex justify-between items-center">
+        <div class="luxury italic text-2xl gold-text font-bold">NT</div>
+        <div class="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.4em] font-bold text-slate-400">
+            <a href="#credentials" class="hover:text-gold transition">Credentials</a>
+            <a href="#maritime" class="hover:text-gold transition">Sea Based</a>
+            <a href="#land" class="hover:text-gold transition">Land Based</a>
+            <a href="#contact" class="hover:text-gold transition">Contact</a>
         </div>
-    </header>
+        <a href="#contact" class="bg-gradient-to-r from-yellow-700 to-yellow-500 text-slate-900 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Book Consultation</a>
+    </nav>
 
-    <main class="max-w-5xl mx-auto py-16 px-6 space-y-24">
-        
-        <section id="vision">
-            <h2 class="text-2xl font-bold mb-10 gold border-l-4 border-gold pl-4 uppercase tracking-wider">Vision & Strategy</h2>
-            <div class="bg-slate-800/20 p-8 md:p-12 rounded-2xl border border-slate-800 shadow-xl text-center md:text-left">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-2xl font-bold gold mb-6 italic">"High-Tech Meets High-Touch"</h3>
-                        <p class="text-slate-300 leading-relaxed mb-6">
-                            Bridging legacy hospitality standards with the digital frontier to define modern luxury through seamless efficiency and authentic connection.
-                        </p>
-                        <a href="#contact" class="btn-gold px-8 py-3 rounded-full font-bold uppercase text-sm tracking-widest inline-block">Consult With Me</a>
+    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1541336032412-2048a678540d?q=80&w=2000" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10">
+            <h1 class="text-6xl md:text-9xl font-bold mb-4 tracking-tighter gold-text">Nigel Anthony Thomas</h1>
+            <p class="text-xl md:text-3xl font-light tracking-widest text-slate-300">Global Operations & F&B Executive</p>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto py-20 px-10 space-y-40">
+
+        <section id="maritime" class="space-y-16">
+            <div class="border-l-4 border-gold pl-6">
+                <h2 class="text-5xl font-bold uppercase tracking-tighter mb-4">Sea Based <span class="gold-text">Excellence</span></h2>
+                <p class="text-slate-400 text-lg uppercase tracking-widest">Global Maritime Routes | 1992 - 2013</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-glass rounded-[2rem] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1550966842-2849a2233828?q=80&w=1200" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" alt="Ship Dining">
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold gold mb-4 italic luxury">Luxury Dining Operations</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Managing high-volume premium dining rooms under rigorous USPH and brand standards across world-class fleets.</p>
                     </div>
-                    <div class="hidden md:block">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800" alt="Executive Strategy" class="rounded-xl border border-slate-700 shadow-2xl">
+                </div>
+                <div class="card-glass rounded-[2rem] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" alt="Sports Deck">
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold gold mb-4 italic luxury">Sports & Recreation Deck</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Overseeing diverse multinational teams across active recreation zones and global cruise guest activities.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="pt-10">
-            <h2 class="text-2xl font-bold mb-10 gold border-l-4 border-gold pl-4 uppercase tracking-wider">Contact & Consultation</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <p class="text-slate-300 text-lg">
-                        Available for executive leadership roles, operational consulting, and project-based hospitality management across India, the Middle East, and global maritime routes.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-slate-800 rounded-lg gold">📧</span>
-                            <div>
-                                <h4 class="text-xs uppercase text-slate-500 font-bold">Email</h4>
-                                <p class="text-white">restgenmgr1952@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-slate-800 rounded-lg gold">📱</span>
-                            <div>
-                                <h4 class="text-xs uppercase text-slate-500 font-bold">Phone</h4>
-                                <p class="text-white">+91 97693 51231</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-slate-800 rounded-lg gold">📍</span>
-                            <div>
-                                <h4 class="text-xs uppercase text-slate-500 font-bold">Location</h4>
-                                <p class="text-white">Mumbai, India | Open to Relocation</p>
-                            </div>
-                        </div>
+        <section id="land" class="space-y-16">
+            <div class="text-right border-r-4 border-gold pr-6">
+                <h2 class="text-5xl font-bold uppercase tracking-tighter mb-4">Land Based <span class="gold-text">Leadership</span></h2>
+                <p class="text-slate-400 text-lg uppercase tracking-widest">India & Middle East | 2013 - 2025</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-glass rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200" class="w-full h-48 object-cover" alt="Luxury Resort">
+                    <div class="p-6">
+                        <h4 class="gold font-bold mb-2 uppercase text-xs tracking-widest">Resort Operations</h4>
+                        <p class="text-slate-500 text-xs">Oversight of multi-outlet luxury hotel environments.</p>
                     </div>
                 </div>
-
-                <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-700 text-center flex flex-col justify-center">
-                    <h3 class="text-xl font-bold gold mb-4 uppercase">Direct Consultation</h3>
-                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                        Book a 30-minute strategy session to discuss F&B operational optimization, margin improvement frameworks, or multicultural team leadership.
-                    </p>
-                    <a href="mailto:restgenmgr1952@gmail.com?subject=Consultation%20Request" class="btn-gold w-full py-4 rounded-xl font-bold uppercase tracking-widest">
-                        Book Your Consultation
-                    </a>
-                    <p class="mt-4 text-xs text-slate-500 italic">Response time: Usually within 24 hours</p>
+                <div class="card-glass rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200" class="w-full h-48 object-cover" alt="Banquet Hall">
+                    <div class="p-6">
+                        <h4 class="gold font-bold mb-2 uppercase text-xs tracking-widest">Events & Celebrations</h4>
+                        <p class="text-slate-500 text-xs">Managing banquet revenues and large-scale guest celebrations.</p>
+                    </div>
+                </div>
+                <div class="card-glass rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1200" class="w-full h-48 object-cover" alt="Swimming Pool">
+                    <div class="p-6">
+                        <h4 class="gold font-bold mb-2 uppercase text-xs tracking-widest">Wellness & Tennis</h4>
+                        <p class="text-slate-500 text-xs">Directing leisure facilities including pool and courts.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="py-24 px-6 text-center border-t border-slate-800">
-        <h3 class="text-xl gold mb-8 tracking-widest font-bold uppercase">Connect for Opportunities</h3>
-        <div class="flex justify-center gap-10">
-            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="text-slate-400 hover:text-white font-bold transition">LinkedIn</a>
-            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="text-slate-400 hover:text-white font-bold transition">Facebook</a>
+    <div class="fixed bottom-10 right-10 z-[200]">
+        <button @click="chatOpen = !chatOpen" class="w-16 h-16 bg-gold rounded-full shadow-2xl flex items-center justify-center text-slate-900 font-bold hover:scale-110 transition transform">AI</button>
+        <div x-show="chatOpen" x-cloak class="absolute bottom-20 right-0 w-80 glass-nav rounded-2xl border border-slate-800 h-[400px] flex flex-col shadow-2xl">
+            <div class="p-4 border-b border-slate-800 gold text-xs font-bold uppercase tracking-widest">Nigel's Virtual Assistant</div>
+            <div class="flex-1 overflow-y-auto p-4 space-y-3 text-[10px] chat-messages">
+                <template x-for="msg in messages">
+                    <div :class="msg.role === 'bot' ? 'text-left' : 'text-right'">
+                        <div :class="msg.role === 'bot' ? 'bg-slate-800' : 'bg-gold text-slate-900'" class="inline-block px-3 py-2 rounded-xl" x-text="msg.text"></div>
+                    </div>
+                </template>
+            </div>
+            <div class="p-3 border-t border-slate-800 flex gap-2">
+                <input x-model="userInput" @keydown.enter="askAI()" placeholder="Ask about ₹2Cr+ revenues..." class="flex-1 bg-slate-900 border-none rounded-lg p-2 text-[10px] outline-none">
+            </div>
         </div>
-        <p class="mt-12 text-slate-600 text-xs tracking-widest">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
+    </div>
+
+    <footer id="contact" class="py-40 text-center border-t border-slate-900 bg-[#020617]">
+        <h2 class="text-6xl font-bold gold-text mb-12 italic luxury">Elevate Your Operations</h2>
+        <div class="flex flex-col md:flex-row justify-center gap-10 mb-20 text-slate-500 text-[10px] uppercase font-bold tracking-widest">
+            <span>restgenmgr1952@gmail.com</span>
+            <span>+91 97693 51231</span>
+        </div>
+        <a href="https://www.linkedin.com/in/nathomas-hospitality" class="bg-gold text-slate-900 px-12 py-5 rounded-full font-black uppercase tracking-widest hover:scale-110 transition inline-block">LinkedIn Profile</a>
     </footer>
 
+    <script>
+        function careerBot() {
+            return {
+                chatOpen: false, userInput: '',
+                messages: [{role: 'bot', text: 'I am Nigel\'s AI. Ask me about his ₹2Cr monthly revenue management or his maritime leadership.'}],
+                askAI() {
+                    if (!this.userInput) return;
+                    let q = this.userInput.toLowerCase();
+                    this.messages.push({role: 'user', text: this.userInput});
+                    this.userInput = '';
+                    let r = 'I recommend contacting Nigel directly at restgenmgr1952@gmail.com.';
+                    if (q.includes('revenue') || q.includes('budget')) r = 'Nigel manages ₹2Cr+ monthly revenue with 8-10% margin improvements.';
+                    if (q.includes('experience')) r = 'He has 20+ years on international cruise lines and over a decade in land-based leadership.';
+                    setTimeout(() => { this.messages.push({role: 'bot', text: r}); }, 400);
+                }
+            }
+        }
+    </script>
 </body>
 </html>
