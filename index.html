@@ -12,11 +12,13 @@
         .gold-text { background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
         
-        /* LOCKED IMAGE FRAMES - PREVENTS JUMPING */
+        /* LOCKED IMAGE FRAMES - PREVENTS JUMPING/FREEZING */
         .img-frame { width: 100%; height: 350px; overflow: hidden; border-radius: 2rem; background: #111; border: 1px solid rgba(212, 175, 55, 0.3); }
-        .img-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .img-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 0.5s ease; }
+        .img-frame:hover img { transform: scale(1.05); }
         
         @media print {
+            @page { size: A4; margin: 15mm; }
             .no-print { display: none !important; }
             #resume { display: block !important; color: black !important; background: white !important; padding: 0 !important; }
             .gold-text { color: black !important; -webkit-text-fill-color: black !important; background: none !important; }
@@ -36,15 +38,15 @@
             <h2 class="text-4xl font-bold gold-text mb-12 tracking-tighter uppercase">Sea Based Excellence</h2>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="space-y-4 text-center">
-                    <div class="img-frame"><img src="https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Open Deck Pool"></div>
+                    <div class="img-frame"><img src="https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pool"></div>
                     <p class="font-black text-[10px] tracking-[0.3em] text-yellow-500 uppercase">Open Deck Swimming Pool</p>
                 </div>
                 <div class="space-y-4 text-center">
-                    <div class="img-frame"><img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Luxury Ship Dining"></div>
+                    <div class="img-frame"><img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dining"></div>
                     <p class="font-black text-[10px] tracking-[0.3em] text-yellow-500 uppercase">Luxury Ship Dining</p>
                 </div>
                 <div class="space-y-4 text-center">
-                    <div class="img-frame"><img src="https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Ship Galley Kitchen"></div>
+                    <div class="img-frame"><img src="https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Galley"></div>
                     <p class="font-black text-[10px] tracking-[0.3em] text-yellow-500 uppercase">Ship Galley Kitchen</p>
                 </div>
             </div>
@@ -54,16 +56,16 @@
             <h2 class="text-4xl font-bold gold-text mb-12 tracking-tighter text-right uppercase">Land Based Leadership</h2>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="space-y-4 text-center">
-                    <div class="img-frame"><img src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Nanidam Resort"></div>
-                    <p class="font-black text-[10px] tracking-[0.3em] text-yellow-500 uppercase">Nanidam Resort - Bangalore</p>
+                    <div class="img-frame"><img src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Resort"></div>
+                    <p class="font-black text-[10px] tracking-[0.3em] text-yellow-500 uppercase">Le Méridien Abu Dhabi</p>
                 </div>
                 <div class="space-y-4 text-center">
-                    <div class="img-frame"><img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Al Hambra Hotel"></div>
+                    <div class="img-frame"><img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Hotel"></div>
                     <p class="font-black text-[10px] tracking-[0.3em] text-yellow-500 uppercase">Al Hambra Hotel - Baghdad</p>
                 </div>
                 <div class="space-y-4 text-center">
-                    <div class="img-frame"><img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Middle East Luxury"></div>
-                    <p class="font-black text-[10px] tracking-[0.3em] text-yellow-500 uppercase">Middle East 5-Star Portfolio</p>
+                    <div class="img-frame"><img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Ramada"></div>
+                    <p class="font-black text-[10px] tracking-[0.3em] text-yellow-500 uppercase">Ramada Portfolio</p>
                 </div>
             </div>
         </section>
@@ -71,7 +73,6 @@
         <section id="resume" class="card-glass p-12 md:p-20 rounded-[3rem] space-y-16">
             <div class="text-center border-b border-slate-800 pb-12">
                 <h1 class="text-5xl font-bold uppercase tracking-tighter mb-4">Nigel Anthony Thomas</h1>
-                <p class="text-yellow-500 font-bold mb-4">F&B Operations & Hospitality Management Professional</p>
                 <div class="flex flex-wrap justify-center gap-6 text-sm font-bold uppercase tracking-widest text-slate-400">
                     <span>+91 97693 51231</span>
                     <span>restgenmgr1952@gmail.com</span>
@@ -90,54 +91,62 @@
             <div class="space-y-10">
                 <h3 class="text-xl font-black text-yellow-500 uppercase tracking-widest border-l-4 border-yellow-600 pl-4">Professional Experience</h3>
                 
-                <div class="space-y-2 mb-8">
-                    <div class="flex justify-between font-bold text-white">
-                        <span>General Manager – Café/Resort Operations</span>
-                        <span class="text-yellow-600">Jan 2024 – Sep 2025</span>
+                <div class="space-y-8">
+                    <div class="bg-slate-900/30 p-8 rounded-2xl">
+                        <div class="flex justify-between font-bold text-white mb-2">
+                            <span>General Manager – Café/Resort Operations</span>
+                            <span class="text-yellow-600">Jan 2024 – Sep 2025</span>
+                        </div>
+                        <p class="text-xs text-slate-500 uppercase mb-3">Nanidam Resort, Nandi Hills, Bangalore</p>
+                        <p class="text-sm text-slate-400">• Led full operations for café and resort property, driving sales and service standards.</p>
                     </div>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">Nanidam Resort, Nandi Hills, Bangalore</p>
-                    <ul class="text-sm text-slate-400 space-y-2 mt-2">
-                        <li>• Led full operations for café and resort property, driving sales and service standards.</li>
-                        <li>• Oversaw staff training, vendor coordination, and P&L accountability.</li>
-                    </ul>
-                </div>
 
-                <div class="space-y-2 mb-8">
-                    <div class="flex justify-between font-bold text-white">
-                        <span>Director of Operations – The Ofen Bakery-Bistro</span>
-                        <span class="text-yellow-600">Nov 2022 – Jan 2023</span>
+                    <div class="bg-slate-900/30 p-8 rounded-2xl">
+                        <div class="flex justify-between font-bold text-white mb-2">
+                            <span>Director of Operations – The Ofen Bakery-Bistro</span>
+                            <span class="text-yellow-600">Nov 2022 – Jan 2023</span>
+                        </div>
+                        <p class="text-xs text-slate-500 uppercase mb-3">Hyderabad</p>
+                        <p class="text-sm text-slate-400">• Directed day-to-day F&B operations with focus on profitability and customer satisfaction.</p>
                     </div>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">Hyderabad</p>
-                    <p class="text-sm text-slate-400 mt-2">• Directed day-to-day F&B operations with focus on profitability and customer satisfaction.</p>
-                </div>
 
-                <div class="space-y-2">
-                    <div class="flex justify-between font-bold text-white">
-                        <span>Restaurant Operations Manager – KlayWorkZ Barista</span>
-                        <span class="text-yellow-600">Apr 2020 – Oct 2022</span>
+                    <div class="bg-slate-900/30 p-8 rounded-2xl">
+                        <div class="flex justify-between font-bold text-white mb-2">
+                            <span>Restaurant Operations Manager – KlayWorkZ Barista</span>
+                            <span class="text-yellow-600">Apr 2020 – Oct 2022</span>
+                        </div>
+                        <p class="text-xs text-slate-500 uppercase mb-3">Bangalore (Kalyan Nagar & JP Nagar)</p>
+                        <p class="text-sm text-slate-400">• Managed dual locations; implemented SOPs, HACCP plans, and staff training.</p>
                     </div>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">Bangalore</p>
-                    <ul class="text-sm text-slate-400 space-y-2 mt-2">
-                        <li>• Managed dual locations at Kalyan Nagar & JP Nagar.</li>
-                        <li>• Implemented SOPs, HACCP plans, and staff training.</li>
-                    </ul>
+
+                    <div class="bg-slate-900/30 p-8 rounded-2xl">
+                        <div class="flex justify-between font-bold text-white mb-2">
+                            <span>Hospitality Management Roles – Middle East, USA & Maritime</span>
+                            <span class="text-yellow-600">Dec 1993 – Jul 2019</span>
+                        </div>
+                        <ul class="text-sm text-slate-400 space-y-2">
+                            <li>• **Middle East (5 Years):** Leadership at **Le Méridien Abu Dhabi**, **Ramada**, and **Al Hambra Baghdad**.</li>
+                            <li>• **Maritime (20 Years):** Management positions on international cruise ships.</li>
+                            <li>• **USA (6 Years):** Managing restaurants and ensuring strict regulatory compliance.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-16 border-t border-slate-800 pt-12">
                 <div>
                     <h3 class="text-xl font-black text-yellow-500 uppercase tracking-widest mb-6">Core Competencies</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 font-medium">
+                    <ul class="text-sm text-slate-400 space-y-2">
+                        <li>• Restaurant & Resort Operations Management</li>
                         <li>• Budgeting & P&L Analysis</li>
                         <li>• Revenue Growth & Cost Control</li>
-                        <li>• Staff Recruitment & Training</li>
                         <li>• SOP Development & HACCP Compliance</li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-black text-yellow-500 uppercase tracking-widest mb-6">Qualifications</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 font-medium">
-                        <li>• USPH Training - Johnson & Wales University, USA</li>
+                    <ul class="text-sm text-slate-400 space-y-2">
+                        <li>• USPH Training - Johnson & Wales, USA</li>
                         <li>• F&B Management - AH&LAE, USA</li>
                         <li>• ServSafe & FSSAI Certified</li>
                     </ul>
@@ -146,18 +155,14 @@
         </section>
 
         <section id="contact" class="text-center py-20 no-print card-glass rounded-[4rem] p-12">
-            <h2 class="text-5xl font-bold gold-text mb-6 uppercase tracking-tighter">Get In Contact</h2>
-            <p class="text-slate-400 mb-12 max-w-xl mx-auto font-medium">Connect directly via any channel below. All professional inquiries will receive a response within 24 hours.</p>
-            
+            <h2 class="text-5xl font-bold gold-text mb-12 uppercase tracking-tighter">Get In Contact</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <a href="mailto:restgenmgr1952@gmail.com" class="bg-yellow-600 text-black px-6 py-5 rounded-2xl font-black uppercase text-[10px] tracking-widest transition hover:scale-105">
                     Email Me:<br><span class="text-[12px] lowercase font-bold">restgenmgr1952@gmail.com</span>
                 </a>
-                
                 <a href="https://wa.me/919769351231" target="_blank" class="bg-green-600 text-white px-6 py-5 rounded-2xl font-black uppercase text-[10px] tracking-widest transition hover:scale-105">
                     WhatsApp Me:<br><span class="text-[12px] font-bold">+91 97693 51231</span>
                 </a>
-
                 <a href="tel:+919769351231" class="bg-blue-600 text-white px-6 py-5 rounded-2xl font-black uppercase text-[10px] tracking-widest transition hover:scale-105">
                     Call Direct:<br><span class="text-[12px] font-bold">+91 97693 51231</span>
                 </a>
@@ -165,10 +170,6 @@
         </section>
 
     </main>
-
-    <footer class="py-20 text-center text-[10px] text-slate-600 no-print uppercase tracking-[0.5em] font-bold">
-        © 2026 Nigel Anthony Thomas | Mumbai, India
-    </footer>
 
 </body>
 </html>
