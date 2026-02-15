@@ -13,13 +13,13 @@
         h1, h2, h3, .luxury { font-family: 'Playfair Display', serif; }
         .gold-text { background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glass-nav { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
-        .card-glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.5s ease; }
+        .card-glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
         
-        /* ULTIMATE MULTI-PAGE PRINT ENGINE */
+        /* THE ULTIMATE MULTI-PAGE PRINT ENGINE */
         @media print {
             @page { size: A4; margin: 15mm; }
             html, body { height: auto !important; overflow: visible !important; background: white !important; color: black !important; }
-            .no-print, nav, footer, #contact, button { display: none !important; }
+            .no-print, nav, footer, #contact, button, .stats-strip { display: none !important; }
             #resume { 
                 display: block !important; 
                 position: static !important;
@@ -29,13 +29,15 @@
                 padding: 0 !important;
                 margin: 0 !important;
                 border: none !important;
+                box-shadow: none !important;
             }
             .card-glass { border: none !important; background: transparent !important; color: black !important; }
             .gold, .gold-text { color: black !important; -webkit-text-fill-color: black !important; background: none !important; font-weight: bold !important; }
-            h2, h3, h4 { color: black !important; border-bottom: 1.5pt solid #000 !important; page-break-after: avoid; margin-top: 20pt !important; }
-            p, li, span { color: #111 !important; font-size: 11pt !important; line-height: 1.4; }
+            h2, h3, h4 { color: black !important; border-bottom: 2pt solid #000 !important; page-break-after: avoid; margin-top: 25pt !important; padding-bottom: 5pt !important; }
+            p, li, span { color: #111 !important; font-size: 11pt !important; line-height: 1.5 !important; }
             .grid { display: block !important; }
-            .print-header { display: block !important; text-align: center; margin-bottom: 30pt; border-bottom: 3pt solid #000; padding-bottom: 15pt; }
+            .print-header { display: block !important; text-align: center; margin-bottom: 40pt; border-bottom: 4pt solid #000; padding-bottom: 20pt; }
+            .competency-item { border: 1px solid #ddd !important; margin-bottom: 5pt !important; padding: 10pt !important; }
         }
         .print-header { display: none; }
     </style>
@@ -61,38 +63,17 @@
                 <p class="text-slate-500 text-xs tracking-widest uppercase italic">International Maritime Operations | 1992 - 2013 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-glass rounded-[2rem] overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200" class="w-full h-64 object-cover" alt="Cruise Pool Deck">
-                    <div class="p-8 text-center"><h4 class="gold text-[10px] font-black uppercase tracking-widest">Pool Side Decks</h4></div>
+                <div class="card-glass rounded-[2rem] overflow-hidden group border border-slate-800">
+                    <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&q=80&w=1200" class="w-full h-64 object-cover" alt="Cruise Pool Deck">
+                    <div class="p-8 text-center"><h4 class="gold text-[10px] font-black uppercase tracking-widest">Open Deck Swimming Pool</h4></div>
                 </div>
-                <div class="card-glass rounded-[2rem] overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1550966842-2849a2233828?q=80&w=1200" class="w-full h-64 object-cover" alt="Ship Dining Room">
-                    <div class="p-8 text-center"><h4 class="gold text-[10px] font-black uppercase tracking-widest">Luxury Dining Rooms</h4></div>
+                <div class="card-glass rounded-[2rem] overflow-hidden group border border-slate-800">
+                    <img src="https://images.unsplash.com/photo-1550966842-2849a2233828?auto=format&fit=crop&q=80&w=1200" class="w-full h-64 object-cover" alt="Ship Dining Room">
+                    <div class="p-8 text-center"><h4 class="gold text-[10px] font-black uppercase tracking-widest">Ship Dining Rooms</h4></div>
                 </div>
-                <div class="card-glass rounded-[2rem] overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200" class="w-full h-64 object-cover" alt="Ship Kitchen">
+                <div class="card-glass rounded-[2rem] overflow-hidden group border border-slate-800">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=1200" class="w-full h-64 object-cover" alt="Galley Operations">
                     <div class="p-8 text-center"><h4 class="gold text-[10px] font-black uppercase tracking-widest">Culinary & Galley Ops</h4></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="land" class="space-y-12 no-print">
-            <div class="text-right border-r-4 border-gold pr-6">
-                <h2 class="text-4xl font-bold uppercase tracking-tighter mb-2">Land Based <span class="gold-text">Leadership</span></h2>
-                <p class="text-slate-500 text-xs tracking-widest uppercase italic">2013 - 2025 | India & Middle East [cite: 18, 19]</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-glass rounded-[2rem] overflow-hidden group relative h-64">
-                    <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition">
-                    <div class="absolute bottom-6 left-6 gold text-[10px] font-black uppercase bg-black/80 px-3 py-1">Nanidam Resort - Nandi Hills</div>
-                </div>
-                <div class="card-glass rounded-[2rem] overflow-hidden group relative h-64">
-                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition">
-                    <div class="absolute bottom-6 left-6 gold text-[10px] font-black uppercase bg-black/80 px-3 py-1">Al Hambra Hotel - Baghdad</div>
-                </div>
-                <div class="card-glass rounded-[2rem] overflow-hidden group relative h-64">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition">
-                    <div class="absolute bottom-6 left-6 gold text-[10px] font-black uppercase bg-black/80 px-3 py-1">Abu Dhabi Luxury Portfolio</div>
                 </div>
             </div>
         </section>
@@ -100,69 +81,90 @@
         <section id="resume" class="card-glass p-12 rounded-[3rem] border-t-4 border-t-gold space-y-12">
             
             <div class="print-header">
-                <h1 class="text-4xl font-bold uppercase">Nigel Anthony Thomas</h1>
-                <p class="text-xl font-bold italic">Hospitality & F&B Operations Executive</p>
-                <p class="mt-2">+91 97693 51231 | restgenmgr1952@gmail.com | Mumbai, India [cite: 56, 57, 58]</p>
+                <h1 class="text-5xl font-bold uppercase">Nigel Anthony Thomas</h1>
+                <p class="text-2xl font-bold italic mb-4">Executive Hospitality & F&B Operations Leader</p>
+                <div class="text-lg space-y-1">
+                    <p><strong>Location:</strong> Mumbai, India | Open to Pan-India opportunities [cite: 56]</p>
+                    <p><strong>Mobile:</strong> +91 97693 51231 [cite: 57]</p>
+                    <p><strong>Email:</strong> restgenmgr1952@gmail.com [cite: 58]</p>
+                </div>
             </div>
 
             <div class="text-center no-print">
-                <h2 class="text-4xl font-bold gold-text uppercase mb-2">Executive CV</h2>
-                <p class="text-slate-500 text-[10px] tracking-[0.5em] uppercase font-bold">1993 - 2025 Professional History</p>
+                <h2 class="text-4xl font-bold gold-text uppercase mb-2">Executive Resume</h2>
+                <p class="text-slate-500 text-[10px] tracking-[0.5em] uppercase font-bold">Comprehensive Career Portfolio</p>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold gold italic luxury">Professional Summary</h3>
+                <p class="text-slate-300 leading-relaxed text-sm">Seasoned hospitality and F&B operations professional with extensive leadership experience across resorts, restaurants, and international cruise lines[cite: 23]. Expert in driving revenue growth, ensuring compliance with global standards, and committed to operational excellence and team development[cite: 24, 25].</p>
             </div>
 
             <div class="space-y-6">
                 <h3 class="text-xl font-bold gold italic luxury">Core Competencies</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-[10px] font-black uppercase tracking-widest">
-                    <div class="p-3 border border-slate-800 rounded-lg">Restaurant & Resort Ops [cite: 27]</div>
-                    <div class="p-3 border border-slate-800 rounded-lg">Budgeting & P&L Analysis [cite: 28]</div>
-                    <div class="p-3 border border-slate-800 rounded-lg">Revenue & Cost Control [cite: 29]</div>
-                    <div class="p-3 border border-slate-800 rounded-lg">Leadership & Training [cite: 30]</div>
-                    <div class="p-3 border border-slate-800 rounded-lg">Customer Excellence [cite: 31]</div>
-                    <div class="p-3 border border-slate-800 rounded-lg">SOP & HACCP Compliance [cite: 32]</div>
-                    <div class="p-3 border border-slate-800 rounded-lg">Inventory & Vendor Mgmt [cite: 33]</div>
-                    <div class="p-3 border border-slate-800 rounded-lg">Strategic Planning [cite: 34]</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-[10px] uppercase font-black tracking-widest">
+                    <div class="p-3 border border-slate-800 rounded-lg competency-item">Restaurant & Resort Ops [cite: 27]</div>
+                    <div class="p-3 border border-slate-800 rounded-lg competency-item">Budgeting & P&L Analysis [cite: 28]</div>
+                    <div class="p-3 border border-slate-800 rounded-lg competency-item">Revenue & Cost Control [cite: 29]</div>
+                    <div class="p-3 border border-slate-800 rounded-lg competency-item">Staff Leadership [cite: 30]</div>
+                    <div class="p-3 border border-slate-800 rounded-lg competency-item">Customer Experience [cite: 31]</div>
+                    <div class="p-3 border border-slate-800 rounded-lg competency-item">SOP & HACCP Compliance [cite: 32]</div>
+                    <div class="p-3 border border-slate-800 rounded-lg competency-item">Inventory & Vendor Mgmt [cite: 33]</div>
+                    <div class="p-3 border border-slate-800 rounded-lg competency-item">Strategic Planning [cite: 34]</div>
                 </div>
             </div>
 
             <div class="space-y-10">
                 <h3 class="text-xl font-bold gold italic luxury">Professional Experience</h3>
                 
-                <div class="border-l-2 border-gold pl-6">
-                    <h4 class="text-white font-bold text-lg uppercase">General Manager – Café/Resort Operations</h4>
-                    <p class="text-slate-500 text-xs italic">Nanidam Resort, Nandi Hills, Bangalore | Jan 2024 – Sep 2025 [cite: 36]</p>
-                    <ul class="text-[11px] md:text-sm text-slate-400 space-y-1 list-disc ml-5">
+                <div class="border-l-2 border-gold pl-6 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-white font-bold text-lg uppercase">General Manager – Café/Resort Operations</h4>
+                        <span class="gold text-[10px] font-black italic">Jan 2024 – Sep 2025 [cite: 36]</span>
+                    </div>
+                    <p class="text-slate-500 text-xs italic">Nandi Hills, Bangalore [cite: 36]</p>
+                    <ul class="text-[11px] md:text-sm text-slate-400 space-y-2 list-disc ml-5">
                         <li>Led full operations for café and resort property, driving sales and service standards[cite: 37].</li>
                         <li>Oversaw staff training, vendor coordination, and P&L accountability[cite: 38].</li>
-                        <li>Managed multi-outlet revenues exceeding ₹2Cr monthly[cite: 19].</li>
+                        <li>Managed multi-outlet revenues exceeding ₹2Cr monthly in India[cite: 19].</li>
                     </ul>
                 </div>
 
-                <div class="border-l-2 border-slate-800 pl-6">
-                    <h4 class="text-white font-bold text-lg uppercase">Director of Operations</h4>
-                    <p class="text-slate-500 text-xs italic">The Ofen Bakery-Bistro, Hyderabad | Nov 2022 – Jan 2023 [cite: 39]</p>
+                <div class="border-l-2 border-slate-800 pl-6 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-white font-bold text-lg uppercase">Director of Operations</h4>
+                        <span class="gold text-[10px] font-black italic">Nov 2022 – Jan 2023 [cite: 39]</span>
+                    </div>
+                    <p class="text-slate-500 text-xs italic">The Ofen Bakery-Bistro, Hyderabad [cite: 39]</p>
                     <p class="text-slate-400 text-sm">• Directed day-to-day F&B operations with focus on profitability and customer satisfaction[cite: 40].</p>
                 </div>
 
-                <div class="border-l-2 border-slate-800 pl-6">
-                    <h4 class="text-white font-bold text-lg uppercase">Restaurant Operations Manager</h4>
-                    <p class="text-slate-500 text-xs italic">KlayWorkZ Barista, Bangalore | Apr 2020 – Oct 2022 [cite: 41]</p>
+                <div class="border-l-2 border-slate-800 pl-6 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-white font-bold text-lg uppercase">Restaurant Operations Manager</h4>
+                        <span class="gold text-[10px] font-black italic">Apr 2020 – Oct 2022 [cite: 41]</span>
+                    </div>
+                    <p class="text-slate-500 text-xs italic">KlayWorkZ Barista, Bangalore [cite: 41]</p>
                     <p class="text-slate-400 text-sm">• Managed dual locations; implemented SOPs, HACCP plans, and staff training[cite: 42].</p>
                 </div>
 
-                <div class="p-8 bg-slate-950 rounded-2xl border border-slate-800">
-                    <h4 class="gold text-center mb-6 uppercase text-[10px] font-black">Global Management History (1993 - 2019) [cite: 43]</h4>
-                    <div class="grid grid-cols-3 gap-6 text-[10px] text-center">
-                        <div>
-                            <p class="text-white font-bold uppercase">Cruise Ships</p>
-                            <p class="text-slate-500 italic">20 Years [cite: 45]</p>
+                <div class="p-10 bg-slate-950 rounded-[3rem] border border-slate-800 print-header">
+                    <h4 class="gold text-center mb-8 uppercase text-[10px] font-black tracking-widest">Global Leadership History</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                        <div class="space-y-2">
+                            <h5 class="text-white font-bold text-sm uppercase">International Cruise Ships</h5>
+                            <p class="gold text-lg font-black italic">20 Years [cite: 45]</p>
+                            <p class="text-slate-500 text-[10px]">Senior Maritime Hospitality Management.</p>
                         </div>
-                        <div class="border-x border-slate-800">
-                            <p class="text-white font-bold uppercase">USA Ops</p>
-                            <p class="text-slate-500 italic">6 Years [cite: 46]</p>
+                        <div class="border-y md:border-y-0 md:border-x border-slate-800 py-8 md:py-0 space-y-2">
+                            <h5 class="text-white font-bold text-sm uppercase">USA Operations</h5>
+                            <p class="gold text-lg font-black italic">6 Years [cite: 46]</p>
+                            <p class="text-slate-500 text-[10px]">Restaurant Mgmt & Regulatory Compliance[cite: 46].</p>
                         </div>
-                        <div>
-                            <p class="text-white font-bold uppercase">Middle East</p>
-                            <p class="text-slate-500 italic">5 Years [cite: 44]</p>
+                        <div class="space-y-2">
+                            <h5 class="text-white font-bold text-sm uppercase">Middle East Portfolio</h5>
+                            <p class="gold text-lg font-black italic">5 Years [cite: 44]</p>
+                            <p class="text-slate-500 text-[10px]">5-Star Hotel F&B Leadership[cite: 44].</p>
                         </div>
                     </div>
                 </div>
@@ -171,36 +173,38 @@
             <div class="grid md:grid-cols-2 gap-16 pt-10">
                 <div class="space-y-4">
                     <h3 class="text-xl font-bold gold italic luxury">Education & Certifications</h3>
-                    <ul class="text-[11px] text-slate-400 space-y-2 uppercase tracking-widest font-bold">
+                    <ul class="text-xs text-slate-400 space-y-3 uppercase tracking-widest font-bold">
                         <li>• USPH Training - Johnson & Wales University, USA [cite: 51]</li>
                         <li>• F&B Management - AH&LAE, USA [cite: 49]</li>
-                        <li>• ServSafe & FSSAI Food Safety Certifications [cite: 52, 53]</li>
+                        <li>• ServSafe Certification - USA [cite: 53]</li>
+                        <li>• FSSAI Food Safety Seminars - India [cite: 52]</li>
                     </ul>
                 </div>
                 <div class="space-y-4">
                     <h3 class="text-xl font-bold gold italic luxury">Additional Information</h3>
-                    <p class="text-sm text-slate-300 italic">English (Fluent), Hindi (Intermediate), Tamil, Kannada [cite: 55]</p>
-                    <p class="text-sm text-white font-black uppercase">Mumbai Based | Pan-India Ready [cite: 56]</p>
+                    <p class="text-sm text-slate-300 italic">**Languages:** English (Fluent), Hindi (Intermediate), Tamil, Kannada [cite: 55]</p>
+                    <p class="text-sm text-white font-black uppercase tracking-tighter">Availability: Mumbai Based | Pan-India Ready [cite: 56]</p>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="max-w-4xl mx-auto card-glass p-16 rounded-[4rem] text-center no-print shadow-2xl">
-            <h2 class="text-4xl font-bold gold-text uppercase mb-4">Open to Job Offers [cite: 25]</h2>
+            <h2 class="text-4xl font-bold gold-text uppercase mb-4">OPEN TO JOB OFFERS</h2>
+            <p class="text-slate-500 text-[10px] tracking-[0.4em] uppercase font-bold mb-10 italic">Your Details | I will contact you shortly</p>
             <form action="mailto:restgenmgr1952@gmail.com?subject=Job%20Offer%20for%20Nigel%20Thomas" method="post" enctype="text/plain" class="space-y-6">
                 <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" name="Company" placeholder="Recruiter / Company" required class="bg-slate-900/50 border border-slate-800 w-full px-6 py-4 rounded-xl text-sm">
-                    <input type="tel" name="Phone" placeholder="Your Number" required class="bg-slate-900/50 border border-slate-800 w-full px-6 py-4 rounded-xl text-sm">
+                    <input type="text" name="Company" placeholder="Recruiter / Company" required class="bg-slate-900/50 border border-slate-800 w-full px-6 py-4 rounded-xl text-sm outline-none focus:border-gold transition">
+                    <input type="tel" name="Phone" placeholder="Cell Number" required class="bg-slate-900/50 border border-slate-800 w-full px-6 py-4 rounded-xl text-sm outline-none focus:border-gold transition">
                 </div>
-                <input type="email" name="Email" placeholder="Official Email" required class="bg-slate-900/50 border border-slate-800 w-full px-6 py-4 rounded-xl text-sm">
-                <button type="submit" class="w-full bg-gradient-to-r from-yellow-700 to-yellow-500 text-slate-900 py-5 rounded-xl font-black uppercase tracking-widest transition">Send Proposal</button>
+                <input type="email" name="Email" placeholder="Official Email" required class="bg-slate-900/50 border border-slate-800 w-full px-6 py-4 rounded-xl text-sm outline-none focus:border-gold transition">
+                <button type="submit" class="w-full bg-gradient-to-r from-yellow-700 to-yellow-500 text-slate-900 py-5 rounded-xl font-black uppercase tracking-[0.3em] shadow-lg transform active:scale-95 transition">Send Proposal</button>
             </form>
         </section>
 
     </main>
 
     <footer class="py-20 text-center border-t border-slate-900 no-print">
-        <p class="text-[9px] text-slate-700 tracking-[0.8em] uppercase font-black italic">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
+        <p class="text-[9px] text-slate-700 tracking-[0.8em] uppercase font-black italic">© 2026 Nigel Anthony Thomas | Executive Operations Leader</p>
     </footer>
 
 </body>
