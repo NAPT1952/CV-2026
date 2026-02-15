@@ -1,49 +1,113 @@
-<body x-data="{ 
-    chatOpen: false, 
-    userInput: '', 
-    messages: [{role: 'bot', text: 'Hello! I am Nigel\'s AI assistant. Ask me about his 20+ years of experience, budget management, or his AI automation projects.'}],
-    async askAI() {
-        if (!this.userInput) return;
-        let q = this.userInput.toLowerCase();
-        this.messages.push({role: 'user', text: this.userInput});
-        this.userInput = '';
-        
-        let reply = 'I don\'t have a specific answer for that. Please contact Nigel directly at restgenmgr1952@gmail.com for more details.';
-        
-        // Career & Experience Logic
-        if (q.includes('experience') || q.includes('years')) {
-            reply = 'Nigel has over 20 years of global hospitality experience, specializing in senior operations across the USA, Middle East, and India.';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel Anthony Thomas | Executive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; scroll-behavior: smooth; }
+        .gold { color: #d4af37; }
+        .hero-bg { 
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('background.jpg'); 
+            background-size: cover; 
+            background-position: center;
         }
-        else if (q.includes('relocate') || q.includes('mumbai')) {
-            reply = 'He is a resident of Mumbai but is fully open to relocation for global leadership opportunities.';
-        }
-        else if (q.includes('maritime') || q.includes('cruise')) {
-            reply = 'His maritime career spans 20+ years on major cruise lines, including Holland America, Carnival, and Royal Caribbean.';
-        }
+    </style>
+</head>
+<body>
 
-        // Budget & Financial Logic
-        else if (q.includes('budget') || q.includes('revenue') || q.includes('money') || q.includes('cost')) {
-            reply = 'Nigel manages annual budgets and outlet revenues exceeding ₹2Cr monthly in India, or approximately $250,000 USD. He consistently achieves 8-10% margin improvements.';
-        }
+    <header class="w-full pt-16 pb-20 px-6 text-center border-b border-slate-800 hero-bg">
+        <nav class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12 text-xs md:text-sm font-bold uppercase tracking-widest">
+            <a href="#credentials" class="gold hover:text-white transition">Credentials</a>
+            <a href="#maritime" class="gold hover:text-white transition">Sea Based</a>
+            <a href="#land" class="gold hover:text-white transition">Land Based</a>
+            <a href="#contact" class="gold hover:text-white transition">Contact</a>
+        </nav>
 
-        // AI & Automation Logic
-        else if (q.includes('n8n') || q.includes('automation') || q.includes('ai') || q.includes('joblynk')) {
-            reply = 'Nigel is highly skilled in AI automation. He has built a local n8n instance using Docker for job search agents and developed the JobLynk.live domain for automated career services.';
-        }
-        else if (q.includes('tech') || q.includes('software')) {
-            reply = 'Beyond hospitality, Nigel is an expert in leveraging AI for professional tasks, including building hotel management apps and autonomous agents like OpenClaw.';
-        }
-
-        // Skills & Certificates
-        else if (q.includes('skill') || q.includes('expert')) {
-            reply = 'His strategic expertise includes Global Team Leadership (98%), Budget Management (95%), and USPH Compliance (100%).';
-        }
+        <h1 class="text-4xl md:text-6xl font-bold gold mb-4">Nigel Anthony Thomas</h1>
+        <p class="text-xl md:text-2xl uppercase tracking-widest text-white mb-4">General Manager</p>
+        <p class="text-slate-400 italic">Global Hospitality & Resort Operations Leader</p>
         
-        setTimeout(() => { 
-            this.messages.push({role: 'bot', text: reply}); 
-            // Auto-scroll logic
-            const chatContainer = document.querySelector('.chat-messages');
-            if(chatContainer) chatContainer.scrollTop = chatContainer.scrollHeight;
-        }, 400);
-    }
-}">
+        <div class="mt-10 text-slate-300 flex flex-col md:flex-row justify-center items-center gap-4 font-semibold">
+            <span>+91 97693 51231</span> 
+            <span class="hidden md:inline">|</span> 
+            <span>restgenmgr1952@gmail.com</span>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto py-16 px-6 space-y-20">
+        
+        <section id="credentials">
+            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Verified Credentials</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
+                    <h3 class="font-bold text-lg gold">Certified Hospitality Supervisor</h3>
+                    <p class="text-sm text-slate-400">AHLEI</p>
+                </div>
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
+                    <h3 class="font-bold text-lg gold">F&B Management</h3>
+                    <p class="text-sm text-slate-400">AHLEI</p>
+                </div>
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
+                    <h3 class="font-bold text-lg gold">F&B Cost Controls</h3>
+                    <p class="text-sm text-slate-400">AHLEI</p>
+                </div>
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
+                    <h3 class="font-bold text-lg gold">ServSafe Food Manager</h3>
+                    <p class="text-sm text-slate-400">ANSI Accredited</p>
+                </div>
+                <div class="p-6 bg-slate-800/40 rounded-xl border border-slate-700 hover:border-yellow-600 transition">
+                    <h3 class="font-bold text-lg gold">Vessel Sanitation (USPH)</h3>
+                    <p class="text-sm text-slate-400">Nova Southeastern University</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="maritime">
+            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Sea Based Operations (1992-2013)</h2>
+            <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-800/40">
+                <img src="ship.jpg" alt="Maritime Operations" class="w-full h-80 object-cover">
+                <div class="p-8">
+                    <p class="text-lg text-slate-300 leading-relaxed mb-4 font-bold uppercase tracking-wide">USA | Bahamas | Global Routes</p>
+                    <p class="text-slate-300 mb-6">Senior hospitality operations roles onboard international fleets including <strong>Holland America, Carnival, and Royal Caribbean</strong>.</p>
+                    <ul class="text-slate-400 space-y-3 text-sm">
+                        <li>• Operated under USPH, ServSafe, and international maritime compliance standards.</li>
+                        <li>• Participated in dry dock refurbishments and ship pre-openings.</li>
+                        <li>• Managed high-volume guest operations with strict service timelines.</li>
+                        <li>• Led diverse multinational teams while maintaining brand consistency.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="land">
+            <h2 class="text-2xl font-bold mb-8 gold border-l-4 border-gold pl-4 uppercase">Land Based Operations (2013-2025)</h2>
+            <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-800/40">
+                <img src="resort.jpg" alt="Land Based Hospitality" class="w-full h-80 object-cover">
+                <div class="p-8">
+                    <p class="text-lg text-slate-300 leading-relaxed mb-4 font-bold uppercase tracking-wide">India & Middle East</p>
+                    <p class="text-slate-300 mb-6">Oversaw multi-outlet F&B operations including restaurants, bars, banquets, and cafés.</p>
+                    <ul class="text-slate-400 space-y-3 text-sm">
+                        <li>• Managed annual budgets & outlet revenues exceeding ₹2Cr (India pm) / $250,000 pm.</li>
+                        <li>• Implemented cost-control frameworks achieving 8–10% margin improvement.</li>
+                        <li>• Led recruitment, onboarding, and training of multicultural teams.</li>
+                        <li>• Ensured compliance with brand standards, audits, and food safety regulations.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="py-20 px-6 text-center border-t border-slate-800">
+        <h3 class="text-xl gold mb-8">Connect for Opportunities</h3>
+        <div class="flex justify-center gap-8 text-slate-400 font-bold">
+            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="hover:text-white underline decoration-gold underline-offset-4">LinkedIn Profile</a>
+            <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="hover:text-white underline decoration-gold underline-offset-4">Facebook Page</a>
+        </div>
+        <p class="mt-10 text-slate-600 text-sm">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
+    </footer>
+
+</body>
+</html>
