@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigel Anthony Thomas | World-Class Executive Portfolio</title>
+    <title>Nigel Anthony Thomas | World-Class Executive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -11,10 +11,11 @@
         :root { --gold: #D4AF37; --deep: #020617; }
         body { font-family: 'Inter', sans-serif; background-color: var(--deep); color: #f8fafc; scroll-behavior: smooth; overflow-x: hidden; }
         h1, h2, h3, .luxury { font-family: 'Playfair Display', serif; }
-        .glass-nav { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .glass-nav { background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
         .gold-text { background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.5s ease; }
-        .card-glass:hover { border-color: var(--gold); background: rgba(255, 255, 255, 0.05); transform: translateY(-10px); }
+        .card-glass:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .input-glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); color: white; }
         [x-cloak] { display: none !important; }
     </style>
 </head>
@@ -23,122 +24,140 @@
     <nav class="fixed top-0 w-full z-[100] glass-nav px-8 py-5 flex justify-between items-center">
         <div class="luxury italic text-2xl gold-text font-bold">NT</div>
         <div class="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.4em] font-bold text-slate-400">
-            <a href="#credentials" class="hover:text-gold transition">Credentials</a>
-            <a href="#maritime" class="hover:text-gold transition">Sea Based</a>
+            <a href="#maritime" class="hover:text-gold transition">Maritime</a>
             <a href="#land" class="hover:text-gold transition">Land Based</a>
-            <a href="#contact" class="hover:text-gold transition">Contact</a>
+            <a href="#contact" class="hover:text-gold transition">Connect</a>
         </div>
-        <a href="#contact" class="bg-gradient-to-r from-yellow-700 to-yellow-500 text-slate-900 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Book Consultation</a>
+        <a href="#contact" class="bg-gradient-to-r from-yellow-700 to-yellow-500 text-slate-900 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Inquire Now</a>
     </nav>
 
-    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+    <section class="h-[60vh] flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
         <div class="absolute inset-0 opacity-30">
             <img src="https://images.unsplash.com/photo-1541336032412-2048a678540d?q=80&w=2000" class="w-full h-full object-cover">
         </div>
         <div class="relative z-10">
-            <h1 class="text-6xl md:text-9xl font-bold mb-4 tracking-tighter gold-text">Nigel Anthony Thomas</h1>
-            <p class="text-xl md:text-3xl font-light tracking-widest text-slate-300">Global Operations & F&B Executive</p>
+            <span class="gold-text uppercase tracking-[0.5em] text-[10px] font-black mb-4 block">Global Operations Leadership</span>
+            <h1 class="text-5xl md:text-8xl font-bold mb-4 tracking-tighter gold-text">Nigel Anthony Thomas</h1>
+            <p class="text-lg md:text-2xl font-light tracking-[0.2em] text-slate-300 uppercase">Hospitality & F&B Executive</p>
         </div>
     </section>
 
     <main class="max-w-7xl mx-auto py-20 px-10 space-y-40">
 
-        <section id="maritime" class="space-y-16">
+        <section id="maritime" class="space-y-12">
             <div class="border-l-4 border-gold pl-6">
-                <h2 class="text-5xl font-bold uppercase tracking-tighter mb-4">Sea Based <span class="gold-text">Excellence</span></h2>
-                <p class="text-slate-400 text-lg uppercase tracking-widest">Global Maritime Routes | 1992 - 2013</p>
+                <h2 class="text-4xl font-bold uppercase tracking-tighter mb-2">Sea Based <span class="gold-text">Excellence</span></h2>
+                <p class="text-slate-500 text-xs tracking-widest uppercase">Global Routes (1992 - 2013)</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="card-glass rounded-[2rem] overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1550966842-2849a2233828?q=80&w=1200" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" alt="Ship Dining">
-                    <div class="p-10">
-                        <h3 class="text-2xl font-bold gold mb-4 italic luxury">Luxury Dining Operations</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Managing high-volume premium dining rooms under rigorous USPH and brand standards across world-class fleets.</p>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-glass rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1599640846395-829d003366c8?q=80&w=1200" class="w-full h-48 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="p-6"><h4 class="gold text-xs font-bold uppercase tracking-widest">Pool & Sports Decks</h4></div>
                 </div>
-                <div class="card-glass rounded-[2rem] overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" alt="Sports Deck">
-                    <div class="p-10">
-                        <h3 class="text-2xl font-bold gold mb-4 italic luxury">Sports & Recreation Deck</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Overseeing diverse multinational teams across active recreation zones and global cruise guest activities.</p>
-                    </div>
+                <div class="card-glass rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1550966842-2849a2233828?q=80&w=1200" class="w-full h-48 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="p-6"><h4 class="gold text-xs font-bold uppercase tracking-widest">Main Dining Rooms</h4></div>
+                </div>
+                <div class="card-glass rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200" class="w-full h-48 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="p-6"><h4 class="gold text-xs font-bold uppercase tracking-widest">Galley Operations & Culinary Teams</h4></div>
                 </div>
             </div>
         </section>
 
-        <section id="land" class="space-y-16">
+        <section id="land" class="space-y-12">
             <div class="text-right border-r-4 border-gold pr-6">
-                <h2 class="text-5xl font-bold uppercase tracking-tighter mb-4">Land Based <span class="gold-text">Leadership</span></h2>
-                <p class="text-slate-400 text-lg uppercase tracking-widest">India & Middle East | 2013 - 2025</p>
+                <h2 class="text-4xl font-bold uppercase tracking-tighter mb-2">Land Based <span class="gold-text">Leadership</span></h2>
+                <p class="text-slate-500 text-xs tracking-widest uppercase">India & Middle East (2013 - 2025)</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="card-glass rounded-3xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200" class="w-full h-48 object-cover" alt="Luxury Resort">
-                    <div class="p-6">
-                        <h4 class="gold font-bold mb-2 uppercase text-xs tracking-widest">Resort Operations</h4>
-                        <p class="text-slate-500 text-xs">Oversight of multi-outlet luxury hotel environments.</p>
+                <div class="card-glass rounded-2xl overflow-hidden group">
+                    <div class="h-48 bg-slate-800 relative">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-4 left-4 text-xs font-black bg-black/60 px-2 py-1 gold uppercase">Le Méridien Abu Dhabi</div>
                     </div>
                 </div>
-                <div class="card-glass rounded-3xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200" class="w-full h-48 object-cover" alt="Banquet Hall">
-                    <div class="p-6">
-                        <h4 class="gold font-bold mb-2 uppercase text-xs tracking-widest">Events & Celebrations</h4>
-                        <p class="text-slate-500 text-xs">Managing banquet revenues and large-scale guest celebrations.</p>
+                <div class="card-glass rounded-2xl overflow-hidden group">
+                    <div class="h-48 bg-slate-800 relative">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-4 left-4 text-xs font-black bg-black/60 px-2 py-1 gold uppercase">Ramada Abu Dhabi</div>
                     </div>
                 </div>
-                <div class="card-glass rounded-3xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1200" class="w-full h-48 object-cover" alt="Swimming Pool">
-                    <div class="p-6">
-                        <h4 class="gold font-bold mb-2 uppercase text-xs tracking-widest">Wellness & Tennis</h4>
-                        <p class="text-slate-500 text-xs">Directing leisure facilities including pool and courts.</p>
+                <div class="card-glass rounded-2xl overflow-hidden group">
+                    <div class="h-48 bg-slate-800 relative">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-4 left-4 text-xs font-black bg-black/60 px-2 py-1 gold uppercase">Nandini Resort - Nandi Hills</div>
                     </div>
+                </div>
+                <div class="card-glass rounded-2xl overflow-hidden group">
+                    <div class="h-48 bg-slate-800 relative">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute bottom-4 left-4 text-xs font-black bg-black/60 px-2 py-1 gold uppercase">Al Hamra - Baghdad</div>
+                    </div>
+                </div>
+                <div class="card-glass rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center text-xs gold uppercase font-bold tracking-widest">Events & Large Scale Celebrations</div>
                 </div>
             </div>
+        </section>
+
+        <section id="contact" class="max-w-3xl mx-auto card-glass p-12 rounded-[3rem] shadow-2xl">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold gold-text uppercase mb-2">Connect for Opportunities</h2>
+                <p class="text-slate-500 text-[10px] tracking-widest uppercase">Your details | I will contact you</p>
+            </div>
+            
+            <form action="mailto:restgenmgr1952@gmail.com" method="post" enctype="text/plain" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Full Name" required class="input-glass w-full px-6 py-4 rounded-xl text-sm">
+                    <input type="tel" name="phone" placeholder="Cell Number" required class="input-glass w-full px-6 py-4 rounded-xl text-sm">
+                </div>
+                <input type="email" name="email" placeholder="Email Address" required class="input-glass w-full px-6 py-4 rounded-xl text-sm">
+                
+                <button type="submit" class="w-full bg-gradient-to-r from-yellow-700 to-yellow-500 text-slate-900 py-4 rounded-xl font-black uppercase tracking-[0.2em] shadow-lg hover:scale-105 transition transform">
+                    Send Details
+                </button>
+            </form>
         </section>
 
     </main>
 
-    <div class="fixed bottom-10 right-10 z-[200]">
-        <button @click="chatOpen = !chatOpen" class="w-16 h-16 bg-gold rounded-full shadow-2xl flex items-center justify-center text-slate-900 font-bold hover:scale-110 transition transform">AI</button>
-        <div x-show="chatOpen" x-cloak class="absolute bottom-20 right-0 w-80 glass-nav rounded-2xl border border-slate-800 h-[400px] flex flex-col shadow-2xl">
-            <div class="p-4 border-b border-slate-800 gold text-xs font-bold uppercase tracking-widest">Nigel's Virtual Assistant</div>
+    <footer class="py-10 text-center border-t border-slate-900">
+        <p class="text-[9px] text-slate-600 tracking-[0.4em] uppercase">© 2026 Nigel Anthony Thomas | Executive Portfolio</p>
+    </footer>
+
+    <div class="fixed bottom-8 right-8 z-[200]">
+        <button @click="chatOpen = !chatOpen" class="w-14 h-14 bg-gold rounded-full shadow-2xl flex items-center justify-center text-slate-900 font-black text-xs transition active:scale-95">AI</button>
+        <div x-show="chatOpen" x-cloak class="absolute bottom-20 right-0 w-72 glass-nav rounded-2xl border border-slate-800 h-[350px] flex flex-col shadow-2xl">
+            <div class="p-3 border-b border-slate-800 gold text-[10px] font-black uppercase">Executive Assistant</div>
             <div class="flex-1 overflow-y-auto p-4 space-y-3 text-[10px] chat-messages">
                 <template x-for="msg in messages">
                     <div :class="msg.role === 'bot' ? 'text-left' : 'text-right'">
-                        <div :class="msg.role === 'bot' ? 'bg-slate-800' : 'bg-gold text-slate-900'" class="inline-block px-3 py-2 rounded-xl" x-text="msg.text"></div>
+                        <div :class="msg.role === 'bot' ? 'bg-slate-800' : 'bg-gold text-slate-900'" class="inline-block px-3 py-2 rounded-lg" x-text="msg.text"></div>
                     </div>
                 </template>
             </div>
-            <div class="p-3 border-t border-slate-800 flex gap-2">
-                <input x-model="userInput" @keydown.enter="askAI()" placeholder="Ask about ₹2Cr+ revenues..." class="flex-1 bg-slate-900 border-none rounded-lg p-2 text-[10px] outline-none">
+            <div class="p-2 border-t border-slate-800">
+                <input x-model="userInput" @keydown.enter="askAI()" placeholder="Ask about ₹2Cr+ revenues..." class="w-full bg-slate-900 border-none rounded p-2 text-[9px] outline-none">
             </div>
         </div>
     </div>
-
-    <footer id="contact" class="py-40 text-center border-t border-slate-900 bg-[#020617]">
-        <h2 class="text-6xl font-bold gold-text mb-12 italic luxury">Elevate Your Operations</h2>
-        <div class="flex flex-col md:flex-row justify-center gap-10 mb-20 text-slate-500 text-[10px] uppercase font-bold tracking-widest">
-            <span>restgenmgr1952@gmail.com</span>
-            <span>+91 97693 51231</span>
-        </div>
-        <a href="https://www.linkedin.com/in/nathomas-hospitality" class="bg-gold text-slate-900 px-12 py-5 rounded-full font-black uppercase tracking-widest hover:scale-110 transition inline-block">LinkedIn Profile</a>
-    </footer>
 
     <script>
         function careerBot() {
             return {
                 chatOpen: false, userInput: '',
-                messages: [{role: 'bot', text: 'I am Nigel\'s AI. Ask me about his ₹2Cr monthly revenue management or his maritime leadership.'}],
+                messages: [{role: 'bot', text: 'I can answer questions regarding Nigel\'s ₹2Cr+ revenue management or his Middle East leadership.'}],
                 askAI() {
                     if (!this.userInput) return;
                     let q = this.userInput.toLowerCase();
                     this.messages.push({role: 'user', text: this.userInput});
                     this.userInput = '';
-                    let r = 'I recommend contacting Nigel directly at restgenmgr1952@gmail.com.';
-                    if (q.includes('revenue') || q.includes('budget')) r = 'Nigel manages ₹2Cr+ monthly revenue with 8-10% margin improvements.';
-                    if (q.includes('experience')) r = 'He has 20+ years on international cruise lines and over a decade in land-based leadership.';
+                    let r = 'Please use the contact form for specific inquiries.';
+                    if (q.includes('revenue')) r = 'Nigel manages ₹2Cr+ monthly revenue with 8-10% margin improvements.';
                     setTimeout(() => { this.messages.push({role: 'bot', text: r}); }, 400);
                 }
             }
