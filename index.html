@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV-2026 | Professional Portfolio</title>
+    <title>CV-2026 | Nigel Anthony Thomas Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -21,7 +21,7 @@
             overflow-x: hidden;
         }
 
-        /* Top Introduction Header */
+        /* Header */
         .intro-header {
             background: rgba(0,0,0,0.9);
             padding: 60px 20px;
@@ -29,23 +29,10 @@
             text-align: center;
         }
 
-        .intro-header h1 {
-            color: #d4af37;
-            text-transform: uppercase;
-            letter-spacing: 8px;
-            margin: 0;
-            font-size: 3rem;
-        }
+        .intro-header h1 { color: #d4af37; text-transform: uppercase; letter-spacing: 8px; margin: 0; font-size: 3rem; }
+        .intro-header p { max-width: 850px; margin: 25px auto; line-height: 1.8; font-size: 1.2rem; color: #ddd; }
 
-        .intro-header p {
-            max-width: 850px;
-            margin: 25px auto;
-            line-height: 1.8;
-            font-size: 1.2rem;
-            color: #ddd;
-        }
-
-        /* The Main Gallery Wall */
+        /* Wall */
         .wall {
             background-color: #8d6e63; 
             background-image: 
@@ -67,208 +54,105 @@
             border: 1px solid #d4af37;
         }
 
-        /* Professional Info Cards */
-        .flex-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
+        /* Competencies & Testimonials */
         .info-card {
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.7);
             border: 1px solid #d4af37;
-            border-radius: 12px;
-            padding: 30px;
-            width: 100%;
-            max-width: 450px;
-            text-align: left;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        }
-
-        .info-card h3 { color: #d4af37; border-bottom: 1px solid #5d4037; padding-bottom: 10px; }
-        .info-card ul { list-style: none; padding: 0; line-height: 2; }
-        .info-card ul li::before { content: "• "; color: #d4af37; font-weight: bold; }
-
-        /* Gallery Frames */
-        .gallery-frame {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 15px;
-            background-color: #fff;
-            border: 12px solid var(--wood-dark); 
-            box-shadow: 10px 20px 40px rgba(0,0,0,0.8);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-        }
-
-        .gallery-frame:hover { transform: scale(1.08) translateY(-10px); z-index: 5; }
-        .gallery-frame img { width: 260px; height: 190px; object-fit: cover; border: 1px solid #ddd; }
-
-        .nameplate {
-            background: var(--brass);
-            color: #3e2723;
-            font-family: 'Times New Roman', serif;
-            font-weight: bold;
-            font-size: 0.85rem;
-            padding: 5px 15px;
-            margin-top: 15px;
-            border: 1px solid #8b6d05;
-            letter-spacing: 1px;
-        }
-
-        /* Interactive Buttons */
-        .btn {
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #3e2723;
-            background: var(--brass);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-            transition: 0.3s;
-            border: none;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .btn:hover { transform: translateY(-3px) scale(1.05); filter: brightness(1.1); }
-
-        .whatsapp-float {
-            position: fixed;
-            width: 65px; height: 65px;
-            bottom: 40px; left: 40px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 35px;
-            box-shadow: 2px 5px 15px rgba(0,0,0,0.5);
-            z-index: 1000;
-            text-decoration: none;
-        }
-
-        /* Footer Section */
-        .footer-area {
-            background: #1a1a1a;
-            padding: 60px 20px;
-            border-top: 3px solid #d4af37;
-        }
-
-        .guestbook {
-            max-width: 550px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.05);
-            padding: 40px;
             border-radius: 15px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .guestbook input, .guestbook textarea {
-            width: 100%; padding: 15px; margin: 10px 0;
-            border-radius: 8px; border: 1px solid #444;
-            background: #2d2d2d; color: white; box-sizing: border-box;
+        .skill-bar-bg { background: #444; border-radius: 10px; height: 12px; margin-bottom: 20px; overflow: hidden; }
+        .skill-fill { height: 100%; background: var(--brass); border-radius: 10px; }
+        .skill-label { display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: bold; color: #d4af37; }
+
+        .quote { font-style: italic; color: #eee; border-left: 4px solid #d4af37; padding-left: 15px; margin-bottom: 10px; }
+        .author { color: #d4af37; font-weight: bold; text-align: right; display: block; }
+
+        /* Gallery */
+        .gallery-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; padding: 20px 0; }
+        .gallery-frame {
+            display: flex; flex-direction: column; align-items: center; padding: 15px; background-color: #fff;
+            border: 12px solid var(--wood-dark); box-shadow: 10px 20px 40px rgba(0,0,0,0.8);
+            transition: transform 0.4s ease; cursor: pointer;
+        }
+        .gallery-frame:hover { transform: scale(1.08) translateY(-10px); }
+        .gallery-frame img { width: 260px; height: 190px; object-fit: cover; border: 1px solid #ddd; }
+        
+        .nameplate {
+            background: var(--brass); color: #3e2723; font-family: 'Times New Roman', serif;
+            font-weight: bold; font-size: 0.85rem; padding: 5px 15px; margin-top: 15px;
+            border: 1px solid #8b6d05; letter-spacing: 1px; text-transform: uppercase;
         }
 
-        /* Modal Zoom */
-        #modal {
-            display: none; position: fixed; z-index: 2000;
-            left: 0; top: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.98);
-            justify-content: center; align-items: center;
-        }
-        #modal-img { max-width: 90%; max-height: 90%; border: 10px solid white; box-shadow: 0 0 50px black; }
-        #close-btn { position: absolute; top: 25px; right: 40px; color: white; font-size: 60px; cursor: pointer; }
+        /* Buttons */
+        .btn { padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; color: #3e2723; background: var(--brass); transition: 0.3s; border: none; display: inline-block; cursor: pointer; }
+        .btn:hover { transform: translateY(-3px); filter: brightness(1.1); }
+        .whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 40px; left: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; text-decoration: none; box-shadow: 2px 5px 15px rgba(0,0,0,0.5); }
+
+        #modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); justify-content: center; align-items: center; }
+        #modal-img { max-width: 90%; max-height: 90%; border: 10px solid white; }
     </style>
 </head>
 <body>
 
 <header class="intro-header">
     <h1>CV-2026</h1>
-    <p>
-        Dynamic Hospitality Leader with 20+ years of global experience directing luxury resort and cruise operations. 
-        Specialist in P&L management, high-volume F&B, and AI adaptation.
-    </p>
-    <div style="margin-top: 30px;">
-        <a href="resume.pdf" download class="btn">
-            <i class="fas fa-file-download"></i> DOWNLOAD MY CV
-        </a>
-    </div>
+    <p>Dynamic Hospitality Leader with 20+ years of global experience. Specialist in luxury resort operations, high-volume F&B, and bridging world-class service with AI automation.</p>
+    <a href="resume.pdf" download class="btn"><i class="fas fa-file-download"></i> DOWNLOAD MY CV</a>
 </header>
 
 <div class="wall" id="galleryWall">
     
-    <h2 class="section-title">Professional Background</h2>
-    <div class="flex-row">
-        <div class="info-card">
-            <h3><i class="fas fa-history"></i> Experience</h3>
-            <ul>
-                <li><strong>General Manager</strong> | Nanidam Resort (2024-25)</li>
-                <li><strong>Operations Director</strong> | Ofen Bistro (2022-23)</li>
-                <li><strong>Management</strong> | Luxury Cruise Lines (20 Years)</li>
-            </ul>
-        </div>
-        <div class="info-card">
-            <h3><i class="fas fa-award"></i> Skills & Certs</h3>
-            <ul>
-                <li>F&B Management (AH&LAE, USA)</li>
-                <li>AI Integration & Automation Specialist</li>
-                <li>Team Building & Resource Optimization</li>
-            </ul>
-        </div>
+    <h2 class="section-title">Core Competencies</h2>
+    <div class="info-card">
+        <div class="skill-label"><span>Hospitality Leadership & Strategy</span><span>95%</span></div>
+        <div class="skill-bar-bg"><div class="skill-fill" style="width: 95%;"></div></div>
+        
+        <div class="skill-label"><span>P&L & Financial Management</span><span>90%</span></div>
+        <div class="skill-bar-bg"><div class="skill-fill" style="width: 90%;"></div></div>
+        
+        <div class="skill-label"><span>AI-IQ & Digital Transformation</span><span>85%</span></div>
+        <div class="skill-bar-bg"><div class="skill-fill" style="width: 85%;"></div></div>
     </div>
 
     <h2 class="section-title">Land Collection</h2>
     <div class="gallery-container">
-        <div class="gallery-frame" onclick="openModal('land1.jpg')"><img src="land1.jpg"><div class="nameplate">The Great Outdoors</div></div>
-        <div class="gallery-frame" onclick="openModal('land2.jpg')"><img src="land2.jpg"><div class="nameplate">Mountain Vista</div></div>
-        <div class="gallery-frame" onclick="openModal('land3.jpg')"><img src="land3.jpg"><div class="nameplate">Rustic Trails</div></div>
+        <div class="gallery-frame" onclick="openModal('land1.jpg')"><img src="land1.jpg"><div class="nameplate">Palm Beach</div></div>
+        <div class="gallery-frame" onclick="openModal('land2.jpg')"><img src="land2.jpg"><div class="nameplate">Villa View</div></div>
+        <div class="gallery-frame" onclick="openModal('land3.jpg')"><img src="land3.jpg"><div class="nameplate">Pots & Pans</div></div>
     </div>
 
     <h2 class="section-title">Sea Collection</h2>
     <div class="gallery-container">
-        <div class="gallery-frame" onclick="openModal('sea1.jpg')"><img src="sea1.jpg"><div class="nameplate">Open Waters</div></div>
-        <div class="gallery-frame" onclick="openModal('sea2.jpg')"><img src="sea2.jpg"><div class="nameplate">Deep Ocean</div></div>
-        <div class="gallery-frame" onclick="openModal('sea3.jpg')"><img src="sea3.jpg"><div class="nameplate">Tidal Shores</div></div>
+        <div class="gallery-frame" onclick="openModal('sea1.jpg')"><img src="sea1.jpg"><div class="nameplate">Floating Hotel</div></div>
+        <div class="gallery-frame" onclick="openModal('sea2.jpg')"><img src="sea2.jpg"><div class="nameplate">LIDO</div></div>
+        <div class="gallery-frame" onclick="openModal('sea3.jpg')"><img src="sea3.jpg"><div class="nameplate">Pent House</div></div>
+    </div>
+
+    <h2 class="section-title">Professional Endorsements</h2>
+    <div class="info-card">
+        <p class="quote">This space is reserved for professional testimonials. Once permissions are granted, endorsements from industry leaders will be featured here.</p>
+        <span class="author">— Pending Verification</span>
     </div>
 
     <div style="margin: 60px 0;">
-        <a href="mailto:your-email@example.com" class="btn" style="margin-right: 15px;"><i class="fas fa-envelope"></i> EMAIL ME</a>
-        <a href="tel:+1234567890" class="btn"><i class="fas fa-phone-alt"></i> CALL ME</a>
+        <a href="mailto:restgenmgr1952@outlook.com" class="btn" style="margin-right: 15px;"><i class="fas fa-envelope"></i> EMAIL ME</a>
+        <a href="tel:+919769351231" class="btn"><i class="fas fa-phone-alt"></i> CALL ME</a>
     </div>
-
 </div>
 
-<footer class="footer-area">
-    <div class="guestbook">
-        <h3 style="color:#d4af37;"><i class="fas fa-pen-nib"></i> Guestbook</h3>
-        <p>Leaving a thought about the collection?</p>
-        <form action="https://formspree.io/f/your-id-here" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Message..." rows="3" required></textarea>
-            <button type="submit" class="btn" style="width:100%; border-radius: 8px;">SUBMIT MESSAGE</button>
-        </form>
-        
-        <div style="margin-top: 40px; opacity: 0.7;">
-            <p style="font-size: 0.9rem;">Total Gallery Visits</p>
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FNAPT1952%2FCV-2026&count_bg=%23D4AF37&title_bg=%23444444&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false" alt="Hits"/>
-        </div>
-    </div>
-</footer>
-
-<a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+<a href="https://wa.me/919769351231" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <div id="modal" onclick="closeModal()">
-    <span id="close-btn">&times;</span>
     <img id="modal-img">
 </div>
 
 <script>
-    // Spotlight Movement Logic
     window.addEventListener('mousemove', e => {
         const x = (e.clientX / window.innerWidth) * 100;
         const y = (e.clientY / window.innerHeight) * 100;
@@ -276,7 +160,6 @@
         document.documentElement.style.setProperty('--mouse-y', y + '%');
     });
 
-    // Zoom Image Logic
     function openModal(src) {
         document.getElementById('modal').style.display = 'flex';
         document.getElementById('modal-img').src = src;
