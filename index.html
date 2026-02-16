@@ -3,51 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigel Anthony Thomas | Hospitality Portfolio</title>
+    <title>Nigel Anthony Thomas | Executive Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --mouse-x: 50%; --mouse-y: 50%;
             --brass: linear-gradient(145deg, #d4af37, #f1d592, #b8860b);
         }
-        body { font-family: 'Segoe UI', sans-serif; background-color: #1a0f0d; margin: 0; color: white; overflow-x: hidden; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #1a0f0d; 
+            margin: 0; 
+            color: white; 
+        }
         
-        /* 1. TOP BIO SECTION - High Visibility */
-        .intro-section {
+        /* Fixed Header - Always Visible */
+        .header-top {
             background: #000;
-            padding: 60px 20px;
-            border-bottom: 4px solid #d4af37;
+            padding: 50px 20px;
             text-align: center;
-            position: relative;
-            z-index: 10;
+            border-bottom: 4px solid #d4af37;
         }
-        .intro-section h1 { color: #d4af37; text-transform: uppercase; letter-spacing: 6px; margin: 0; font-size: 2.8rem; }
-        .intro-section p { max-width: 800px; margin: 20px auto; font-size: 1.2rem; line-height: 1.6; color: #ccc; }
+        .header-top h1 { color: #d4af37; text-transform: uppercase; letter-spacing: 5px; margin: 0; font-size: 2.5rem; }
+        .header-top p { max-width: 800px; margin: 20px auto; font-size: 1.1rem; line-height: 1.6; color: #ccc; }
 
-        /* 2. CREDENTIALS WALL */
-        .wall {
-            background-color: #8d6e63; 
-            background-image: 
-                radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.7) 60%),
-                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 120px);
-            background-size: 100% 100%, 120px 100%;
-            padding: 40px 20px; text-align: center;
+        /* The Main Gallery Wall */
+        .gallery-wall {
+            background-color: #5d4037; /* Solid wood color backup */
+            background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 120px);
+            padding: 40px 20px;
+            text-align: center;
+            min-height: 800px;
         }
 
-        .section-title { text-transform: uppercase; letter-spacing: 4px; background: rgba(0, 0, 0, 0.8); padding: 10px 40px; border-radius: 50px; display: inline-block; margin: 40px 0; border: 1px solid #d4af37; }
+        .section-title { 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            background: rgba(0, 0, 0, 0.85); 
+            padding: 10px 40px; 
+            border-radius: 50px; 
+            display: inline-block; 
+            margin: 30px 0; 
+            border: 1px solid #d4af37; 
+        }
 
-        .info-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; max-width: 1100px; margin: 0 auto; }
-        .info-card { background: rgba(0,0,0,0.85); border: 1px solid #d4af37; border-radius: 12px; padding: 25px; width: 100%; max-width: 320px; text-align: left; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
-        .info-card h3 { color: #d4af37; margin-top: 0; border-bottom: 1px solid #5d4037; padding-bottom: 10px; font-size: 1.1rem; }
-        .info-card ul { list-style: none; padding: 0; line-height: 1.8; font-size: 0.95rem; }
-        .info-card ul li::before { content: "• "; color: #d4af37; font-weight: bold; }
+        /* Profile Grid */
+        .profile-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .card { background: rgba(0,0,0,0.9); border: 1px solid #d4af37; border-radius: 10px; padding: 20px; width: 300px; text-align: left; }
+        .card h3 { color: #d4af37; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .card ul { list-style: none; padding: 0; line-height: 1.8; font-size: 0.9rem; }
+        .card ul li::before { content: "• "; color: #d4af37; }
 
-        /* 3. GALLERY FRAMES */
-        .gallery-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; padding: 30px 0; }
-        .gallery-frame { display: flex; flex-direction: column; align-items: center; padding: 15px; background: #fff; border: 10px solid #2d1b18; box-shadow: 10px 20px 30px rgba(0,0,0,0.8); cursor: pointer; transition: 0.3s; }
-        .gallery-frame:hover { transform: scale(1.05); }
-        .gallery-frame img { width: 250px; height: 180px; object-fit: cover; }
-        .nameplate { background: var(--brass); color: #3e2723; font-weight: bold; padding: 5px 15px; margin-top: 12px; border: 1px solid #8b6d05; font-size: 0.8rem; text-transform: uppercase; }
+        /* Gallery Frames */
+        .container { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-bottom: 50px; }
+        .frame { background: #fff; padding: 12px; border: 10px solid #2d1b18; box-shadow: 0 10px 20px rgba(0,0,0,0.5); cursor: pointer; transition: 0.3s; }
+        .frame:hover { transform: translateY(-10px); }
+        .frame img { width: 240px; height: 170px; object-fit: cover; display: block; }
+        .plate { background: var(--brass); color: #2d1b18; font-weight: bold; padding: 5px; margin-top: 10px; font-size: 0.75rem; text-transform: uppercase; }
 
-        /* CONTACT TOOLS */
-        .btn { padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; color: #3e2
+        /* Buttons */
+        .btn { padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; color: #2d1b18; background: var(--brass); display: inline-block; margin: 10px; border: none; cursor: pointer; }
+        .whatsapp { position: fixed; bottom: 20px; left: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body>
+
+<div class="header-top">
+    <h1>Nigel Anthony Thomas</h1>
+    <p>Dynamic Hospitality Leader | 20+ Years Global Experience | Senior Management Specialist</p>
+    <a href="resume.pdf" download class="btn"><i class="fas fa-file-download"></i> Download My CV</a>
+</div>
+
+<div class="gallery-wall">
+    
+    <h2 class="section-title">Core Credentials</h2>
+    <div class="profile-grid">
+        <div class="card">
+            <h3><i class="fas fa-history"></i> Experience</h3>
+            <ul>
+                <li><strong>GM</strong>: Nanidam Resort ('24-'25)</li>
+                <li><strong>Ops Director</strong>: Ofen Bistro ('22-'23)</li>
+                <li><strong>Management</strong>: Cruise Lines (20 Yrs)</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-certificate"></i> Certificates</h3>
+            <ul>
+                <li>F&B Mgmt (AH&LAE, USA)</li>
+                <li>USPH & ServSafe Certified</li>
+                <li>FSSAI Food Safety Seminar</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-star"></i> Specialist Skills</h3>
+            <ul>
+                <li>Strategic Resort Operations</li>
+                <li>P&L & Financial Control</li>
+                <li>AI Integration & Automation</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">Land Collection</h2>
+    <div class="container">
+        <div class="frame"><img src="land1.jpg"><div class="plate">Palm Beach</div></div>
+        <div class="frame"><img src="land2.jpg"><div class="plate">Villa View</div></div>
+        <div class="frame"><img src="land3.jpg"><div class="plate">Pots & Pans</div></div>
+    </div>
+
+    <h2 class="section-title">Sea Collection</h2>
+    <div class="container">
+        <div class="frame"><img src="sea1.jpg"><div class="plate">Floating Hotel</div></div>
+        <div class="frame"><img src="sea2.jpg"><div class="plate">LIDO</div></div>
+        <div class="frame"><img src="sea3.jpg"><div class="plate">Pent House</div></div>
+    </div>
+
+    <div style="padding: 40px 0;">
+        <a href="mailto:restgenmgr1952@outlook.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="tel:+919769351231" class="btn"><i class="fas fa-phone"></i> Call Me</a>
+    </div>
+
+</div>
+
+<a href="https://wa.me/919769351231" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+</body>
+</html>
