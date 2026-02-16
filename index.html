@@ -3,83 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigel Anthony Thomas | Executive Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CV-2026 Virtual Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: sans-serif; }
-        .gold-text { color: #D4AF37; }
-        .executive-frame { border: 2px solid #D4AF37; border-radius: 15px; background: #1e293b; overflow: hidden; transition: 0.3s; height: 100%; }
-        .executive-frame:hover { border-color: #F9E076; transform: translateY(-5px); box-shadow: 0 10px 20px -10px rgba(212, 175, 55, 0.3); }
-        .btn-gold { 
-            background-color: #D4AF37 !important; color: #0f172a !important; font-weight: 800; 
-            padding: 14px 28px; border-radius: 10px; text-decoration: none; 
-            display: inline-block !important; cursor: pointer !important; border: none;
-            pointer-events: auto !important;
+        :root {
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+            --brass: linear-gradient(145deg, #d4af37, #f1d592, #b8860b);
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #3e2723;
+            margin: 0;
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .wall {
+            background-color: #8d6e63; 
+            background-image: 
+                radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.6) 60%),
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 120px);
+            background-size: 100% 100%, 120px 100%;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 40px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        .gallery-frame {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background-color: #fff;
+            border: 12px solid #2d1b18; 
+            box-shadow: 10px 20px 30px rgba(0,0,0,0.7);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-frame:hover { transform: scale(1.05); }
+        .gallery-frame img { width: 250px; height: 180px; object-fit: cover; border: 1px solid #ddd; }
+
+        .nameplate {
+            background: var(--brass);
+            color: #3e2723;
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            margin-top: 15px;
+            border: 1px solid #8b6d05;
+        }
+
+        /* CONTACT TOOLS */
+        .contact-bar {
+            margin: 50px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #3e2723;
+            background: var(--brass);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: 0.3s;
+            border: none;
+        }
+
+        .btn:hover { transform: translateY(-3px); filter: brightness(1.1); cursor: pointer; }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px; height: 60px;
+            bottom: 40px; left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        /* GUESTBOOK & ANALYTICS */
+        .footer-section {
+            background: rgba(0,0,0,0.8);
+            padding: 50px 20px;
+            border-top: 2px solid #d4af37;
+        }
+
+        .guestbook {
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            text-align: center;
+        }
+
+        .guestbook input, .guestbook textarea {
+            width: 100%; padding: 12px; margin: 10px 0;
+            border-radius: 5px; border: 1px solid #5d4037;
+            background: #2d1b18; color: white; box-sizing: border-box;
+        }
+
+        .visitor-counter {
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* MODAL */
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            justify-content: center; align-items: center;
+        }
+        #modal-img { max-width: 85%; max-height: 85%; border: 8px solid white; }
+        #close-btn { position: absolute; top: 20px; right: 35px; color: white; font-size: 50px; cursor: pointer; }
     </style>
 </head>
-<body class="p-4 md:p-10">
-    <div class="max-w-6xl mx-auto text-center">
-        
-        <h1 class="text-5xl md:text-7xl font-bold mb-4 gold-text">Nigel Anthony Thomas</h1>
-        <p class="text-xl text-slate-400 mb-10 italic">Global Hospitality Leader | 20+ Years Excellence</p>
+<body>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a href="mailto:napt1952@gmail.com" class="btn-gold shadow-lg">EMAIL ME</a>
-            <a href="tel:+919769351231" class="btn-gold shadow-lg" style="background:transparent !important; border:2px solid #D4AF37 !important; color:white !important;">CALL NIGEL</a>
-        </div>
+<div class="wall" id="galleryWall">
+    
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-        <h2 class="text-3xl font-bold mb-6 gold-text border-b border-slate-700 pb-2 inline-block">Maritime Operations: Holland America Line</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div class="executive-frame p-3">
-                <img src="sea1.webp" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Galley & Kitchen</p>
-            </div>
-            <div class="executive-frame p-3">
-                <img src="sea2.webp" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Pool Deck Ops</p>
-            </div>
-            <div class="executive-frame p-3">
-                <img src="sea3.webp" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Cruise Logistics</p>
-            </div>
-        </div>
-
-        <h2 class="text-3xl font-bold mb-6 gold-text border-b border-slate-700 pb-2 inline-block">Land Resort & Hospitality Management</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div class="executive-frame p-3">
-                <img src="land1.jpg" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Resort Kitchen</p>
-            </div>
-            <div class="executive-frame p-3">
-                <img src="land2.jpg" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Party Hall</p>
-            </div>
-            <div class="executive-frame p-3">
-                <img src="land3.jpg" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Operations</p>
-            </div>
-        </div>
-
-        <h2 class="text-3xl font-bold mb-6 gold-text border-b border-slate-700 pb-2 inline-block">Core Experience</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="executive-frame p-3">
-                <img src="profile.png" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Executive Profile</p>
-            </div>
-            <div class="executive-frame p-3">
-                <img src="ofen.png" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Leadership: OFEN</p>
-            </div>
-            <div class="executive-frame p-3">
-                <img src="award.jpg" class="w-full h-56 object-cover rounded-lg mb-3">
-                <p class="text-sm font-bold gold-text uppercase">Excellence Award</p>
-            </div>
-        </div>
-
-        <footer class="text-slate-600 text-sm border-t border-slate-800 pt-8 mt-12">
-            © 2026 Nigel Anthony Thomas | JobLynk.live
-        </footer>
+    <h2>Land Collection</h2>
+    <div class="gallery-container">
+        <div class="gallery-frame" onclick="openModal('land1.jpg')"><img src="land1.jpg"><div class="nameplate">Vast Horizon</div></div>
+        <div class="gallery-frame" onclick="openModal('land2.jpg')"><img src="land2.jpg"><div class="nameplate">The Summit</div></div>
+        <div class="gallery-frame" onclick="openModal('land3.jpg')"><img src="land3.jpg"><div class="nameplate">Quiet Earth</div></div>
     </div>
+
+    <h2>Sea Collection</h2>
+    <div class="gallery-container">
+        <div class="gallery-frame" onclick="openModal('sea1.jpg')"><img src="sea1.jpg"><div class="nameplate">Tidal Reach</div></div>
+        <div class="gallery-frame" onclick="openModal('sea2.jpg')"><img src="sea2.jpg"><div class="nameplate">Deep Blue</div></div>
+        <div class="gallery-frame" onclick="openModal('sea3.jpg')"><img src="sea3.jpg"><div class="nameplate">Endless Tides</div></div>
+    </div>
+
+    <div class="contact-bar">
+        <a href="mailto:yourname@example.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="tel:+1234567890" class="btn"><i class="fas fa-phone"></i> Call Me</a>
+    </div>
+</div>
+
+<div class="footer-section">
+    <div class="guestbook">
+        <h3><i class="fas fa-pen-fancy"></i> Gallery Guestbook</h3>
+        <form action="https://formspree.io/f/your-id-here" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Your message..." rows="3" required></textarea>
+            <button type="submit" class="btn" style="width:100%;">Sign Guestbook</button>
+        </form>
+
+        <div class="visitor-counter">
+            <p>Gallery Visitors</p>
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FNAPT1952%2FCV-2026&count_bg=%23D4AF37&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false" alt="Visitor Counter"/>
+        </div>
+    </div>
+</div>
+
+<div id="modal" onclick="closeModal()">
+    <span id="close-btn">&times;</span>
+    <img id="modal-img">
+</div>
+
+<script>
+    window.addEventListener('mousemove', e => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        document.documentElement.style.setProperty('--mouse-x', x + '%');
+        document.documentElement.style.setProperty('--mouse-y', y + '%');
+    });
+
+    function openModal(src) {
+        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('modal-img').src = src;
+    }
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+
 </body>
 </html>
