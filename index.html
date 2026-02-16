@@ -3,196 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV-2026 Virtual Gallery</title>
+    <title>CV-2026 | Professional Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --mouse-x: 50%;
             --mouse-y: 50%;
             --brass: linear-gradient(145deg, #d4af37, #f1d592, #b8860b);
+            --wood-dark: #2d1b18;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #3e2723;
             margin: 0;
-            min-height: 100vh;
             color: white;
             overflow-x: hidden;
         }
 
-        .wall {
-            background-color: #8d6e63; 
-            background-image: 
-                radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.6) 60%),
-                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 120px);
-            background-size: 100% 100%, 120px 100%;
+        /* Top Introduction Header */
+        .intro-header {
+            background: rgba(0,0,0,0.9);
             padding: 60px 20px;
+            border-bottom: 5px solid #d4af37;
             text-align: center;
         }
 
-        h2 {
+        .intro-header h1 {
+            color: #d4af37;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 40px;
-            border-radius: 50px;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            letter-spacing: 8px;
+            margin: 0;
+            font-size: 3rem;
         }
 
-        .gallery-container {
+        .intro-header p {
+            max-width: 850px;
+            margin: 25px auto;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        /* The Main Gallery Wall */
+        .wall {
+            background-color: #8d6e63; 
+            background-image: 
+                radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.18) 0%, rgba(0,0,0,0.65) 60%),
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 120px);
+            background-size: 100% 100%, 120px 100%;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 12px 50px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 50px 0 30px;
+            border: 1px solid #d4af37;
+        }
+
+        /* Professional Info Cards */
+        .flex-row {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 40px;
-            padding: 40px 0;
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
+        .info-card {
+            background: rgba(0,0,0,0.6);
+            border: 1px solid #d4af37;
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            max-width: 450px;
+            text-align: left;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .info-card h3 { color: #d4af37; border-bottom: 1px solid #5d4037; padding-bottom: 10px; }
+        .info-card ul { list-style: none; padding: 0; line-height: 2; }
+        .info-card ul li::before { content: "• "; color: #d4af37; font-weight: bold; }
+
+        /* Gallery Frames */
         .gallery-frame {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 15px;
             background-color: #fff;
-            border: 12px solid #2d1b18; 
-            box-shadow: 10px 20px 30px rgba(0,0,0,0.7);
-            transition: transform 0.3s ease;
+            border: 12px solid var(--wood-dark); 
+            box-shadow: 10px 20px 40px rgba(0,0,0,0.8);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
         }
 
-        .gallery-frame:hover { transform: scale(1.05); }
-        .gallery-frame img { width: 250px; height: 180px; object-fit: cover; border: 1px solid #ddd; }
+        .gallery-frame:hover { transform: scale(1.08) translateY(-10px); z-index: 5; }
+        .gallery-frame img { width: 260px; height: 190px; object-fit: cover; border: 1px solid #ddd; }
 
         .nameplate {
             background: var(--brass);
             color: #3e2723;
             font-family: 'Times New Roman', serif;
             font-weight: bold;
-            font-size: 0.8rem;
-            padding: 4px 12px;
+            font-size: 0.85rem;
+            padding: 5px 15px;
             margin-top: 15px;
             border: 1px solid #8b6d05;
+            letter-spacing: 1px;
         }
 
-        /* CONTACT TOOLS */
-        .contact-bar {
-            margin: 50px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
+        /* Interactive Buttons */
         .btn {
-            padding: 12px 25px;
-            border-radius: 5px;
+            padding: 15px 35px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             color: #3e2723;
             background: var(--brass);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
             transition: 0.3s;
             border: none;
+            display: inline-block;
+            cursor: pointer;
         }
 
-        .btn:hover { transform: translateY(-3px); filter: brightness(1.1); cursor: pointer; }
+        .btn:hover { transform: translateY(-3px) scale(1.05); filter: brightness(1.1); }
 
         .whatsapp-float {
             position: fixed;
-            width: 60px; height: 60px;
+            width: 65px; height: 65px;
             bottom: 40px; left: 40px;
             background-color: #25d366;
             color: #FFF;
             border-radius: 50px;
             display: flex; align-items: center; justify-content: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-            z-index: 100;
+            font-size: 35px;
+            box-shadow: 2px 5px 15px rgba(0,0,0,0.5);
+            z-index: 1000;
             text-decoration: none;
         }
 
-        /* GUESTBOOK & ANALYTICS */
-        .footer-section {
-            background: rgba(0,0,0,0.8);
-            padding: 50px 20px;
-            border-top: 2px solid #d4af37;
+        /* Footer Section */
+        .footer-area {
+            background: #1a1a1a;
+            padding: 60px 20px;
+            border-top: 3px solid #d4af37;
         }
 
         .guestbook {
-            max-width: 500px;
-            margin: 0 auto 40px auto;
-            text-align: center;
+            max-width: 550px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 15px;
         }
 
         .guestbook input, .guestbook textarea {
-            width: 100%; padding: 12px; margin: 10px 0;
-            border-radius: 5px; border: 1px solid #5d4037;
-            background: #2d1b18; color: white; box-sizing: border-box;
+            width: 100%; padding: 15px; margin: 10px 0;
+            border-radius: 8px; border: 1px solid #444;
+            background: #2d2d2d; color: white; box-sizing: border-box;
         }
 
-        .visitor-counter {
-            margin-top: 20px;
-            opacity: 0.8;
-        }
-
-        /* MODAL */
+        /* Modal Zoom */
         #modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95);
+            display: none; position: fixed; z-index: 2000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.98);
             justify-content: center; align-items: center;
         }
-        #modal-img { max-width: 85%; max-height: 85%; border: 8px solid white; }
-        #close-btn { position: absolute; top: 20px; right: 35px; color: white; font-size: 50px; cursor: pointer; }
+        #modal-img { max-width: 90%; max-height: 90%; border: 10px solid white; box-shadow: 0 0 50px black; }
+        #close-btn { position: absolute; top: 25px; right: 40px; color: white; font-size: 60px; cursor: pointer; }
     </style>
 </head>
 <body>
 
+<header class="intro-header">
+    <h1>CV-2026</h1>
+    <p>
+        Dynamic Hospitality Leader with 20+ years of global experience directing luxury resort and cruise operations. 
+        Specialist in P&L management, high-volume F&B, and AI adaptation.
+    </p>
+    <div style="margin-top: 30px;">
+        <a href="resume.pdf" download class="btn">
+            <i class="fas fa-file-download"></i> DOWNLOAD MY CV
+        </a>
+    </div>
+</header>
+
 <div class="wall" id="galleryWall">
     
-    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <h2>Land Collection</h2>
-    <div class="gallery-container">
-        <div class="gallery-frame" onclick="openModal('land1.jpg')"><img src="land1.jpg"><div class="nameplate">Vast Horizon</div></div>
-        <div class="gallery-frame" onclick="openModal('land2.jpg')"><img src="land2.jpg"><div class="nameplate">The Summit</div></div>
-        <div class="gallery-frame" onclick="openModal('land3.jpg')"><img src="land3.jpg"><div class="nameplate">Quiet Earth</div></div>
-    </div>
-
-    <h2>Sea Collection</h2>
-    <div class="gallery-container">
-        <div class="gallery-frame" onclick="openModal('sea1.jpg')"><img src="sea1.jpg"><div class="nameplate">Tidal Reach</div></div>
-        <div class="gallery-frame" onclick="openModal('sea2.jpg')"><img src="sea2.jpg"><div class="nameplate">Deep Blue</div></div>
-        <div class="gallery-frame" onclick="openModal('sea3.jpg')"><img src="sea3.jpg"><div class="nameplate">Endless Tides</div></div>
-    </div>
-
-    <div class="contact-bar">
-        <a href="mailto:yourname@example.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
-        <a href="tel:+1234567890" class="btn"><i class="fas fa-phone"></i> Call Me</a>
-    </div>
-</div>
-
-<div class="footer-section">
-    <div class="guestbook">
-        <h3><i class="fas fa-pen-fancy"></i> Gallery Guestbook</h3>
-        <form action="https://formspree.io/f/your-id-here" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Your message..." rows="3" required></textarea>
-            <button type="submit" class="btn" style="width:100%;">Sign Guestbook</button>
-        </form>
-
-        <div class="visitor-counter">
-            <p>Gallery Visitors</p>
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FNAPT1952%2FCV-2026&count_bg=%23D4AF37&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false" alt="Visitor Counter"/>
+    <h2 class="section-title">Professional Background</h2>
+    <div class="flex-row">
+        <div class="info-card">
+            <h3><i class="fas fa-history"></i> Experience</h3>
+            <ul>
+                <li><strong>General Manager</strong> | Nanidam Resort (2024-25)</li>
+                <li><strong>Operations Director</strong> | Ofen Bistro (2022-23)</li>
+                <li><strong>Management</strong> | Luxury Cruise Lines (20 Years)</li>
+            </ul>
+        </div>
+        <div class="info-card">
+            <h3><i class="fas fa-award"></i> Skills & Certs</h3>
+            <ul>
+                <li>F&B Management (AH&LAE, USA)</li>
+                <li>AI Integration & Automation Specialist</li>
+                <li>Team Building & Resource Optimization</li>
+            </ul>
         </div>
     </div>
+
+    <h2 class="section-title">Land Collection</h2>
+    <div class="gallery-container">
+        <div class="gallery-frame" onclick="openModal('land1.jpg')"><img src="land1.jpg"><div class="nameplate">The Great Outdoors</div></div>
+        <div class="gallery-frame" onclick="openModal('land2.jpg')"><img src="land2.jpg"><div class="nameplate">Mountain Vista</div></div>
+        <div class="gallery-frame" onclick="openModal('land3.jpg')"><img src="land3.jpg"><div class="nameplate">Rustic Trails</div></div>
+    </div>
+
+    <h2 class="section-title">Sea Collection</h2>
+    <div class="gallery-container">
+        <div class="gallery-frame" onclick="openModal('sea1.jpg')"><img src="sea1.jpg"><div class="nameplate">Open Waters</div></div>
+        <div class="gallery-frame" onclick="openModal('sea2.jpg')"><img src="sea2.jpg"><div class="nameplate">Deep Ocean</div></div>
+        <div class="gallery-frame" onclick="openModal('sea3.jpg')"><img src="sea3.jpg"><div class="nameplate">Tidal Shores</div></div>
+    </div>
+
+    <div style="margin: 60px 0;">
+        <a href="mailto:your-email@example.com" class="btn" style="margin-right: 15px;"><i class="fas fa-envelope"></i> EMAIL ME</a>
+        <a href="tel:+1234567890" class="btn"><i class="fas fa-phone-alt"></i> CALL ME</a>
+    </div>
+
 </div>
+
+<footer class="footer-area">
+    <div class="guestbook">
+        <h3 style="color:#d4af37;"><i class="fas fa-pen-nib"></i> Guestbook</h3>
+        <p>Leaving a thought about the collection?</p>
+        <form action="https://formspree.io/f/your-id-here" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Message..." rows="3" required></textarea>
+            <button type="submit" class="btn" style="width:100%; border-radius: 8px;">SUBMIT MESSAGE</button>
+        </form>
+        
+        <div style="margin-top: 40px; opacity: 0.7;">
+            <p style="font-size: 0.9rem;">Total Gallery Visits</p>
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FNAPT1952%2FCV-2026&count_bg=%23D4AF37&title_bg=%23444444&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false" alt="Hits"/>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 <div id="modal" onclick="closeModal()">
     <span id="close-btn">&times;</span>
@@ -200,6 +268,7 @@
 </div>
 
 <script>
+    // Spotlight Movement Logic
     window.addEventListener('mousemove', e => {
         const x = (e.clientX / window.innerWidth) * 100;
         const y = (e.clientY / window.innerHeight) * 100;
@@ -207,6 +276,7 @@
         document.documentElement.style.setProperty('--mouse-y', y + '%');
     });
 
+    // Zoom Image Logic
     function openModal(src) {
         document.getElementById('modal').style.display = 'flex';
         document.getElementById('modal-img').src = src;
