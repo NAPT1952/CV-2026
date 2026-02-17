@@ -1,232 +1,32 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nigel A Thomas | General Manager - F&B Operations</title>
-
+<title>Nigel Anthony Thomas | Portfolio</title>
+<link rel="stylesheet" href="">
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #0f1720;
-    color: white;
-    scroll-behavior: smooth;
-}
-
-/* Gold Glow Animation */
-@keyframes goldGlow {
-    0% { text-shadow: 0 0 5px #d4af37; }
-    50% { text-shadow: 0 0 20px #d4af37; }
-    100% { text-shadow: 0 0 5px #d4af37; }
-}
-
-.gold-animated {
-    color: #d4af37;
-    animation: goldGlow 3s infinite;
-}
-
-.hero {
-    position: relative;
-    height: 95vh;
-    background: url("Desk Pic.png") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.70);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.hero h2 {
-    margin: 15px 0 25px;
-    font-weight: 400;
-    font-size: 1.5rem;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    opacity: 0.9;
-}
-
-.btn {
-    display: inline-block;
-    margin: 10px 8px;
-    padding: 12px 26px;
-    background: #d4af37;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 40px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: white;
-}
-
-.section {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.section h3 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    border-bottom: 2px solid #d4af37;
-    display: inline-block;
-    padding-bottom: 8px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: #1c2733;
-    padding: 25px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card ul {
-    padding-left: 18px;
-    line-height: 1.7;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid #333;
-    font-size: 0.9rem;
-    opacity: 0.6;
-}
+body { background: #1a0f0d; color: white; font-family: 'Segoe UI', Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
+.gold { color: #d4af37; }
+.header { background: #000; padding: 60px 20px; border-bottom: 5px solid #d4af37; }
+.card-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; max-width: 1300px; margin: 0 auto; }
+.card { background: #000; border: 1px solid #d4af37; padding: 25px; width: 380px; text-align: left; border-radius: 12px; vertical-align: top; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+.card h3 { color: #d4af37; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; }
+.card ul { list-style: none; padding: 0; margin: 0; }
+.card li { margin-bottom: 10px; position: relative; padding-left: 15px; font-size: 0.95rem; line-height: 1.4; }
+.card li::before { content: "•"; color: #d4af37; position: absolute; left: 0; }
+.gallery-title { margin-top: 50px; text-transform: uppercase; letter-spacing: 3px; font-weight: bold; }
+.gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+.frame { background: #fff; padding: 12px; border: 12px solid #2d1b18; width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin: 10px; transition: 0.3s; }
+.frame img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.plate { color: #000; font-weight: bold; margin-top: 10px; font-size: 0.75rem; text-transform: uppercase; }
+.btn { background: #d4af37; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin: 5px; font-size: 0.9rem; transition: 0.3s; }
+.btn:hover { background: white; transform: translateY(-2px); }
+.whatsapp { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; text-decoration: none; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
 </style>
 </head>
-
 <body>
-
-<div class="hero">
-    <div class="hero-content">
-        <h1 class="gold-animated">NIGEL A THOMAS</h1>
-        <h2>General Manager – F&B Operations | Hospitality Executive</h2>
-        <p>
-            Strategic hospitality leader specializing in F&B operations, revenue growth,
-            multi-outlet management, pre-opening leadership, and financial control.
-            Focused on profitability, guest excellence, and high-performance teams.
-        </p>
-
-        <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="btn">
-            LinkedIn
-        </a>
-
-        <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank" class="btn">
-            Facebook
-        </a>
-
-        <a href="resume.pdf" download class="btn">
-            Download CV
-        </a>
-
-        <a href="mailto:restgenmgr1952@gmail.com" class="btn">
-            Email
-        </a>
-
-        <a href="tel:+919769351231" class="btn">
-            Call +919769351231
-        </a>
-    </div>
-</div>
-
-<div class="section">
-    <h3>Executive Competencies</h3>
-    <div class="grid">
-        <div class="card">
-            <ul>
-                <li>Full-Service Hotel & Multi-Outlet F&B Leadership</li>
-                <li>Revenue Optimization & Cost Control</li>
-                <li>Budgeting, Forecasting & Financial Reporting</li>
-                <li>Vendor Negotiation & Procurement Strategy</li>
-            </ul>
-        </div>
-        <div class="card">
-            <ul>
-                <li>Pre-Opening & Turnaround Projects</li>
-                <li>Luxury Guest Experience Strategy</li>
-                <li>Team Development & Performance Management</li>
-                <li>Operational Systems & Process Improvement</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="section">
-    <h3>Leadership Impact</h3>
-    <div class="grid">
-        <div class="card">
-            <ul>
-                <li>Led cross-functional hospitality teams</li>
-                <li>Strengthened revenue performance through structured execution</li>
-                <li>Improved cost efficiency through disciplined control systems</li>
-                <li>Built high-retention, performance-driven teams</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<footer>
-© 2026 Nigel A Thomas | General Manager – F&B Operations
-</footer>
-
-<script>
-const sections = document.querySelectorAll('.section');
-
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const triggerPoint = window.innerHeight * 0.85;
-
-        if(sectionTop < triggerPoint) {
-            section.classList.add('visible');
-        }
-    });
-});
-</script>
 
 </body>
 </html>
