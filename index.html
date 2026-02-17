@@ -6,7 +6,7 @@
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: sans-serif; margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
+        body { background-color: #0f172a; color: #f8fafc; font-family: sans-serif; margin: 0; padding: 0; width: 100%; }
         .gold { color: #d4af37; }
         .border-gold { border-color: #d4af37; }
         
@@ -27,17 +27,30 @@
             z-index: 10;
         }
 
-        .btn-gold { background: #d4af37; color: #0f172a; font-weight: 600; padding: 12px 24px; border-radius: 6px; transition: 0.3s; display: inline-block; text-transform: uppercase; font-size: 0.8rem; }
-        .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 5px 15px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
-        .social-link:hover { background: #d4af37; color: #0f172a; }
+        /* FIX: PREVENTS CRUSHING - Maintains original image shape */
+        .img-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         
-        /* Fix for Crushing: Maintains Aspect Ratio */
-        .frame-img { width: 100%; height: auto; max-height: 450px; object-fit: contain; background: #020617; }
+        .frame-img {
+            width: 100%;
+            height: auto; /* Allows image to find its own height */
+            max-height: 400px; /* Limits height so it doesn't get too long */
+            object-fit: contain; /* Keeps the ship and face from stretching */
+            border-radius: 8px;
+            background-color: rgba(15, 23, 42, 0.5);
+        }
+
+        .btn-gold { background: #d4af37; color: #0f172a; font-weight: 600; padding: 12px 24px; border-radius: 6px; transition: 0.3s; display: inline-block; text-transform: uppercase; font-size: 0.8rem; }
+        .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 5px 15px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
     </style>
 </head>
 <body class="bg-slate-950">
 
-    <header class="w-full pt-16 pb-12 px-6 text-center border-b border-slate-800 bg-slate-900/50">
+    <header class="w-full pt-16 pb-12 px-6 text-center border-b border-slate-800">
         <div class="max-w-4xl mx-auto flex flex-col items-center">
             <div class="mb-6 flex flex-col items-center">
                 <img src="profile.png" alt="Nigel Anthony Thomas" class="w-44 h-44 rounded-full border-4 border-gold shadow-2xl object-cover">
@@ -50,35 +63,35 @@
             </div>
 
             <h1 class="text-4xl md:text-5xl font-bold gold mb-2">Executive Leadership</h1>
-            <p class="text-lg md:text-xl uppercase tracking-widest text-white mb-6">Global Operations Specialist</p>
+            <p class="text-lg md:text-xl uppercase tracking-widest text-white mb-8">Global Operations Specialist</p>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full mb-8">
-                <div class="p-3 border border-slate-800 rounded bg-slate-900/30 text-xs font-bold uppercase gold tracking-tighter">Team Leader</div>
-                <div class="p-3 border border-slate-800 rounded bg-slate-900/30 text-xs font-bold uppercase gold tracking-tighter">Team Builder</div>
-                <div class="p-3 border border-slate-800 rounded bg-slate-900/30 text-xs font-bold uppercase gold tracking-tighter">Hospitality Trainer</div>
-                <div class="p-3 border border-slate-800 rounded bg-slate-900/30 text-xs font-bold uppercase gold tracking-tighter">AI Automation</div>
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="px-4 py-2 border border-slate-800 rounded bg-slate-900/50 text-xs gold font-bold uppercase tracking-widest">Team Leader</span>
+                <span class="px-4 py-2 border border-slate-800 rounded bg-slate-900/50 text-xs gold font-bold uppercase tracking-widest">Team Builder</span>
+                <span class="px-4 py-2 border border-slate-800 rounded bg-slate-900/50 text-xs gold font-bold uppercase tracking-widest">Hospitality Trainer</span>
+                <span class="px-4 py-2 border border-slate-800 rounded bg-slate-900/50 text-xs gold font-bold uppercase tracking-widest">AI Automation</span>
             </div>
 
             <a href="resume.pdf" download class="btn-gold shadow-lg">Download Executive CV</a>
         </div>
     </header>
 
-    <main class="w-full max-w-6xl mx-auto px-6 py-12">
+    <main class="max-w-6xl mx-auto px-6 py-12">
         
-        <section id="portfolio" class="mb-24 text-center">
-            <h2 class="text-2xl font-bold gold mb-12 uppercase tracking-widest">Global Land-Based Leadership</h2>
+        <section class="mb-24 text-center">
+            <h2 class="text-2xl font-bold gold mb-12 uppercase tracking-widest">Land-Based Leadership</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-                <div class="flex flex-col items-center">
-                    <img src="land1.jpg" class="rounded-lg border-4 border-gold shadow-lg frame-img">
+                <div class="img-container">
+                    <img src="land1.jpg" class="frame-img border-4 border-gold">
                     <div class="brass-tag">Nanidam Resort | Bangalore</div>
                 </div>
-                <div class="flex flex-col items-center">
-                    <img src="ofen.png" class="rounded-lg border-4 border-gold shadow-lg frame-img">
+                <div class="img-container">
+                    <img src="ofen.png" class="frame-img border-4 border-gold">
                     <div class="brass-tag">The Ofen | Hyderabad</div>
                 </div>
-                <div class="flex flex-col items-center">
-                    <img src="land3.jpg" class="rounded-lg border-4 border-gold shadow-lg frame-img">
-                    <div class="brass-tag">International Resort Ops</div>
+                <div class="img-container">
+                    <img src="land3.jpg" class="frame-img border-4 border-gold">
+                    <div class="brass-tag">International Resort Operations</div>
                 </div>
             </div>
         </section>
@@ -86,38 +99,38 @@
         <section class="mb-24 text-center">
             <h2 class="text-2xl font-bold gold mb-12 uppercase tracking-widest">Maritime Excellence: Holland America Line</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-                <div class="flex flex-col items-center">
-                    <img src="sea1.jpg" class="rounded-lg border-4 border-gold shadow-lg frame-img">
+                <div class="img-container">
+                    <img src="sea1.jpg" class="frame-img border-4 border-gold">
                     <div class="brass-tag">HAL | Global Fleet Operations</div>
                 </div>
-                <div class="flex flex-col items-center">
-                    <img src="sea2.jpg" class="rounded-lg border-4 border-gold shadow-lg frame-img">
+                <div class="img-container">
+                    <img src="sea2.jpg" class="frame-img border-4 border-gold">
                     <div class="brass-tag">HAL | Penthouse View</div>
                 </div>
-                <div class="flex flex-col items-center">
-                    <img src="sea3.jpg" class="rounded-lg border-4 border-gold shadow-lg frame-img">
+                <div class="img-container">
+                    <img src="sea3.jpg" class="frame-img border-4 border-gold">
                     <div class="brass-tag">HAL | Lido Café Operations</div>
                 </div>
             </div>
         </section>
 
-        <section id="credentials" class="text-center mb-24">
+        <section class="text-center mb-24">
             <h2 class="text-2xl font-bold gold mb-12 uppercase tracking-widest">Recognition & Art Collaboration</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <div class="flex flex-col items-center">
-                    <img src="award.jpg" class="rounded-xl border-4 border-gold shadow-2xl frame-img">
+                <div class="img-container">
+                    <img src="award.jpg" class="frame-img border-4 border-gold">
                     <div class="brass-tag">Leadership Excellence Award</div>
                 </div>
-                <div class="flex flex-col items-center">
-                    <img src="art1.jpg" class="rounded-xl border-4 border-gold shadow-2xl frame-img">
+                <div class="img-container">
+                    <img src="art1.jpg" class="frame-img border-4 border-gold">
                     <div class="brass-tag">Art Collaboration</div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="text-center py-10 text-slate-600 text-xs border-t border-slate-900 bg-slate-900/20">
-        © 2026 Nigel Anthony Thomas | Executive Portfolio | Resident of Mumbai, India
+    <footer class="text-center py-10 text-slate-600 text-xs border-t border-slate-900">
+        © 2026 Nigel Anthony Thomas | Resident of Mumbai, India
     </footer>
 
 </body>
