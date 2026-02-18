@@ -3,65 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigel Anthony Thomas | Portfolio</title>
+    <title>Nigel Anthony Thomas | Executive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Force the browser to allow scrolling */
-        html, body { 
-            height: auto !important; 
-            overflow: visible !important; 
-            background-color: #0a0f1a; 
-            color: #e2e8f0;
-        }
+        body { background-color: #0a0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; margin: 0; }
         .gold { color: #d4af37; }
-        .cert-container {
-            border-left: 5px solid #d4af37;
-            background: #0f172a;
-            padding: 20px;
-            margin-bottom: 30px;
+        .binder-page { 
+            background: #0f172a; 
+            border-left: 8px solid #d4af37; 
             border-radius: 0 8px 8px 0;
-            max-width: 500px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 15px 15px 30px rgba(0,0,0,0.5);
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
-        img { max-width: 100%; height: auto; border-radius: 4px; }
+        img { width: 100%; border-radius: 4px; border: 1px solid #1e293b; }
+        .label { background: #d4af37; color: #000; padding: 4px 15px; font-weight: 900; font-size: 0.75rem; display: inline-block; margin-top: 15px; text-transform: uppercase; }
     </style>
 </head>
-<body class="p-4">
+<body class="py-20 px-4">
 
-    <header class="text-center py-10">
-        <h1 class="text-4xl font-bold gold uppercase">Nigel Anthony Thomas</h1>
-        <p class="text-slate-400 tracking-widest mt-2">Senior Hospitality Executive</p>
-        <div class="mt-6">
-            <a href="mailto:operations@nigelthomas.live" class="text-gold border border-gold px-6 py-2 rounded-full">Email Me</a>
+    <header class="text-center mb-24">
+        <h1 class="text-5xl font-black gold mb-4 uppercase">Nigel Anthony Thomas</h1>
+        <p class="text-slate-400 tracking-[0.4em] uppercase">Senior Hospitality Executive</p>
+        <div class="mt-10">
+            <a href="mailto:operations@nigelthomas.live" class="border border-gold text-gold px-8 py-3 rounded-full hover:bg-gold hover:text-black transition shadow-lg">operations@nigelthomas.live</a>
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto py-10">
-        
-        <h2 class="text-center gold text-xl font-bold mb-10 uppercase tracking-widest">Professional Credentials</h2>
+    <main class="max-w-4xl mx-auto">
+        <div class="binder-page"><img src="c8.png"><div class="label">Food Safety</div></div>
+        <div class="binder-page"><img src="c2.png"><div class="label">AH&LEI Management</div></div>
+        <div class="binder-page"><img src="c3.png"><div class="label">AH&LEI Management</div></div>
+        <div class="binder-page"><img src="c4.png"><div class="label">AH&LEI Management</div></div>
+        <div class="binder-page"><img src="c5.png"><div class="label">Apollo Management</div></div>
+        <div class="binder-page"><img src="c6.png"><div class="label">Carnival Management</div></div>
+        <div class="binder-page"><img src="c7.png"><div class="label">ServSafe Certified</div></div>
 
-        <div class="cert-container"><img src="c8.png"><p class="mt-4 font-bold text-sm">FOOD SAFETY</p></div>
-        <div class="cert-container"><img src="c2.png"><p class="mt-4 font-bold text-sm">AH&LEI MANAGEMENT</p></div>
-        <div class="cert-container"><img src="c3.png"><p class="mt-4 font-bold text-sm">AH&LEI MANAGEMENT</p></div>
-        <div class="cert-container"><img src="c4.png"><p class="mt-4 font-bold text-sm">AH&LEI MANAGEMENT</p></div>
-        <div class="cert-container"><img src="c5.png"><p class="mt-4 font-bold text-sm">APOLLO MGMT</p></div>
-        <div class="cert-container"><img src="c6.png"><p class="mt-4 font-bold text-sm">CARNIVAL MGMT</p></div>
-        <div class="cert-container"><img src="c7.png"><p class="mt-4 font-bold text-sm">SERVSAFE</p></div>
-
-        <section class="mt-20 p-8 border border-gold/30 rounded text-center bg-slate-900">
-            <h2 class="gold text-2xl font-bold mb-4 uppercase">About My Leadership</h2>
-            <p class="italic text-lg mb-6">"Protecting the investment while delivering an impeccable guest experience."</p>
-            <p class="text-slate-300">Senior Hospitality Executive with over 24 years of international leadership across luxury resorts and global maritime fleets.</p>
-            <p class="mt-8 gold font-bold">operations@nigelthomas.live</p>
+        <section class="mt-32 p-12 bg-slate-900/80 border border-gold/20 rounded-lg text-center shadow-2xl">
+            <h2 class="gold text-3xl font-bold mb-8 uppercase tracking-widest">Leadership Profile</h2>
+            <p class="italic gold text-xl mb-6">"Protecting the investment while delivering an impeccable guest experience."</p>
+            <p class="text-slate-300 text-lg leading-relaxed">Senior Executive with 24+ years of global leadership in maritime and luxury resort operations.</p>
         </section>
-
     </main>
 
-    <footer class="text-center py-20 opacity-50 text-xs">
-        © 2026 Nigel Anthony Thomas | Mumbai, India
-        <br>
-        <img src="https://profile-counter.glitch.me/nigelthomas-live/count.svg" alt="hits" class="mx-auto mt-4 h-4">
+    <footer class="text-center py-20 mt-20 border-t border-slate-900">
+        <p class="text-slate-600 text-xs tracking-widest uppercase">© 2026 Nigel Anthony Thomas | Mumbai, India</p>
+        <div class="mt-8 opacity-30">
+            <img src="https://profile-counter.glitch.me/nigelthomas-live/count.svg" alt="hits" class="mx-auto h-4">
+        </div>
     </footer>
 
 </body>
