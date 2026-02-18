@@ -6,53 +6,90 @@
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0a0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; margin: 0; }
+        body { background-color: #0a0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
         .gold { color: #d4af37; }
-        .binder-page { 
-            background: #0f172a; 
-            border-left: 8px solid #d4af37; 
-            border-radius: 0 8px 8px 0;
-            padding: 30px;
-            margin-bottom: 50px;
-            box-shadow: 15px 15px 30px rgba(0,0,0,0.5);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        /* The Binder Frame */
+        .binder-frame {
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: #0f172a;
+            border-left: 10px solid #d4af37;
+            border-radius: 4px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
-        img { width: 100%; border-radius: 4px; border: 1px solid #1e293b; }
-        .label { background: #d4af37; color: #000; padding: 4px 15px; font-weight: 900; font-size: 0.75rem; display: inline-block; margin-top: 15px; text-transform: uppercase; }
+        .cert-img { width: 100%; max-width: 500px; border-radius: 4px; border: 1px solid #1e293b; margin: 0 auto; }
+        .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 10px 25px; border-radius: 4px; text-decoration: none; }
+        .social-link:hover { background: #d4af37; color: #0a0f1a; }
     </style>
 </head>
-<body class="py-20 px-4">
+<body class="p-4 md:p-12">
 
     <header class="text-center mb-24">
-        <h1 class="text-5xl font-black gold mb-4 uppercase">Nigel Anthony Thomas</h1>
-        <p class="text-slate-400 tracking-[0.4em] uppercase">Senior Hospitality Executive</p>
-        <div class="mt-10">
-            <a href="mailto:operations@nigelthomas.live" class="border border-gold text-gold px-8 py-3 rounded-full hover:bg-gold hover:text-black transition shadow-lg">operations@nigelthomas.live</a>
+        <h1 class="text-4xl md:text-6xl font-black gold mb-4 uppercase">Nigel Anthony Thomas</h1>
+        <p class="text-slate-400 tracking-[0.4em] uppercase mb-10">Senior Hospitality Executive</p>
+        <div class="flex justify-center gap-6">
+            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="social-link">LinkedIn</a>
+            <a href="mailto:operations@nigelthomas.live" class="social-link">Email</a>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto">
-        <div class="binder-page"><img src="c8.png"><div class="label">Food Safety</div></div>
-        <div class="binder-page"><img src="c2.png"><div class="label">AH&LEI Management</div></div>
-        <div class="binder-page"><img src="c3.png"><div class="label">AH&LEI Management</div></div>
-        <div class="binder-page"><img src="c4.png"><div class="label">AH&LEI Management</div></div>
-        <div class="binder-page"><img src="c5.png"><div class="label">Apollo Management</div></div>
-        <div class="binder-page"><img src="c6.png"><div class="label">Carnival Management</div></div>
-        <div class="binder-page"><img src="c7.png"><div class="label">ServSafe Certified</div></div>
+    <main class="max-w-3xl mx-auto mb-32">
+        <h2 class="text-center gold text-2xl font-bold uppercase tracking-widest mb-16 underline underline-offset-8">Professional Credentials</h2>
+        
+        <div class="binder-frame">
+            <img src="c8.png" class="cert-img">
+            <p class="mt-6 font-bold gold tracking-widest text-center">FOOD SAFETY</p>
+        </div>
 
-        <section class="mt-32 p-12 bg-slate-900/80 border border-gold/20 rounded-lg text-center shadow-2xl">
-            <h2 class="gold text-3xl font-bold mb-8 uppercase tracking-widest">Leadership Profile</h2>
-            <p class="italic gold text-xl mb-6">"Protecting the investment while delivering an impeccable guest experience."</p>
-            <p class="text-slate-300 text-lg leading-relaxed">Senior Executive with 24+ years of global leadership in maritime and luxury resort operations.</p>
-        </section>
+        <div class="binder-frame">
+            <img src="c2.png" class="cert-img">
+            <p class="mt-6 font-bold gold tracking-widest text-center">AH&LEI MANAGEMENT</p>
+        </div>
+
+        <div class="binder-frame">
+            <img src="c3.png" class="cert-img">
+            <p class="mt-6 font-bold gold tracking-widest text-center">AH&LEI MANAGEMENT</p>
+        </div>
+
+        <div class="binder-frame">
+            <img src="c4.png" class="cert-img">
+            <p class="mt-6 font-bold gold tracking-widest text-center">AH&LEI MANAGEMENT</p>
+        </div>
+
+        <div class="binder-frame">
+            <img src="c5.png" class="cert-img">
+            <p class="mt-6 font-bold gold tracking-widest text-center">APOLLO MANAGEMENT</p>
+        </div>
+
+        <div class="binder-frame">
+            <img src="c6.png" class="cert-img">
+            <p class="mt-6 font-bold gold tracking-widest text-center">CARNIVAL MANAGEMENT</p>
+        </div>
+
+        <div class="binder-frame">
+            <img src="c7.png" class="cert-img">
+            <p class="mt-6 font-bold gold tracking-widest text-center">SERVSAFE CERTIFIED</p>
+        </div>
     </main>
 
-    <footer class="text-center py-20 mt-20 border-t border-slate-900">
-        <p class="text-slate-600 text-xs tracking-widest uppercase">© 2026 Nigel Anthony Thomas | Mumbai, India</p>
+    <section class="max-w-4xl mx-auto mb-32 py-10">
+        <div class="bg-slate-900/80 p-12 border border-gold/30 rounded-lg text-center">
+            <h2 class="gold text-3xl font-bold mb-8 uppercase tracking-widest">About My Leadership</h2>
+            <div class="text-slate-200 text-xl leading-relaxed space-y-6">
+                <p class="italic gold text-2xl">"Protecting the investment while delivering an impeccable guest experience."</p>
+                <p>Senior Hospitality Executive with over 24 years of international leadership across luxury resorts and global maritime fleets.</p>
+                <div class="pt-8">
+                    <a href="mailto:operations@nigelthomas.live" class="text-2xl gold hover:underline">operations@nigelthomas.live</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-20 border-t border-slate-900">
+        <p class="text-slate-600 text-sm uppercase tracking-widest">© 2026 Nigel Anthony Thomas | Mumbai, India</p>
         <div class="mt-8 opacity-30">
-            <img src="https://profile-counter.glitch.me/nigelthomas-live/count.svg" alt="hits" class="mx-auto h-4">
+            <img src="https://profile-counter.glitch.me/nigelthomas-live/count.svg" alt="hits" class="mx-auto h-5">
         </div>
     </footer>
 
