@@ -6,100 +6,98 @@
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0a0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        body { background-color: #0a0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
         .gold { color: #d4af37; }
-        /* Book Page Style */
-        .portfolio-page { 
-            background: #0f172a;
-            border-left: 4px solid #d4af37;
-            border-radius: 4px;
-            padding: 20px;
-            box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease;
-            min-width: 280px;
+        /* Certificate "Page" Style */
+        .cert-card { 
+            background: #0f172a; 
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-left: 8px solid #d4af37; /* Thick binder edge */
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .portfolio-page:hover { transform: translateY(-10px); }
-        .frame-img { width: 100%; border: 1px solid #334155; border-radius: 2px; }
+        .frame-img { width: 100%; height: auto; border: 1px solid #1e293b; border-radius: 4px; }
         .brass-tag { 
             background: linear-gradient(135deg, #b8860b, #ffd700, #b8860b); 
-            color: #1a1a1a; 
-            padding: 2px 12px; 
-            font-weight: bold; 
-            font-size: 0.7rem; 
+            color: #111; 
+            padding: 4px 16px; 
+            font-weight: 800; 
+            font-size: 0.75rem; 
             text-transform: uppercase; 
             display: inline-block;
             margin-top: 15px;
+            border-radius: 2px;
         }
-        .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 8px 24px; border-radius: 9999px; transition: all 0.3s; text-decoration: none; }
+        .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 10px 24px; border-radius: 4px; text-decoration: none; transition: 0.3s; }
         .social-link:hover { background: #d4af37; color: #0a0f1a; }
     </style>
 </head>
-<body class="p-6 md:p-12">
+<body class="py-12 px-4">
 
-    <header class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-extrabold gold tracking-tighter mb-4 uppercase">Nigel Anthony Thomas</h1>
-        <p class="text-xl text-slate-400 uppercase tracking-[0.3em] mb-10">Senior Hospitality Executive</p>
+    <header class="text-center mb-24">
+        <h1 class="text-4xl md:text-6xl font-black gold tracking-tighter mb-4 uppercase">Nigel Anthony Thomas</h1>
+        <p class="text-lg text-slate-400 uppercase tracking-[0.4em] mb-12">Senior Hospitality Executive</p>
         <div class="flex justify-center gap-6">
-            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="social-link">LinkedIn</a>
-            <a href="mailto:operations@nigelthomas.live" class="social-link">Email</a>
+            <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="social-link font-bold">LinkedIn</a>
+            <a href="mailto:operations@nigelthomas.live" class="social-link font-bold">Email Me</a>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto mb-32">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl font-bold gold uppercase tracking-widest inline-block border-b-2 border-gold pb-2">Professional Portfolio</h2>
-        </div>
+    <section class="max-w-4xl mx-auto mb-32">
+        <h2 class="text-center text-2xl font-bold gold uppercase tracking-widest mb-16 border-b border-gold/20 pb-4">Professional Credentials</h2>
         
-        <div class="flex flex-nowrap overflow-x-auto gap-8 pb-10 px-4 snap-x">
-            <div class="portfolio-page snap-center">
-                <img src="c8.png" class="frame-img">
-                <div class="brass-tag">Food Safety</div>
-            </div>
-            <div class="portfolio-page snap-center">
-                <img src="c2.png" class="frame-img">
-                <div class="brass-tag">AH&LEI Management</div>
-            </div>
-            <div class="portfolio-page snap-center">
-                <img src="c3.png" class="frame-img">
-                <div class="brass-tag">AH&LEI Management</div>
-            </div>
-            <div class="portfolio-page snap-center">
-                <img src="c4.png" class="frame-img">
-                <div class="brass-tag">AH&LEI Management</div>
-            </div>
-            <div class="portfolio-page snap-center">
-                <img src="c5.png" class="frame-img">
-                <div class="brass-tag">Apollo Mgmt</div>
-            </div>
-            <div class="portfolio-page snap-center">
-                <img src="c6.png" class="frame-img">
-                <div class="brass-tag">Carnival Mgmt</div>
-            </div>
-            <div class="portfolio-page snap-center">
-                <img src="c7.png" class="frame-img">
-                <div class="brass-tag">ServSafe</div>
-            </div>
+        <div class="cert-card">
+            <img src="c8.png" class="frame-img">
+            <div class="brass-tag">Food Safety</div>
         </div>
-        <p class="text-center text-slate-500 text-sm mt-4">← Swipe to flip through portfolio →</p>
+        <div class="cert-card">
+            <img src="c2.png" class="frame-img">
+            <div class="brass-tag">AH&LEI Management</div>
+        </div>
+        <div class="cert-card">
+            <img src="c3.png" class="frame-img">
+            <div class="brass-tag">AH&LEI Management</div>
+        </div>
+        <div class="cert-card">
+            <img src="c4.png" class="frame-img">
+            <div class="brass-tag">AH&LEI Management</div>
+        </div>
+        <div class="cert-card">
+            <img src="c5.png" class="frame-img">
+            <div class="brass-tag">Apollo Mgmt</div>
+        </div>
+        <div class="cert-card">
+            <img src="c6.png" class="frame-img">
+            <div class="brass-tag">Carnival Mgmt</div>
+        </div>
+        <div class="cert-card">
+            <img src="c7.png" class="frame-img">
+            <div class="brass-tag">ServSafe</div>
+        </div>
     </section>
 
     <section class="max-w-4xl mx-auto mb-32">
-        <div class="bg-slate-900/50 p-10 md:p-16 border border-gold/30 rounded-lg text-center shadow-2xl">
+        <div class="bg-slate-900/80 p-10 md:p-20 border border-gold/30 rounded-lg text-center">
             <h2 class="text-3xl font-bold gold mb-8 uppercase tracking-widest">About My Leadership</h2>
-            <div class="text-slate-200 text-lg leading-relaxed space-y-6">
-                <p class="italic gold text-xl">"Protecting the investment while delivering an impeccable guest experience."</p>
+            <div class="text-slate-200 text-xl leading-relaxed space-y-8">
+                <p class="italic gold text-2xl">"Protecting the investment while delivering an impeccable guest experience."</p>
                 <p>Senior Hospitality Executive with over 24 years of international leadership across luxury resorts and global maritime fleets.</p>
-                <div class="pt-8">
+                <div class="pt-10">
                     <a href="mailto:operations@nigelthomas.live" class="text-2xl gold hover:underline">operations@nigelthomas.live</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="text-center py-12 border-t border-slate-900/50">
-        <p class="text-slate-600 text-xs uppercase tracking-widest">© 2026 Nigel Anthony Thomas | Mumbai, India</p>
-        <div class="mt-6 flex justify-center opacity-30">
-            <img src="https://profile-counter.glitch.me/nigelthomas-live/count.svg" alt="Hits" class="h-4">
+    <footer class="text-center py-20 border-t border-slate-900">
+        <p class="text-slate-600 text-sm uppercase tracking-widest">© 2026 Nigel Anthony Thomas | Mumbai, India</p>
+        <div class="mt-8 flex justify-center opacity-30">
+            <img src="https://profile-counter.glitch.me/nigelthomas-live/count.svg" alt="Hits" class="h-5">
         </div>
     </footer>
 
