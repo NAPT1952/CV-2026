@@ -6,12 +6,13 @@
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0a0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        body { background-color: #0a0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .gold { color: #d4af37; }
         .border-gold { border-color: #d4af37; }
-        .frame-img { border: 4px solid #d4af37; border-radius: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); width: 100%; max-width: 250px; }
+        .frame-img { border: 4px solid #d4af37; border-radius: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); width: 100%; max-width: 250px; transition: transform 0.3s; }
+        .frame-img:hover { transform: scale(1.05); }
         .brass-tag { background: linear-gradient(135deg, #b8860b, #ffd700, #b8860b); color: #1a1a1a; padding: 4px 12px; border-radius: 2px; font-weight: bold; font-size: 0.75rem; text-transform: uppercase; margin-top: -10px; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
-        .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 8px 20px; border-radius: 9999px; transition: all 0.3s; }
+        .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 8px 20px; border-radius: 9999px; transition: all 0.3s; display: inline-block; }
         .social-link:hover { background: #d4af37; color: #0a0f1a; }
     </style>
 </head>
@@ -21,46 +22,48 @@
             <h1 class="text-5xl font-extrabold gold tracking-tighter mb-4">NIGEL ANTHONY THOMAS</h1>
             <p class="text-xl text-slate-400 uppercase tracking-widest mb-8">Senior Hospitality Executive</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="social-link">LinkedIn</a>
-                <a href="mailto:operations@nigelthomas.live" class="social-link">Email</a>
+                <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="social-link">LinkedIn Profile</a>
+                <a href="mailto:operations@nigelthomas.live" class="social-link">Contact Email</a>
             </div>
         </header>
 
-        <section id="certifications" class="mb-24 text-center">
-            <h2 class="text-2xl font-bold gold mb-10 uppercase tracking-widest underline decoration-1 underline-offset-8">Professional Credentials</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <section id="certifications" class="mb-32 text-center">
+            <h2 class="text-2xl font-bold gold mb-12 uppercase tracking-widest border-b border-gold/30 pb-4 inline-block">Professional Credentials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-8">
                 <div class="flex flex-col items-center"><img src="c8.png" class="frame-img"><div class="brass-tag">Food Safety</div></div>
                 <div class="flex flex-col items-center"><img src="c2.png" class="frame-img"><div class="brass-tag">AH&LEI Management</div></div>
                 <div class="flex flex-col items-center"><img src="c3.png" class="frame-img"><div class="brass-tag">AH&LEI Management</div></div>
                 <div class="flex flex-col items-center"><img src="c4.png" class="frame-img"><div class="brass-tag">AH&LEI Management</div></div>
-                <div class="flex flex-col items-center mt-4"><img src="c5.png" class="frame-img"><div class="brass-tag">Apollo Mgmt</div></div>
-                <div class="flex flex-col items-center mt-4"><img src="c6.png" class="frame-img"><div class="brass-tag">Carnival Mgmt</div></div>
-                <div class="flex flex-col items-center mt-4"><img src="c7.png" class="frame-img"><div class="brass-tag">ServSafe</div></div>
+                <div class="flex flex-col items-center"><img src="c5.png" class="frame-img"><div class="brass-tag">Apollo Mgmt</div></div>
+                <div class="flex flex-col items-center"><img src="c6.png" class="frame-img"><div class="brass-tag">Carnival Mgmt</div></div>
+                <div class="flex flex-col items-center"><img src="c7.png" class="frame-img"><div class="brass-tag">ServSafe</div></div>
             </div>
         </section>
 
-        <section id="about" class="w-full py-20 border-t-2 border-gold/20">
-            <div class="max-w-4xl mx-auto bg-slate-900/40 p-12 border border-gold/50 rounded-lg text-center">
+        <section id="about" class="w-full py-20 border-t border-gold/20">
+            <div class="max-w-4xl mx-auto bg-slate-900/40 p-12 border border-gold/30 rounded-lg text-center shadow-xl">
                 <h2 class="text-3xl font-bold gold mb-8 uppercase tracking-widest">About My Leadership</h2>
                 <div class="space-y-6 text-slate-200 text-lg leading-relaxed">
                     <p class="italic gold text-xl">"Protecting the investment while delivering an impeccable guest experience."</p>
-                    <p>Executive with over 24 years of international leadership across luxury resorts and global maritime fleets.</p>
+                    <p>Senior Hospitality Executive with over 24 years of international leadership across luxury resorts and global maritime fleets including <strong>RCCL, HAL, and CCL</strong>.</p>
                     <div class="pt-8">
-                        <a href="mailto:operations@nigelthomas.live" class="text-2xl gold hover:underline">operations@nigelthomas.live</a>
+                        <a href="mailto:operations@nigelthomas.live" class="text-2xl gold hover:underline transition-all">operations@nigelthomas.live</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="text-center py-12 text-slate-600 text-xs uppercase tracking-widest">
+    <footer class="text-center py-16 text-slate-600 text-xs uppercase tracking-[0.2em]">
         © 2026 Nigel Anthony Thomas | Mumbai, India
         <br>
-        <img src="https://profile-counter.glitch.me/nigelthomas-live/count.svg" alt="Visitor Count" class="mx-auto mt-6 opacity-30 h-4">
+        <div class="mt-8 flex justify-center opacity-40">
+            <img src="https://profile-counter.glitch.me/nigelthomas-live/count.svg" alt="Visitor Count" class="h-5">
+        </div>
     </footer>
 
     <script>
-        // Ensure page starts at top on refresh
+        // Start at top of page on refresh
         window.onbeforeunload = function () { window.scrollTo(0, 0); }
     </script>
 </body>
