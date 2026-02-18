@@ -1,47 +1,112 @@
-<section id="about" class="w-full py-20 bg-[#0f172a] border-t-4 border-[#d4af37]">
-    <div class="max-w-5xl mx-auto px-6 flex justify-center">
-        <div class="w-full bg-[#1e293b] p-10 md:p-16 border-2 border-[#d4af37] rounded-lg shadow-2xl text-center">
-            
-            <h2 class="text-3xl md:text-4xl font-bold text-[#d4af37] mb-8 uppercase tracking-widest">
-                About My Leadership
-            </h2>
-            
-            <div class="space-y-8 text-slate-200 leading-relaxed">
-                <p class="text-xl italic text-[#d4af37] max-w-2xl mx-auto">
-                    "Protecting the investment while delivering an impeccable guest experience." [cite: 3, 20]
-                </p>
-                
-                <p class="text-lg max-w-3xl mx-auto">
-                    Senior Hospitality Executive with over 20 years of international leadership across luxury resorts and 
-                    global fleets including <strong>RCCL, HAL, and CCL</strong>. [cite: 4, 22] Expert in bridging high-level strategy 
-                    with gritty, practical operational reality. [cite: 4, 23]
-                </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel Anthony Thomas | Executive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; font-family: sans-serif; margin: 0; padding: 0; }
+        .gold { color: #d4af37; }
+        .brass-tag {
+            background: linear-gradient(145deg, #e6c673, #d4af37, #a68a2d);
+            color: #1a1512; font-weight: 800; padding: 4px 15px;
+            border: 1px solid #8a6d1d; border-radius: 2px;
+            display: inline-block; text-transform: uppercase; font-size: 0.7rem;
+            margin-top: -10px; position: relative; z-index: 10;
+        }
+        .frame-img { width: 100%; height: auto; max-height: 400px; object-fit: contain; background: #000; border: 4px solid #d4af37; border-radius: 8px; transition: 0.3s; }
+        .frame-img:hover { transform: scale(1.02); border-color: #fff; }
+        .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 8px 16px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+        .social-link:hover { background: #d4af37; color: #020617; }
+    </style>
+</head>
+<body id="top">
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-slate-700 pt-10 text-left">
-                    <div class="space-y-4">
-                        <p><strong class="text-[#d4af37]">★ Strategic Cost Control:</strong> Reduced OpEx by 10-12% through lean management and P&L optimization. [cite: 10, 28]</p>
-                        <p><strong class="text-[#d4af37]">★ Global Compliance:</strong> Expert in USPH, HACCP, ServSafe, and FSSAI with 100% audit readiness. </p>
-                    </div>
-                    <div class="space-y-4">
-                        <p><strong class="text-[#d4af37]">★ Asset Mastery:</strong> Oversight of Front Office, Engineering, Housekeeping, and high-volume F&B. [cite: 12, 36]</p>
-                        <p><strong class="text-[#d4af37]">★ Human Capital:</strong> Led multicultural teams of 80+ staff, reducing attrition by 20%. [cite: 15, 34]</p>
-                    </div>
-                </div>
+    <header class="w-full pt-16 pb-12 px-6 text-center bg-slate-900/50">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <img src="profile.png" alt="Nigel" class="w-40 h-40 rounded-full border-4 border-gold mb-4 object-cover">
+            <div class="brass-tag mb-6">Nigel Anthony Thomas</div>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://www.instagram.com/restgenmgr/" target="_blank" class="social-link">Instagram</a>
+                <a href="mailto:nigelathomas@hotmail.com" class="social-link">Email</a>
+            </div>
 
-                <div class="pt-10 flex justify-center">
-                    <a href="mailto:nigelathomas@hotmail.com" 
-                       class="inline-block px-10 py-4 bg-[#d4af37] text-[#0f172a] font-bold uppercase rounded shadow-lg hover:bg-white transition-all">
-                        Connect: nigelathomas@hotmail.com
-                    </a>
+            <h1 class="text-4xl font-bold gold mb-2">Executive Leadership</h1>
+            <p class="text-xl uppercase tracking-widest text-white mb-10">Global Operations Specialist</p>
+        </div>
+    </header>
+
+    <nav class="sticky top-0 z-50 bg-slate-900/90 border-b border-slate-800 py-4 flex justify-center space-x-8">
+        <a href="#top" class="text-white hover:text-gold uppercase text-xs font-bold">Home</a>
+        <a href="#portfolio" class="text-white hover:text-gold uppercase text-xs font-bold">Portfolio</a>
+        <a href="#certifications" class="text-white hover:text-gold uppercase text-xs font-bold">Certificates</a>
+        <a href="#about" class="text-white hover:text-gold uppercase text-xs font-bold">About Me</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <section id="portfolio" class="mb-24 text-center">
+            <h2 class="text-2xl font-bold gold mb-10 uppercase tracking-widest">Global Land-Based Leadership</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center"><img src="land1.jpg" class="frame-img"><div class="brass-tag">Nanidam Resort</div></div>
+                <div class="flex flex-col items-center"><img src="ofen.png" class="frame-img"><div class="brass-tag">The Ofen</div></div>
+                <div class="flex flex-col items-center"><img src="land3.jpg" class="frame-img"><div class="brass-tag">KWB | Klayworks</div></div>
+                <div class="flex flex-col items-center"><img src="land4.jpg" class="frame-img"><div class="brass-tag">Middle East Ops</div></div>
+            </div>
+        </section>
+
+        <section class="mb-24 text-center">
+            <h2 class="text-2xl font-bold gold mb-10 uppercase tracking-widest">Maritime Excellence: Global Fleets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center"><img src="sea1.jpg" class="frame-img"><div class="brass-tag">Holland America</div></div>
+                <div class="flex flex-col items-center"><img src="sea2.jpg" class="frame-img"><div class="brass-tag">Royal Caribbean</div></div>
+                <div class="flex flex-col items-center"><img src="sea3.jpg" class="frame-img"><div class="brass-tag">Carnival (CCL)</div></div>
+                <div class="flex flex-col items-center"><img src="sea4.jpg" class="frame-img"><div class="brass-tag">Apollo Ship Chandlers</div></div>
+            </div>
+        </section>
+
+        <section id="certifications" class="mb-24 text-center">
+            <h2 class="text-2xl font-bold gold mb-10 uppercase tracking-widest">Professional Credentials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center"><img src="c1.jfif" class="frame-img"><div class="brass-tag">Credential 01</div></div>
+                <div class="flex flex-col items-center"><img src="c2.png" class="frame-img"><div class="brass-tag">Credential 02</div></div>
+                <div class="flex flex-col items-center"><img src="c3.png" class="frame-img"><div class="brass-tag">Credential 03</div></div>
+                <div class="flex flex-col items-center"><img src="c4.png" class="frame-img"><div class="brass-tag">Credential 04</div></div>
+                <div class="flex flex-col items-center mt-4"><img src="c5.png" class="frame-img"><div class="brass-tag">Credential 05</div></div>
+                <div class="flex flex-col items-center mt-4"><img src="c6.png" class="frame-img"><div class="brass-tag">Credential 06</div></div>
+                <div class="flex flex-col items-center mt-4"><img src="c7.png" class="frame-img"><div class="brass-tag">Credential 07</div></div>
+                <div class="flex flex-col items-center mt-4"><img src="c8.png" class="frame-img"><div class="brass-tag">Credential 08</div></div>
+            </div>
+        </section>
+
+        <section id="about" class="w-full py-20 border-t-2 border-gold/30">
+            <div class="max-w-4xl mx-auto bg-slate-900/50 p-12 border-2 border-gold rounded-lg shadow-2xl text-center">
+                <h2 class="text-3xl font-bold gold mb-8 uppercase tracking-widest">About My Leadership</h2>
+                <div class="space-y-6 text-slate-200 leading-relaxed">
+                    <p class="text-xl italic gold">"Protecting the investment while delivering an impeccable guest experience."</p>
+                    <p class="text-lg">Senior Hospitality Executive with over 24 years of international leadership including <strong>RCCL, HAL, and CCL</strong>.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t border-slate-800 pt-8">
+                        <div><p><strong class="gold">★ Strategic Cost Control:</strong> Reduced OpEx by 10-12%.</p></div>
+                        <div><p><strong class="gold">★ Global Compliance:</strong> Expert in USPH, HACCP, and FSSAI.</p></div>
+                    </div>
+                    <div class="pt-10">
+                        <a href="mailto:nigelathomas@hotmail.com" class="social-link">nigelathomas@hotmail.com</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+    </main>
 
-<script>
-  if (history.scrollRestoration) {
-    history.scrollRestoration = 'manual';
-  }
-  window.scrollTo(0, 0);
-</script>
+    <footer class="text-center py-10 text-slate-600 text-xs uppercase border-t border-slate-900">
+        © 2026 Nigel Anthony Thomas | Mumbai, India
+    </footer>
+
+    <script>
+        if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
+        window.scrollTo(0, 0);
+    </script>
+</body>
+</html>
