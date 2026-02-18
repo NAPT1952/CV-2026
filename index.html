@@ -8,8 +8,9 @@
     <style>
         body { background-color: #0a0f1a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
         .gold { color: #d4af37; }
-        .skill-badge { border: 1px solid #d4af37; color: #d4af37; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
-        .img-frame { border: 2px solid #d4af37; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 10px 20px rgba(0,0,0,0.5); display: inline-block; width: fit-content; }
+        /* Small Round Skill Badges */
+        .skill-badge { border: 1px solid #d4af37; color: #d4af37; padding: 6px 18px; border-radius: 50px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; display: inline-block; margin: 5px; }
+        .img-frame { border: 2px solid #d4af37; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 10px 20px rgba(0,0,0,0.5); display: inline-block; }
         .social-link { color: #d4af37; border: 1px solid #d4af37; padding: 10px 25px; border-radius: 4px; transition: 0.3s; text-decoration: none; font-weight: bold; display: inline-block; }
         .social-link:hover { background: #d4af37; color: #0a0f1a; }
         .narrative-box { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); padding: 40px; border-radius: 8px; line-height: 1.8; color: #cbd5e1; text-align: justify; }
@@ -21,16 +22,8 @@
         <header class="text-center mb-16">
             <h1 class="text-5xl font-black gold mb-4 uppercase">Nigel Anthony Thomas</h1>
             <p class="text-xl text-slate-400 uppercase tracking-[0.3em] mb-10">General Manager | 30+ Years Global Leadership</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:operations@nigelthomas.live" class="social-link">EMAIL ME</a>
-                <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="social-link">LINKEDIN</a>
-                <a href="https://wa.me/919769351231" target="_blank" class="social-link">WHATSAPP</a>
-            </div>
-        </header>
-
-        <section class="mb-20">
-            <h2 class="text-2xl font-bold gold uppercase tracking-widest mb-8 border-b border-gold/20 pb-4">Core Competencies</h2>
-            <div class="flex flex-wrap gap-4">
+            
+            <div class="flex flex-wrap justify-center mb-10">
                 <span class="skill-badge">F&B Operations</span>
                 <span class="skill-badge">Revenue Management</span>
                 <span class="skill-badge">HACCP Compliance</span>
@@ -38,10 +31,16 @@
                 <span class="skill-badge">Global Maritime Ops</span>
                 <span class="skill-badge">P&L Optimization</span>
             </div>
-        </section>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:operations@nigelthomas.live" class="social-link">EMAIL ME</a>
+                <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="social-link">LINKEDIN</a>
+                <a href="https://wa.me/919769351231" target="_blank" class="social-link">WHATSAPP</a>
+            </div>
+        </header>
 
         <section class="mb-24">
-            <h2 class="text-2xl font-bold gold uppercase tracking-widest mb-10 border-b border-gold/20 pb-4">Executive Career Narrative</h2>
+            <h2 class="text-2xl font-bold gold uppercase tracking-widest mb-10 border-b border-gold/20 pb-4 text-center">Executive Career Narrative</h2>
             <div class="narrative-box">
                 <h3 class="text-white text-xl font-bold mb-4 italic">"Operational Maturity: Life Without Chaos"</h3>
                 <p class="mb-6">With over 30 years of experience, my career has been forged in the most demanding hospitality environments. For 20 years, I navigated the logistical complexities of international maritime fleets with <strong>Royal Caribbean, Holland America, and Carnival</strong>. Managing high-volume F&B and Hotel operations taught me that success is engineered through discipline and the "Life Without Chaos" philosophy.</p>
@@ -57,27 +56,31 @@
                 <div class="img-frame w-full"><img src="sea2.jpg" class="w-full h-64 object-cover"><p class="p-2 text-center text-[10px] gold font-bold uppercase">Global Fleets</p></div>
                 <div class="img-frame w-full"><img src="sea3.jpg" class="w-full h-64 object-cover"><p class="p-2 text-center text-[10px] gold font-bold uppercase">Logistics</p></div>
             </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="img-frame w-full"><img src="land1.jpg" class="w-full h-64 object-cover"><p class="p-2 text-center text-[10px] gold font-bold uppercase">Resort Mgmt</p></div>
+                <div class="img-frame w-full"><img src="land2.jpg" class="w-full h-64 object-cover"><p class="p-2 text-center text-[10px] gold font-bold uppercase">International Projects</p></div>
+                <div class="img-frame w-full"><img src="land3.jpg" class="w-full h-64 object-cover"><p class="p-2 text-center text-[10px] gold font-bold uppercase">Luxury Dining</p></div>
+            </div>
         </section>
 
         <section class="mb-24 pt-20 border-t border-slate-800">
             <h2 class="text-2xl font-bold gold uppercase tracking-widest mb-12 text-center">Credentials & Accreditation</h2>
             <div class="flex flex-wrap justify-center items-start gap-8 mb-16">
-                <div class="img-frame">
-                    <img src="award.jpg" class="block h-auto w-auto max-w-[300px]">
-                    <p class="p-2 text-center text-[10px] gold font-bold uppercase">Executive Achievement</p>
+                <div class="img-frame" style="display: table; width: auto;">
+                    <img src="award.jpg" style="display: block; width: auto; max-width: 300px; height: auto;">
+                    <p class="p-2 text-center text-[10px] gold font-bold uppercase" style="display: table-caption; caption-side: bottom;">Executive Achievement</p>
                 </div>
-                <div class="img-frame">
-                    <img src="art1.jpg" class="block h-auto w-auto max-w-[280px]">
-                    <p class="p-2 text-center text-[10px] gold font-bold uppercase">Professional Art</p>
+                <div class="img-frame" style="display: table; width: auto;">
+                    <img src="art1.jpg" style="display: block; width: auto; max-width: 250px; height: auto;">
+                    <p class="p-2 text-center text-[10px] gold font-bold uppercase" style="display: table-caption; caption-side: bottom;">Professional Art</p>
                 </div>
-                <div class="img-frame">
-                    <img src="be10x.png" class="block h-auto w-auto max-w-[280px]">
-                    <p class="p-2 text-center text-[10px] gold font-bold uppercase">BE10X Accreditation</p>
+                <div class="img-frame" style="display: table; width: auto;">
+                    <img src="be10x.png" style="display: block; width: auto; max-width: 250px; height: auto;">
+                    <p class="p-2 text-center text-[10px] gold font-bold uppercase" style="display: table-caption; caption-side: bottom;">BE10X Accreditation</p>
                 </div>
             </div>
-
             <div class="grid grid-cols-4 lg:grid-cols-7 gap-4">
-                <img src="c1.jfif" class="border border-gold/50 rounded"><img src="c2.png" class="border border-gold/50 rounded"><img src="c3.png" class="border border-gold/50 rounded"><img src="c4.png" class="border border-gold/50 rounded"><img src="c5.png" class="border border-gold/50 rounded"><img src="c6.png" class="border border-gold/50 rounded"><img src="c7.png" class="border border-gold/50 rounded">
+                <img src="c1.jfif" class="border border-gold/50 rounded shadow-sm"><img src="c2.png" class="border border-gold/50 rounded shadow-sm"><img src="c3.png" class="border border-gold/50 rounded shadow-sm"><img src="c4.png" class="border border-gold/50 rounded shadow-sm"><img src="c5.png" class="border border-gold/50 rounded shadow-sm"><img src="c6.png" class="border border-gold/50 rounded shadow-sm"><img src="c7.png" class="border border-gold/50 rounded shadow-sm">
             </div>
         </section>
 
@@ -91,5 +94,6 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="60" height="60" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
         </a>
     </div>
+
 </body>
 </html>
