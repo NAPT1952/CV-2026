@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #05070a; color: #f8fafc; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
@@ -13,6 +14,7 @@
         .stat-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 1.5rem; padding: 2rem; }
         .timeline-border { border-left: 2px solid #D4AF37; padding-left: 2rem; margin-bottom: 3rem; position: relative; }
         .timeline-border::before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; background: #D4AF37; border-radius: 50%; }
+        .art-frame { border: 15px solid #1e293b; background: #111; padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,0.8); display: inline-block; max-width: 100%; }
         .tag { background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); color: #D4AF37; padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; }
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); z-index: 100; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
     </style>
@@ -27,134 +29,108 @@
         <img src="profile.png" class="w-40 h-40 mx-auto rounded-full border-4 border-white object-cover mb-8 shadow-2xl">
         <h1 class="text-5xl font-bold mb-4">Nigel Anthony Thomas</h1>
         <p class="gold tracking-[0.3em] text-sm font-light mb-12 uppercase">The Architecture of Operational Maturity</p>
-        <nav class="flex flex-wrap justify-center gap-10 mb-8 px-4">
-            <a href="#bio" class="nav-link">Bio</a>
-            <a href="#operations" class="nav-link">Operations</a>
-            <a href="#timeline" class="nav-link">Timeline</a>
-            <a href="resume.pdf" target="_blank" class="nav-link border-b-2 border-white/20">Resume</a>
-            <a href="https://wa.me/919769351231" class="nav-link gold">WhatsApp</a>
+        
+        <nav class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8 px-4">
+            <a href="https://wa.me/919769351231" target="_blank" class="nav-link tracking-widest">WHATSAPP</a>
+            <a href="mailto:operations@nigelthomas.live" class="nav-link tracking-widest">EMAIL</a>
+            <a href="resume.pdf" target="_blank" class="nav-link tracking-widest border-b-2 border-white/20">DOWNLOAD CV</a>
+            <a href="https://linkedin.com/in/nathomas-hospitality" target="_blank" class="nav-link tracking-widest">LINKEDIN</a>
         </nav>
     </header>
 
     <main class="max-w-6xl mx-auto px-6 py-20">
-        <section id="operations" class="mb-32">
-            <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Sea Operations Management</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-                <img src="sea1.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-                <img src="sea2.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-                <img src="sea3.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-            </div>
 
-            <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Land & Resort Operations</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="land1.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-                <img src="land2.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-                <img src="land3.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-            </div>
-        </section>
-
-        <section id="bio" class="max-w-4xl mx-auto mb-32">
-            <h2 class="gold text-xs tracking-[0.4em] uppercase mb-12 text-center">Executive Narrative</h2>
-            <div class="text-lg text-gray-300 leading-relaxed space-y-8">
-                <p>In the global hospitality landscape, excellence is not merely the absence of error; it is the presence of a meticulously engineered system designed to thrive under pressure[cite: 33]. Over a career spanning more than two decades, I have operated at the intersection of maritime precision and land-based luxury[cite: 32].</p>
+        <section class="mb-32 max-w-4xl mx-auto">
+            <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">The Architecture of Operational Maturity</h2>
+            <div class="text-lg text-gray-300 leading-relaxed text-left space-y-8">
+                [cite_start]<p>In the global hospitality landscape, excellence is not merely the absence of error; it is the presence of a meticulously engineered system designed to thrive under pressure[cite: 1]. [cite_start]Over a career spanning more than two decades, I have operated at the intersection of maritime precision and land-based luxury[cite: 1]. [cite_start]My mission has always been to transform chaotic operational environments into <strong>"Life Without Chaos"</strong>—a state of operational maturity where brand standards, guest satisfaction, and P&L performance function as a synchronized engine[cite: 1].</p>
                 
+                [cite_start]<p>From the rigorous dry-dock protocols of international cruise lines in the USA to the high-stakes luxury market of the Middle East and the burgeoning hospitality sector in India, I have served as a General Manager and Operations Leader who bridges the gap between traditional service and modern AI-driven efficiency[cite: 1].</p>
+
                 <div class="bg-slate-900/40 p-10 rounded-3xl border border-white/5">
-                    <h3 class="text-xl font-bold mb-4 text-white">The Maritime Frontier: Precision in Motion</h3>
-                    <p class="text-base text-gray-400">My tenure with premier organizations like <strong>Royal Caribbean, Holland America Line, and Carnival</strong> was a masterclass in logistics[cite: 35]. Operating a floating luxury resort requires a deep understanding of USPH standards, MARPOL regulations, and the unique challenges of a captive guest base[cite: 34, 35]. I successfully supervised international teams of over 150 staff members, fostering a culture of accountability[cite: 35].</p>
+                    <h3 class="text-xl font-bold mb-4 text-white">Strategic Operational Backbone</h3>
+                    [cite_start]<p class="text-base text-gray-400">Expert in Front Office, Housekeeping, Engineering, and high-volume F&B[cite: 1]. [cite_start]I have a proven track record of reducing operating costs by 10-12% through lean methodology and vendor renegotiation[cite: 1].</p>
                 </div>
 
-                <p>My mission has always been to transform chaotic operational environments into <strong>"Life Without Chaos"</strong>—a state where brand standards, guest satisfaction, and P&L performance function as a synchronized engine[cite: 33].</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
-                    <div class="stat-card">
-                        <h4 class="gold text-xs uppercase mb-4">Middle East Leadership</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">In a region defined by its "Gold Standard," I specialized in pre-opening operations, establishing SOPs from the ground up, and implementing inventory controls that significantly reduced food costs while increasing check values[cite: 29].</p>
-                    </div>
-                    <div class="stat-card">
-                        <h4 class="gold text-xs uppercase mb-4">India: Innovation</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">Defined by a mix of traditional hospitality and innovative project leadership, including collaborating with engineering students to design resort-grade facilities—blending mentorship with technical management[cite: 35].</p>
-                    </div>
-                </div>
-
-                <p class="text-gray-400">As we move into 2026, I am an advocate for AI-driven hospitality[cite: 36]. I develop AI agents and automation workflows (using <strong>n8n, Docker, and Python</strong>) to handle hotel revenue and profit management[cite: 24, 25]. By automating the "chaos" of manual data entry, I allow my teams to return to what matters: <strong>The Human Connection</strong>[cite: 36].</p>
+                <p class="text-gray-400">As we move into 2026, I am an advocate for AI-driven hospitality. [cite_start]I develop AI agents and automation workflows (using <strong>n8n, Docker, and Python</strong>) to handle hotel revenue and profit management[cite: 1]. [cite_start]By automating the "chaos" of manual data entry, I allow my teams to return to what matters: <strong>The Human Connection</strong>[cite: 1].</p>
             </div>
         </section>
 
-        <section id="timeline" class="mb-32">
-            <h3 class="gold text-xs tracking-[0.2em] uppercase mb-12 text-center">Professional Timeline</h3>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
-                            <h3 class="gold text-xs tracking-[0.4em] uppercase mb-6">Certifications</h3>
-            <div class="grid grid-cols-2 gap-4">
-                <img src="c1.png" class="rounded-lg shadow-lg">
-                <img src="c2.png" class="rounded-lg shadow-lg">
-                <img src="c3.png" class="rounded-lg shadow-lg">
-                <img src="c4.png" class="rounded-lg shadow-lg">
-                <img src="c5.png" class="rounded-lg shadow-lg">
-                <img src="c6.png" class="rounded-lg shadow-lg">
-                <img src="c7.png" class="rounded-lg shadow-lg">
-                <img src="c8.png" class="rounded-lg shadow-lg">
+        <section class="mb-32">
+            <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Global Operations: Land & Sea</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <img src="sea1.jpg" class="rounded-2xl w-full h-48 md:h-64 object-cover shadow-lg">
+                <img src="sea2.jpg" class="rounded-2xl w-full h-48 md:h-64 object-cover shadow-lg">
+                <img src="sea3.jpg" class="rounded-2xl w-full h-48 md:h-64 object-cover shadow-lg">
+                <img src="land1.jpg" class="rounded-2xl w-full h-48 md:h-64 object-cover shadow-lg">
+                <img src="land2.jpg" class="rounded-2xl w-full h-48 md:h-64 object-cover shadow-lg">
+                <img src="land3.jpg" class="rounded-2xl w-full h-48 md:h-64 object-cover shadow-lg">
             </div>
-        </aside>
+        </section>
 
-        <div class="lg:col-span-2">
-            <h3 class="gold text-xs tracking-[0.4em] uppercase mb-6">Professional Timeline</h3>
-
-            <div class="timeline-border">
-                <h4 class="text-xl font-bold">General Manager</h4>
-                <p class="text-gray-400">Middle East & India</p>
-            </div>
-
-            <div class="timeline-border">
-                <h4 class="text-xl font-bold">Operations Leader – Cruise Lines</h4>
-                <p class="text-gray-400">United States</p>
-            </div>
-
-        </div>
-    </div>
-
-    </main>
-
-    <footer class="text-center py-12 border-t border-gray-900">
-        <p class="text-xs text-gray-500 tracking-widest uppercase mb-6">
-            © 2026 Nigel Anthony Thomas. All Rights Reserved.
-        </p>
-
-        <!-- Traffic Counter -->
-        <script type="text/javascript" src="//counter.websiteout.net/js/17/0/0/0"></script>
-    </footer>
-
-</body>
-</html>
-                <aside class="stat-card h-fit">
-                    <h4 class="gold text-[10px] uppercase tracking-widest mb-4">Vital Statistics</h4>
-                    <div class="space-y-4 text-sm mb-8">
-                        <p><span class="font-bold mr-2 text-gray-400">Born:</span> 27/01/1952 [cite: 21]</p>
-                        <p><span class="font-bold mr-2 text-gray-400">Base:</span> Mumbai, India [cite: 21]</p>
-                        <p><span class="font-bold mr-2 text-gray-400">Mobility:</span> Open to Pan-India & Global [cite: 21]</p>
+        <section class="mb-32">
+            <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Recognition & Aesthetic Vision</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center">
+                    <img src="award.jpg" class="rounded-2xl w-full max-w-md mx-auto shadow-2xl border border-white/10">
+                    <p class="text-xs text-gray-500 mt-4 italic uppercase tracking-widest">Excellence in Leadership Award</p>
+                </div>
+                <div class="text-center">
+                    <div class="art-frame">
+                        <img src="art1.png" alt="Artistic Direction" class="max-w-full h-auto">
                     </div>
-                    <h4 class="gold text-[10px] uppercase tracking-widest mb-4">Core Certifications</h4>
+                    <p class="text-xs text-gray-500 mt-4 italic uppercase tracking-widest">Artistic Direction & Infrastructure Design</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-32">
+            <aside>
+                <h3 class="gold text-xs tracking-[0.2em] uppercase mb-8">Vital Statistics & Expertise</h3>
+                <div class="stat-card">
+                    <div class="space-y-4 text-sm mb-8 border-b border-white/5 pb-8">
+                        [cite_start]<p><span class="font-bold mr-2 text-gray-400">Born:</span> 27/01/1952 [cite: 1]</p>
+                        [cite_start]<p><span class="font-bold mr-2 text-gray-400">Base:</span> Mumbai, India [cite: 1]</p>
+                        [cite_start]<p><span class="font-bold mr-2 text-gray-400">Mobility:</span> Open to Pan-India & Global [cite: 1]</p>
+                    </div>
+
+                    <h4 class="gold text-[10px] uppercase tracking-widest mb-4">Certifications & Tech Stack</h4>
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="tag">USPH</span> <span class="tag">FSSAI</span> <span class="tag">HACCP</span> <span class="tag">ServSafe</span> [cite: 22, 23]
+                        [cite_start]<span class="tag">USPH</span> <span class="tag">FSSAI</span> <span class="tag">HACCP</span> <span class="tag">ServSafe</span> [cite: 1]
                     </div>
-                </aside>
-                <div class="lg:col-span-2">
-                    <div class="timeline-border">
-                        <h4 class="text-2xl font-bold mb-1 text-white">General Manager</h4>
-                        <p class="gold italic text-sm mb-4">India | 2018 – 2025 [cite: 27]</p>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Led end-to-end resort and bistro operations for Nanidam and The Ofen[cite: 27]. Managed teams of 80+ staff and achieved a 15% increase in guest satisfaction scores[cite: 28].</p>
-                    </div>
-                    <div class="timeline-border">
-                        <h4 class="text-2xl font-bold mb-1 text-white">Global Operations Leadership</h4>
-                        <p class="gold italic text-sm mb-4">USA & Middle East | International Cruise Lines [cite: 29]</p>
-                        <p class="text-gray-400 text-sm leading-relaxed">Directed high-volume operations onboard major cruise lines and land-based luxury assets[cite: 30]. Oversaw multi-outlet revenues exceeding $250,000 per month[cite: 30].</p>
+                    <div class="flex flex-wrap gap-2">
+                        [cite_start]<span class="tag">AI Agents</span> <span class="tag">n8n</span> <span class="tag">Docker</span> <span class="tag">Python</span> [cite: 1]
                     </div>
                 </div>
+            </aside>
+
+            <div class="lg:col-span-2">
+                <h3 class="gold text-xs tracking-[0.2em] uppercase mb-8">Professional Timeline</h3>
+                
+                <div class="timeline-border">
+                    <h4 class="text-2xl font-bold mb-1 text-white">General Manager</h4>
+                    <p class="gold italic text-sm mb-4">India | [cite_start]2018 – 2025 [cite: 1]</p>
+                    [cite_start]<p class="text-gray-400 text-sm leading-relaxed">Led end-to-end resort and bistro operations for <strong>Nanidam</strong> and <strong>The Ofen</strong>[cite: 1]. [cite_start]Managed teams of 80+ staff and achieved a 15% increase in guest satisfaction scores[cite: 1].</p>
+                </div>
+
+                <div class="timeline-border">
+                    <h4 class="text-2xl font-bold mb-1 text-white">Global Operations Leadership</h4>
+                    <p class="gold italic text-sm mb-4">USA & Middle East | [cite_start]International Cruise Lines [cite: 1]</p>
+                    [cite_start]<p class="text-gray-400 text-sm leading-relaxed">Directed high-volume operations onboard major cruise lines including <strong>Royal Caribbean, Holland America Line, and Carnival</strong>[cite: 1]. [cite_start]Oversaw multi-outlet revenues exceeding $250,000 per month[cite: 1].</p>
+                </div>
+
+                <div class="timeline-border">
+                    <h4 class="text-2xl font-bold mb-1 text-white">Pre-Opening & Refurbishment</h4>
+                    [cite_start]<p class="gold italic text-sm mb-4">Global Routes [cite: 1]</p>
+                    [cite_start]<p class="text-gray-400 text-sm leading-relaxed">Key leader for international dry dock refurbishments, ensuring 100% brand consistency and audit readiness under strict deadlines[cite: 1].</p>
+                </div>
             </div>
-        </section>
+        </div>
+
     </main>
 
     <footer class="text-center py-12 border-t border-gray-900 text-gray-600 text-[10px] tracking-[0.2em] uppercase">
-        © 2026 Nigel Anthony Thomas | Operations Specialist [cite: 37]
+        © 2026 Nigel Anthony Thomas | [cite_start]Operations Specialist [cite: 1]
     </footer>
 
 </body>
