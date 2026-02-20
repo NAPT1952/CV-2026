@@ -8,65 +8,69 @@
     <style>
         body { background-color: #05070a; color: #f8fafc; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .gold { color: #D4AF37; }
-        .nav-btn { background: #0f172a; border: 1px solid #1e293b; padding: 12px 18px; border-radius: 8px; color: #D4AF37; font-weight: bold; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; display: flex; align-items: center; justify-content: center; text-align: center; }
+        /* Navigation Bar */
+        .nav-btn { background: #0f172a; border: 1px solid #1e293b; padding: 12px 10px; border-radius: 8px; color: #D4AF37; font-weight: bold; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; text-align: center; }
         .nav-btn:hover { background: #D4AF37; color: #05070a; }
-        .frame-box { border: 12px solid #1e293b; background: #111; padding: 5px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); display: inline-block; max-width: 100%; }
-        /* Visitor Counter Styling */
-        .counter-badge { background: #111; border: 1px solid #1e293b; padding: 10px 20px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; }
+        /* FIXED ART FRAME: Limits size so it doesn't take the full page */
+        .art-container { border: 12px solid #1e293b; background: #111; padding: 5px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); display: inline-block; max-width: 90%; }
+        .art-img { max-height: 400px; width: auto; display: block; margin: 0 auto; }
+        /* Certificate Cards */
+        .cert-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; padding: 10px; height: 180px; display: flex; align-items: center; justify-content: center; }
     </style>
 </head>
 <body>
 
-    <header class="text-center py-10 border-b border-gray-900 sticky top-0 bg-[#05070a] z-50">
-        <h1 class="text-3xl font-bold mb-6">Nigel Anthony Thomas</h1>
-        
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 px-4 max-w-6xl mx-auto">
+    <header class="text-center py-8 border-b border-gray-900 sticky top-0 bg-[#05070a] z-50">
+        <h1 class="text-2xl font-bold mb-6">Nigel Anthony Thomas</h1>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 px-4 max-w-6xl mx-auto">
             <a href="https://api.whatsapp.com/send?phone=919769351231" class="nav-btn">WHATSAPP</a>
             <a href="mailto:operations@nigelthomas.live" class="nav-btn">EMAIL</a>
             <a href="resume.pdf" target="_blank" class="nav-btn">DOWNLOAD CV</a>
             <a href="https://www.linkedin.com/in/nathomas-hospitality" target="_blank" class="nav-btn">LINKEDIN</a>
-            <a href="https://facebook.com" target="_blank" class="nav-btn">FACEBOOK</a>
-            <a href="https://youtube.com" target="_blank" class="nav-btn">YOUTUBE</a>
+            <a href="https://facebook.com" class="nav-btn">FACEBOOK</a>
+            <a href="https://youtube.com" class="nav-btn">YOUTUBE</a>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12">
+    <main class="max-w-5xl mx-auto px-6 py-10">
 
-        <section class="mb-24 text-center">
-            <h2 class="text-2xl font-bold gold mb-10 uppercase tracking-widest">Architectural Vision</h2>
-            <div class="frame-box">
-                <img src="art1.png" alt="Art Portfolio" class="max-w-full h-auto block mx-auto">
+        <section class="mb-20 text-center">
+            <h2 class="text-xl font-bold gold mb-8 uppercase tracking-widest">Architectural Vision</h2>
+            <div class="art-container">
+                <img src="art1.png" alt="Art Portfolio" class="art-img">
             </div>
-            <p class="mt-6 text-gray-400 italic">"Design & Infrastructure Precision: Bengaluru Project Vision"</p>
+            <p class="mt-4 text-gray-500 italic text-sm">"Infrastructure Precision: Bengaluru Project"</p>
         </section>
 
-        <section class="mb-24">
-            <h2 class="text-2xl font-bold gold mb-12 uppercase tracking-widest text-center">Global Credentials</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-gray-900/50 p-2 border border-gray-800 rounded shadow-lg"><img src="be10x.png" class="w-full h-40 object-contain"></div>
-                <div class="bg-gray-900/50 p-2 border border-gray-800 rounded shadow-lg"><img src="c2.png" class="w-full h-40 object-contain"></div>
-                <div class="bg-gray-900/50 p-2 border border-gray-800 rounded shadow-lg"><img src="c3.png" class="w-full h-40 object-contain"></div>
-                <div class="bg-gray-900/50 p-2 border border-gray-800 rounded shadow-lg"><img src="award.jpg" class="w-full h-40 object-contain"></div>
+        <section class="mb-20">
+            <h2 class="text-xl font-bold gold mb-10 uppercase tracking-widest text-center">Global Credentials</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="cert-card"><img src="be10x.png" class="max-h-full object-contain"></div>
+                <div class="cert-card"><img src="c2.png" class="max-h-full object-contain"></div>
+                <div class="cert-card"><img src="c3.png" class="max-h-full object-contain"></div>
+                <div class="cert-card"><img src="award.jpg" class="max-h-full object-contain"></div>
             </div>
         </section>
 
-        <section class="bg-gray-900/40 p-10 rounded-3xl border border-gray-800 mb-20 text-center">
-            <h2 class="text-3xl font-bold gold mb-6 uppercase">Operational Maturity</h2>
-            <p class="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
-                Transforming hospitality chaos into <strong>"Life Without Chaos."</strong> With 20+ years of international leadership, Nigel Anthony Thomas bridges luxury standards with AI-driven operational excellence.
+        <section class="bg-gray-900/40 p-8 rounded-2xl border border-gray-800 mb-16">
+            <h2 class="text-2xl font-bold gold mb-6 text-center">OPERATIONAL MATURITY</h2>
+            <p class="text-gray-300 text-md leading-relaxed text-center italic">
+                "Life Without Chaos"
+            </p>
+            <p class="text-gray-400 mt-4 text-sm leading-relaxed text-center">
+                Over 20 years of international excellence across the USA, Middle East, and India. 
+                Expert in P&L ownership, maritime compliance (USPH), and AI-driven hospitality automation.
             </p>
         </section>
 
     </main>
 
-    <footer class="text-center py-12 border-t border-gray-900 text-gray-600">
-        <div class="mb-6">
-            <p class="text-[10px] tracking-[0.2em] uppercase">Portfolio Traffic</p>
-            <div class="counter-badge">
-                <img src="https://hitwebcounter.com/counter/counter.php?page=9561001&style=0005&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" />
-            </div>
+    <footer class="text-center py-10 border-t border-gray-900 text-gray-600">
+        <div class="mb-4">
+            <p class="text-[10px] tracking-widest uppercase mb-2">Portfolio Traffic</p>
+            <img src="https://hitwebcounter.com/counter/counter.php?page=9561001&style=0005&nbdigits=5&type=page&initCount=0" title="Visitor Counter" border="0" class="mx-auto" />
         </div>
-        <p class="text-[10px] tracking-[0.2em] uppercase">© 2026 Nigel Anthony Thomas | Operations Specialist</p>
+        <p class="text-[9px] tracking-widest uppercase">© 2026 Nigel Anthony Thomas</p>
     </footer>
 
 </body>
