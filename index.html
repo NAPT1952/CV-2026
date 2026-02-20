@@ -3,183 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigel Anthony Thomas | Executive Operations Leader</title>
+    <title>Nigel Anthony Thomas | Executive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #D4AF37; --deep: #020617; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--deep); color: #f8fafc; scroll-behavior: smooth; }
-        .gold-text { background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .img-frame { width: 100%; height: 350px; overflow: hidden; border-radius: 2rem; background: #111; border: 1px solid rgba(212, 175, 55, 0.3); }
-        .img-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .chat-float { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
-        .chat-bubble { background: #25D366; color: white; padding: 15px 25px; border-radius: 50px; font-weight: 800; text-transform: uppercase; font-size: 10px; letter-spacing: 2px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        @media print { .no-print, .chat-float { display: none !important; } #resume { display: block !important; color: black !important; background: white !important; padding: 0 !important; } }
+        body { background-color: #05070a; color: #f8fafc; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .gold { color: #D4AF37; }
+        /* Professional Carousel */
+        .cert-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 20px; padding: 20px 0; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #D4AF37 #05070a; }
+        .cert-item { flex: 0 0 280px; scroll-snap-align: center; border-radius: 12px; border: 2px solid #1e293b; height: 380px; object-fit: contain; background: #0f172a; padding: 10px; transition: all 0.3s; }
+        .cert-item:hover { border-color: #D4AF37; transform: translateY(-5px); }
+        /* Art Frame */
+        .art-frame-box { border: 15px solid #1e293b; background: #111; padding: 5px; display: inline-block; box-shadow: 0 30px 60px -12px rgba(0,0,0,0.8); max-width: 100%; }
     </style>
 </head>
-<body>
+<body class="m-0 p-0">
 
-    <div class="chat-float no-print" NAPT1952-patch-1
-        <a href="https://api.whatsapp.com/send?phone=919769351231&text=Hello%20Nigel" target="_blank" class="chat-bubble">Chat with Nigel<
-        <a href="https://wa.me/919769351231" target="_blank" class="chat-bubble">Chat with Nigel</a>
- mai
-    </div>
+    <header class="text-center py-16 border-b border-gray-800">
+        <img src="profile.png" class="w-48 h-48 mx-auto rounded-full border-4 border-[#D4AF37] object-cover mb-6 shadow-2xl">
+        <h1 class="text-4xl md:text-6xl font-bold mb-2">Nigel Anthony Thomas</h1>
+        <p class="gold tracking-widest uppercase mb-8">Executive Hospitality Leader</p>
+        <div class="flex flex-wrap justify-center gap-6 font-bold">
+            <a href="mailto:operations@nigelthomas.live" class="hover:text-white border-b-2 border-[#D4AF37] pb-1">EMAIL</a>
+            <a href="https://wa.me/919769351231" target="_blank" class="hover:text-white border-b-2 border-[#D4AF37] pb-1">WHATSAPP</a>
+            <a href="resume.pdf" target="_blank" class="hover:text-white border-b-2 border-white/20 pb-1">DOWNLOAD CV</a>
+        </div>
+    </header>
 
-    <nav class="fixed top-0 w-full z-50 bg-slate-950/90 p-5 flex justify-between items-center no-print border-b border-yellow-900/30">
-        <div class="text-xl font-bold gold-text uppercase">Nigel Thomas</div>
-        <button onclick="window.print()" class="bg-yellow-600 text-black px-6 py-2 rounded-full font-black text-[10px] uppercase tracking-widest transition">SAVE FULL CV (PDF)</button>
-    </nav>
-
-    <main class="max-w-6xl mx-auto pt-40 px-6 space-y-40">
-
-      NAPT1952-patch-1
-        <section id="maritime-gallery" class="no-print space-y-10">
-            <h2 class="text-3xl font-bold gold-text uppercase tracking-widest text-center">Maritime Excellence</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="img-frame"><img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Ship Dining"></div>
-                <div class="img-frame"><img src="https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pool Deck"></div>
-                <div class="img-frame"><img src="https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Galley"></div>
+    <main class="max-w-6xl mx-auto px-6 py-16">
+        
+        <section class="mb-24 text-center">
+            <h2 class="text-2xl font-bold gold mb-10 uppercase tracking-widest">Architectural Vision</h2>
+            <div class="art-frame-box">
+                <img src="./art1.png" alt="Art Portfolio" class="h-auto block mx-auto">
             </div>
+            <p class="mt-8 text-gray-400 italic">"Design & Infrastructure: Life Without Chaos"</p>
         </section>
 
-        <section id="hotel-gallery" class="no-print space-y-10">
-        <section id="maritime" class="no-print space-y-10">
-            <h2 class="text-3xl font-bold gold-text uppercase tracking-widest text-center">Maritime Excellence</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="img-frame"><img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dining Room"></div>
-                <div class="img-frame"><img src="https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pool Side"></div>
-                <div class="img-frame"><img src="https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Ship Galley"></div>
+        <section class="mb-24">
+            <h2 class="text-2xl font-bold gold mb-8 uppercase tracking-widest text-center">Global Credentials</h2>
+            <div class="cert-carousel">
+                <img src="./c1.png" class="cert-item" alt="Cert 1">
+                <img src="./c2.png" class="cert-item" alt="Cert 2">
+                <img src="./c3.png" class="cert-item" alt="Cert 3">
+                <img src="./c4.png" class="cert-item" alt="Cert 4">
+                <img src="./c5.png" class="cert-item" alt="Cert 5">
+                <img src="./c6.png" class="cert-item" alt="Cert 6">
+                <img src="./c7.png" class="cert-item" alt="Cert 7">
+                <img src="./c8.png" class="cert-item" alt="Cert 8">
             </div>
+            <p class="text-center text-gray-500 text-sm mt-4">Swipe to browse all certifications</p>
         </section>
 
-        <section id="land" class="no-print space-y-10">
-main
-            <h2 class="text-3xl font-bold gold-text uppercase tracking-widest text-center">Land Based Leadership</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="img-frame"><img src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Resort"></div>
-                <div class="img-frame"><img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Hotel"></div> NAPT1952-patch-1
-                <div class="img-frame"><img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Restaurant"></div>
-
-                <div class="img-frame"><img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Portfolio"></div>
- main
-            </div>
-        </section>
-
-        <section id="resume" class="card-glass p-12 md:p-20 rounded-[3rem] space-y-16">
-            <div class="text-center border-b border-slate-800 pb-12">
-                <h1 class="text-5xl font-bold uppercase tracking-tighter mb-4 gold-text">Nigel Anthony Thomas</h1>
-                <p class="text-sm font-bold uppercase tracking-widest text-slate-400">9769351231 | restgenmgr1952@gmail.com</p>
- NAPT1952-patch-1
-            </div>
-
-            <div class="space-y-6">
-                <h3 class="text-xl font-black text-yellow-500 uppercase tracking-widest border-l-4 border-yellow-600 pl-4">Core Competencies</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-[10px] font-black uppercase text-slate-400">
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40">• Resort Management</div>
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40">• P&L Analysis</div>
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40">• Revenue Growth</div>
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40">• SOP & HACCP Compliance</div>
-                </div>
-            </div>
-
-            <div class="space-y-8">
-                <h3 class="text-xl font-black text-yellow-500 uppercase tracking-widest border-l-4 border-yellow-600 pl-4">Qualifications</h3>
-                <div class="grid md:grid-cols-2 gap-10 text-sm text-slate-300">
-                    <ul class="space-y-3">
-                        <li>• **USPH Training** – Johnson & Wales University, USA</li>
-                        <li>• **F&B Management & Cost Controls** – AH&LAE, USA</li>
-                    </ul>
-                    <ul class="space-y-3">
-                        <li>• **ServSafe & FSSAI Certified**</li>
-                        <li>• **High School** – SSC</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="space-y-12">
-                <h3 class="text-xl font-black text-yellow-500 uppercase tracking-widest border-l-4 border-yellow-600 pl-4">Professional History</h3>
-                <div class="space-y-10">
-                    <div class="bg-slate-900/30 p-8 rounded-2xl border-l-2 border-yellow-600">
-                        <p class="font-bold text-white mb-1 uppercase">General Manager | Nanidam Resort, Bangalore</p>
-                        <p class="text-xs text-yellow-600 mb-2">2024 – 2025</p>
-                        <p class="text-sm text-slate-400">• Led full operations, driving sales excellence and P&L accountability.</p>
-                    </div>
-                    <div class="bg-slate-900/30 p-8 rounded-2xl border-l-2 border-yellow-600">
-                        <p class="font-bold text-white mb-1 uppercase">Middle East Hospitality Management</p>
-                        <p class="text-xs text-yellow-600 mb-2">Abu Dhabi & Baghdad | 5 Years</p>
-                        <p class="text-sm text-slate-400">• High-level management at **Ramada**, **Le Méridien Abu Dhabi**, and **Al Hambra Baghdad**.</p>
-                    </div>
-                    <div class="bg-slate-900/30 p-8 rounded-2xl">
-                        <p class="font-bold text-white mb-1 uppercase">20 Years Maritime Management</p>
-                        <p class="text-xs text-yellow-600 mb-2">RCCL | Holland America | Carnival</p>
-                        <p class="text-sm text-slate-400">• Senior management overseeing global shipboard F&B operations.</p>
-
-                <p class="mt-8 text-slate-300 italic">Senior Hospitality Executive with 30+ years of global leadership experience.</p>
-            </div>
-
-            <div class="space-y-6">
-                <h3 class="text-xl font-black text-yellow-500 uppercase border-l-4 border-yellow-600 pl-4 tracking-widest">Strategic Expertise</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-[10px] font-black uppercase text-slate-400">
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40 text-center">• Team Building & Leading</div>
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40 text-center">• Planning & Execution</div>
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40 text-center">• Online & Offline Marketing</div>
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40 text-center">• P&L Analysis & Budgeting</div>
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40 text-center">• Brand Strategy</div>
-                    <div class="p-4 border border-slate-800 rounded-xl bg-slate-900/40 text-center">• SOP & HACCP Compliance</div>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <h3 class="text-xl font-black text-yellow-500 uppercase border-l-4 border-yellow-600 pl-4 tracking-widest">Qualifications</h3>
-                <ul class="grid md:grid-cols-2 gap-4 text-sm text-slate-300 font-medium">
-                    <li>• USPH Training – Johnson & Wales University, USA</li>
-                    <li>• F&B Management – AH&LAE, USA</li>
-                    <li>• F&B Cost Controls – AH&LAE, USA</li>
-                    <li>• ServSafe & FSSAI Certified</li>
-                </ul>
-            </div>
-
-            <div class="space-y-12">
-                <h3 class="text-xl font-black text-yellow-500 uppercase border-l-4 border-yellow-600 pl-4 tracking-widest">Experience</h3>
-                <div class="space-y-10">
-                    <div class="bg-slate-900/30 p-8 rounded-2xl border-l-2 border-yellow-600">
-                        <p class="font-bold text-white uppercase italic">General Manager – Café/Resort Operations</p>
-                        <p class="text-xs text-yellow-600 mb-2">Nanidam Resort, Bangalore | 2024 – 2025</p>
-                        <p class="text-sm text-slate-400">• Full operations management, brand marketing, and P&L accountability.</p>
-                    </div>
-                    <div class="bg-slate-900/30 p-8 rounded-2xl border-l-2 border-yellow-600">
-                        <p class="font-bold text-white uppercase italic">Hospitality Leadership | Middle East</p>
-                        <p class="text-xs text-yellow-600 mb-2 uppercase italic">Abu Dhabi & Baghdad | 5 Years</p>
-                        <p class="text-sm text-slate-400">• Management at Le Méridien, Ramada, and Al Hambra Hotel.</p>
-                    </div>
-                    <div class="bg-slate-900/30 p-8 rounded-2xl">
-                        <p class="font-bold text-white uppercase italic">20 Years Maritime Leadership</p>
-                        <p class="text-xs text-yellow-600 mb-2">RCCL | Holland America | Carnival</p>
-                        <p class="text-sm text-slate-400">• Elite management overseeing global shipboard operations and team leading.</p>
- main
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="text-center py-20 no-print card-glass rounded-[4rem] p-12">
-            <h2 class="text-5xl font-bold gold-text mb-12 uppercase tracking-tighter">Get In Contact</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <a href="mailto:restgenmgr1952@gmail.com" class="bg-yellow-600 text-black px-6 py-5 rounded-2xl font-black uppercase text-[10px] tracking-widest transition">Email Nigel</a>
- NAPT1952-patch-1
-                <a href="https://api.whatsapp.com/send?phone=919769351231" target="_blank" class="bg-green-600 text-white px-6 py-5 rounded-2xl font-black uppercase text-[10px] tracking-widest transition">WhatsApp Chat</a>
-
-                <a href="https://wa.me/919769351231" target="_blank" class="bg-green-600 text-white px-6 py-5 rounded-2xl font-black uppercase text-[10px] tracking-widest transition">WhatsApp Chat</a>
- main
-                <a href="tel:+919769351231" class="bg-blue-600 text-white px-6 py-5 rounded-2xl font-black uppercase text-[10px] tracking-widest transition">Call Nigel</a>
-            </div>
+        <section class="bg-gray-900/30 p-10 rounded-3xl border border-gray-800 text-center mb-20">
+            <h2 class="text-3xl font-bold gold mb-6">Operational Maturity</h2>
+            <p class="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+                Transforming hospitality chaos into a structured "Life Without Chaos." My 20+ year trajectory across the USA, Middle East, and India focuses on P&L growth, maritime dry-dock precision, and AI-driven workflow automation.
+            </p>
         </section>
 
     </main>
 
-    <footer class="py-20 text-center text-[10px] text-slate-600 no-print uppercase tracking-[0.5em] font-bold">
-        © 2026 Nigel Anthony Thomas | Mumbai, India
+    <footer class="text-center py-12 border-t border-gray-900 text-gray-600 text-sm">
+        © 2026 Nigel Anthony Thomas. All Rights Reserved.
     </footer>
+
 </body>
 </html>
