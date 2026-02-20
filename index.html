@@ -6,45 +6,83 @@
     <title>Nigel Anthony Thomas | Executive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #05070a; color: #f8fafc; font-family: sans-serif; margin: 0; padding: 0; }
+        body { 
+            background-color: #05070a; 
+            color: #f8fafc; 
+            font-family: sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            overflow-y: auto; /* Ensures scrolling is enabled */
+        }
         .gold { color: #D4AF37; }
-        .narrative-box { background: rgba(30, 41, 59, 0.5); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(212, 175, 55, 0.2); margin-bottom: 2rem; }
+        .narrative-box { 
+            background: rgba(30, 41, 59, 0.5); 
+            padding: 2.5rem; 
+            border-radius: 1rem; 
+            border: 1px solid rgba(212, 175, 55, 0.2); 
+            margin-bottom: 2.5rem; 
+        }
+        .profile-img { 
+            width: 220px; 
+            height: 220px; 
+            border-radius: 50%; 
+            border: 4px solid #D4AF37; 
+            object-fit: cover; 
+            margin: 0 auto 25px auto; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        a:hover { text-decoration: none !important; color: #D4AF37 !important; transition: 0.3s; }
     </style>
 </head>
 <body>
 
-    <header style="text-align: center; padding: 60px 20px; border-bottom: 1px solid #1e293b;">
-        <img src="profile.png" style="width: 200px; height: 200px; border-radius: 50%; border: 4px solid #D4AF37; object-fit: cover; margin-bottom: 20px;">
-        <h1 style="font-size: 40px; margin: 0; font-weight: bold;">Nigel Anthony Thomas</h1>
-        <p class="gold" style="letter-spacing: 3px; margin-top: 10px; font-weight: 300;">EXECUTIVE HOSPITALITY LEADER</p>
+    <header style="text-align: center; padding: 100px 20px; border-bottom: 1px solid #1e293b; background: radial-gradient(circle at top, #1e293b 0%, #05070a 100%);">
+        <img src="profile.png" class="profile-img" alt="Nigel Anthony Thomas">
+        <h1 style="font-size: 48px; margin: 0; font-weight: bold; letter-spacing: -1px;">Nigel Anthony Thomas</h1>
+        <p class="gold" style="letter-spacing: 5px; margin-top: 15px; font-weight: 300; font-size: 14px; text-transform: uppercase;">Executive Hospitality Leader</p>
         
-        <div style="margin-top: 30px; display: flex; justify-content: center; gap: 30px;">
-            <a href="mailto:operations@nigelthomas.live" style="color: white; font-weight: bold; text-decoration: underline;">EMAIL</a>
-            <a href="https://wa.me/919769351231" target="_blank" style="color: white; font-weight: bold; text-decoration: underline;">WHATSAPP</a>
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 40px;">
+            <a href="mailto:operations@nigelthomas.live" style="color: white; font-weight: bold; text-decoration: underline; font-size: 14px; letter-spacing: 1px;">EMAIL ME</a>
+            <a href="https://wa.me/919769351231" target="_blank" style="color: white; font-weight: bold; text-decoration: underline; font-size: 14px; letter-spacing: 1px;">WHATSAPP</a>
         </div>
     </header>
 
-    <main style="max-width: 800px; margin: 0 auto; padding: 60px 20px;">
-        <h2 class="text-2xl font-bold gold uppercase tracking-widest mb-10 border-b border-white/10 pb-4 text-center">Executive Career</h2>
+    <main style="max-width: 900px; margin: 0 auto; padding: 80px 20px;">
         
+        <h2 class="gold" style="font-size: 12px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px; text-align: center;">Strategic Expertise</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 60px;">
+            <div style="background: #0f172a; padding: 30px; border-radius: 15px; border: 1px solid #1e293b;">
+                <h3 class="gold" style="margin-top: 0; font-size: 18px;">Maritime Excellence</h3>
+                <p style="color: #cbd5e1; line-height: 1.7; font-size: 15px;">Expertise in dry-dock protocols, high-pressure restructuring, and international maritime safety compliance (USPH/MARPOL).</p>
+            </div>
+
+            <div style="background: #0f172a; padding: 30px; border-radius: 15px; border: 1px solid #1e293b;">
+                <h3 class="gold" style="margin-top: 0; font-size: 18px;">Global Leadership</h3>
+                <p style="color: #cbd5e1; line-height: 1.7; font-size: 15px;">20+ years driving P&L and operational standards across India, USA, and the Middle East for luxury hospitality assets.</p>
+            </div>
+        </div>
+
         <div class="narrative-box">
-            <h3 class="text-white text-xl font-bold mb-4 italic">Operational Maturity: Life Without Chaos</h3>
-            <p style="color: #cbd5e1; line-height: 1.8;">
-                Over 20 years of international excellence across India, the USA, and the Middle East, specializing in high-pressure maritime hospitality and luxury asset restructuring.
+            <h2 class="gold" style="font-size: 12px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px;">Operational Maturity</h2>
+            <h3 class="text-white text-2xl font-bold mb-4 italic">Life Without Chaos</h3>
+            <p style="color: #cbd5e1; line-height: 1.9; font-size: 16px;">
+                Specializing in high-pressure maritime hospitality and luxury asset restructuring, I bring two decades of international excellence to organizations requiring stability, scale, and uncompromising standards.
             </p>
         </div>
 
-        <h2 class="text-xl font-bold gold text-center mb-10">MARITIME & RESORT PORTFOLIO</h2>
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-            <img src="sea1.jpg" style="width: 100%; border-radius: 10px; border: 1px solid #1e293b;">
-            <img src="land1.jpg" style="width: 100%; border-radius: 10px; border: 1px solid #1e293b;">
-            <img src="sea2.jpg" style="width: 100%; border-radius: 10px; border: 1px solid #1e293b;">
-            <img src="award.jpg" style="width: 100%; border-radius: 10px; border: 1px solid #1e293b;">
+        <h2 class="gold" style="font-size: 12px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 40px; text-align: center;">Portfolio & Assets</h2>
+        <div style="display: flex; flex-direction: column; gap: 25px;">
+            <img src="sea1.jpg" style="width: 100%; border-radius: 12px; border: 1px solid #1e293b;" alt="Maritime Asset 1">
+            <img src="land1.jpg" style="width: 100%; border-radius: 12px; border: 1px solid #1e293b;" alt="Luxury Resort">
+            <img src="sea2.jpg" style="width: 100%; border-radius: 12px; border: 1px solid #1e293b;" alt="Maritime Asset 2">
+            <img src="award.jpg" style="width: 100%; border-radius: 12px; border: 1px solid #1e293b;" alt="Recognition Award">
         </div>
+
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: #64748b; font-size: 12px; border-top: 1px solid #1e293b;">
-        © 2026 Nigel Anthony Thomas. All Rights Reserved.
+    <footer style="text-align: center; padding: 80px 40px; color: #64748b; font-size: 11px; border-top: 1px solid #1e293b; letter-spacing: 2px;">
+        © 2026 NIGEL ANTHONY THOMAS. ALL RIGHTS RESERVED.
     </footer>
 
 </body>
