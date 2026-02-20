@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -13,135 +12,128 @@
             color: #f8fafc;
             font-family: sans-serif;
         }
-        .gold {
-            color: #D4AF37;
-        }
-        .frame-box {
-            border: 12px solid #1e293b;
-            background: #111;
-            padding: 6px;
-            display: inline-block;
+        .gold { color: #D4AF37; }
+
+        .image-card {
+            border-radius: 16px;
+            overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
-        .cert-card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 10px;
-            transition: 0.3s;
-        }
-        .cert-card:hover {
-            border-color: #D4AF37;
+
+        .frame-box {
+            border: 10px solid #1e293b;
+            background: #111;
+            padding: 6px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
     </style>
 </head>
 
 <body>
 
-<header class="text-center py-16 border-b border-gray-900">
+<!-- HEADER -->
+<header class="text-center py-24 border-b border-gray-900">
+
     <img src="profile.png"
          class="w-44 h-44 mx-auto rounded-full border-4 border-[#D4AF37] object-cover mb-6 shadow-2xl">
 
-    <h1 class="text-4xl md:text-6xl font-bold mb-2">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
         Nigel Anthony Thomas
     </h1>
 
-    <p class="gold tracking-widest uppercase mb-8">
-        Executive Hospitality Leader
+    <p class="gold tracking-widest uppercase mb-10">
+        The Architecture of Operational Maturity
     </p>
 
-    <div class="flex flex-wrap justify-center gap-6 font-bold">
-        <a href="mailto:operations@nigelthomas.live"
-           class="hover:text-white border-b-2 border-[#D4AF37] pb-1">
-            EMAIL
-        </a>
+    <div class="flex flex-wrap justify-center gap-10 text-sm tracking-widest font-semibold">
 
-        <a href="https://wa.me/919769351231"
-           target="_blank"
-           class="hover:text-white border-b-2 border-[#D4AF37] pb-1">
+        <a href="https://wa.me/919769351231" target="_blank"
+           class="border-b border-gray-500 hover:border-[#D4AF37] hover:text-[#D4AF37] transition pb-1">
             WHATSAPP
         </a>
 
-        <a href="resume.pdf"
-           target="_blank"
-           class="hover:text-white border-b-2 border-white/20 pb-1">
+        <a href="mailto:operations@nigelthomas.live"
+           class="border-b border-gray-500 hover:border-[#D4AF37] hover:text-[#D4AF37] transition pb-1">
+            EMAIL
+        </a>
+
+        <a href="https://www.facebook.com/FoodBeverageMgr/" target="_blank"
+           class="border-b border-gray-500 hover:border-[#D4AF37] hover:text-[#D4AF37] transition pb-1">
+            FACEBOOK
+        </a>
+
+        <a href="https://www.linkedin.com/in/nathomas" target="_blank"
+           class="border-b border-gray-500 hover:border-[#D4AF37] hover:text-[#D4AF37] transition pb-1">
+            LINKEDIN
+        </a>
+
+        <a href="resume.pdf" target="_blank"
+           class="border-b border-gray-500 hover:border-[#D4AF37] hover:text-[#D4AF37] transition pb-1">
             DOWNLOAD CV
         </a>
+
     </div>
+
 </header>
 
-<main class="max-w-6xl mx-auto px-6 py-20 text-center">
 
-    <h2 class="text-2xl font-bold gold mb-10 uppercase tracking-widest">
-        Architectural Vision
+<main class="max-w-7xl mx-auto px-6 py-24">
+
+    <!-- SEA & LAND FIRST -->
+    <h2 class="text-center text-2xl font-bold gold mb-14 tracking-widest uppercase">
+        Sea Operations Management
     </h2>
 
-    <div class="frame-box mx-auto">
-        <img src="art1.png"
-             alt="Architectural Art"
-             class="max-w-full h-auto block mx-auto">
-    </div>
+    <div class="grid md:grid-cols-3 gap-10 mb-24">
 
-    <p class="mt-6 text-gray-400 italic mb-24">
-        “Design & Infrastructure Precision”
-    </p>
-
-    <h2 class="text-2xl font-bold gold mb-12 uppercase tracking-widest">
-        Global Credentials
-    </h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
-
-        <div class="cert-card">
-            <img src="c1.jfif" class="w-full h-40 object-contain">
+        <div class="image-card">
+            <img src="sea1.jpg" class="w-full h-72 object-cover">
         </div>
 
-        <div class="cert-card">
-            <img src="c2.png" class="w-full h-40 object-contain">
+        <div class="image-card">
+            <img src="sea2.jpg" class="w-full h-72 object-cover">
         </div>
 
-        <div class="cert-card">
-            <img src="c3.png" class="w-full h-40 object-contain">
+        <div class="image-card">
+            <img src="sea3.jpg" class="w-full h-72 object-cover">
         </div>
 
-        <div class="cert-card">
-            <img src="c4.png" class="w-full h-40 object-contain">
+        <div class="image-card">
+            <img src="land1.jpg" class="w-full h-72 object-cover">
         </div>
 
-        <div class="cert-card">
-            <img src="c5.png" class="w-full h-40 object-contain">
+        <div class="image-card">
+            <img src="land2.jpg" class="w-full h-72 object-cover">
         </div>
 
-        <div class="cert-card">
-            <img src="c6.png" class="w-full h-40 object-contain">
-        </div>
-
-        <div class="cert-card">
-            <img src="c7.png" class="w-full h-40 object-contain">
-        </div>
-
-        <div class="cert-card">
-            <img src="c8.png" class="w-full h-40 object-contain">
+        <div class="image-card">
+            <img src="land3.jpg" class="w-full h-72 object-cover">
         </div>
 
     </div>
 
-    <div class="bg-gray-900/40 p-10 rounded-3xl border border-gray-800">
-        <h2 class="text-3xl font-bold gold mb-6">
-            Operational Maturity
-        </h2>
 
-        <p class="text-gray-400 text-lg leading-relaxed max-w-4xl mx-auto">
-            Transforming hospitality chaos into structured excellence.
-            Over two decades of leadership across the USA,
-            Middle East, and India, delivering results through
-            discipline, clarity, and execution.
-        </p>
+    <!-- AWARD + ART SIDE BY SIDE -->
+    <h2 class="text-center text-2xl font-bold gold mb-14 tracking-widest uppercase">
+        Recognition & Vision
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+        <div class="frame-box">
+            <img src="award.jpg" class="w-full h-auto">
+        </div>
+
+        <div class="frame-box">
+            <img src="art1.png" class="w-full h-auto">
+        </div>
+
     </div>
 
 </main>
 
-<footer class="text-center py-12 border-t border-gray-900 text-gray-600 text-sm">
+
+<footer class="text-center py-16 border-t border-gray-900 text-gray-500 text-sm">
     © 2026 Nigel Anthony Thomas. All Rights Reserved.
 </footer>
 
