@@ -4,72 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel Anthony Thomas | Executive Portfolio</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #05070a; color: #f8fafc; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .gold { color: #D4AF37; }
-        .nav-link { color: #ffffff; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; font-weight: bold; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-link { color: #ffffff; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; font-weight: bold; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
         .nav-link:hover { border-color: #D4AF37; color: #D4AF37; }
         .stat-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 1.5rem; padding: 2rem; }
         .timeline-border { border-left: 2px solid #D4AF37; padding-left: 2rem; margin-bottom: 3rem; position: relative; }
         .timeline-border::before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; background: #D4AF37; border-radius: 50%; }
-        .art-frame { border: 15px solid #1e293b; background: #111; padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,0.8); display: inline-block; max-width: 100%; }
         .tag { background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); color: #D4AF37; padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; }
+        .photo-frame { border: 3px solid #D4AF37; padding: 2px; }
     </style>
 </head>
 <body class="p-0 m-0">
 
-    <header class="text-center pt-20 pb-12 border-b border-gray-900">
-        <img src="profile.png" class="w-40 h-40 mx-auto rounded-full border-4 border-white object-cover mb-8 shadow-2xl">
-        <h1 class="text-5xl font-bold mb-4">Nigel Anthony Thomas</h1>
-        <p class="gold tracking-[0.3em] text-sm font-light mb-12 uppercase">The Architecture of Operational Maturity</p>
-        
-        <nav class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8 px-4">
-            <a href="https://wa.me/919769351231" target="_blank" class="nav-link tracking-widest">WHATSAPP</a>
-            <a href="mailto:operations@nigelthomas.live" class="nav-link tracking-widest">EMAIL</a>
-            <a href="resume.pdf" target="_blank" class="nav-link tracking-widest border-b-2 border-white/20">DOWNLOAD CV</a>
-            <a href="https://linkedin.com/in/nathomas-hospitality" target="_blank" class="nav-link tracking-widest">LINKEDIN</a>
-        </nav>
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#05070a]/90 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="profile.png" class="w-10 h-10 rounded-full photo-frame object-cover" alt="Nigel Anthony Thomas Profile">
+                <span class="font-bold text-[10px] tracking-[0.2em] uppercase hidden sm:block">Nigel Anthony Thomas</span>
+            </div>
+            <div class="flex gap-6 md:gap-10">
+                <a href="#experience" class="nav-link">Leadership</a>
+                <a href="#skills" class="nav-link">Expertise</a>
+                <a href="#vision" class="nav-link">2026 Vision</a>
+                <a href="resume.pdf" target="_blank" class="nav-link">Resume</a>
+                <a href="https://wa.me/919769351231" target="_blank" class="nav-link gold">WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center pt-32 pb-12 px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 uppercase tracking-tighter">Nigel Anthony Thomas</h1>
+        <p class="gold tracking-[0.4em] text-xs md:text-sm font-light uppercase">The Architecture of Operational Maturity</p>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-20">
-        <section class="mb-32 text-center max-w-4xl mx-auto">
-            <h2 class="gold text-xs tracking-[0.4em] uppercase mb-12">Operational Maturity</h2>
-            <div class="text-lg text-gray-300 leading-relaxed text-left space-y-8">
-                <p>Senior Hospitality Executive with over 20 years of international leadership. I specialize in transforming chaotic operational environments into <strong>"Life Without Chaos"</strong>—a state where brand standards and P&L performance function as a synchronized engine.</p>
+    <main class="max-w-6xl mx-auto px-6">
+        
+        <section id="experience" class="py-20">
+            <h2 class="gold text-xs tracking-[0.4em] uppercase mb-16 text-center">Professional Timeline</h2>
+            
+            <div class="mb-20">
+                <h3 class="text-white text-lg font-bold mb-10 uppercase tracking-[0.2em] flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-white/20"></span> Land & Resort Leadership
+                </h3>
                 
-                <div class="bg-slate-900/40 p-10 rounded-3xl border border-white/5">
-                    <h3 class="text-xl font-bold mb-4 text-white">Strategic Operational Backbone</h3>
-                    <p class="text-base text-gray-400">Expert in Front Office, Housekeeping, Engineering, and high-volume F&B[cite: 34]. I have a proven track record of reducing operating costs by 10-12% through lean methodology and vendor renegotiation[cite: 35].</p>
+                <div class="timeline-border">
+                    <h4 class="text-xl font-bold text-white uppercase">General Manager / Project Head</h4>
+                    <p class="gold italic text-sm mb-4">India | 2018 – 2025</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        End-to-end operational control for <strong>NaniDam</strong>, <strong>Klay Works Barista</strong>, and <strong>Ofen Bistro/Bakery</strong>. Orchestrated high-performance teams to achieve 15% growth in satisfaction and rigorous brand alignment.
+                    </p>
                 </div>
 
-                <p class="text-gray-400">As we move into 2026, I bridge the gap between world-class service and AI-driven efficiency. By automating manual data entry, I allow my teams to return to the human connection that defines true luxury hospitality.</p>
+                <div class="timeline-border">
+                    <h4 class="text-xl font-bold text-white uppercase">Senior Management Leadership</h4>
+                    <p class="gold italic text-sm mb-4">Middle East | 5 Years Leadership Tier</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Pivotal leadership roles at <strong>Ramada</strong>, <strong>Le Meridien</strong>, and <strong>AlHambra</strong>. Focused on stabilizing multi-unit P&L, vendor negotiations, and implementing the "Life Without Chaos" operational backbone.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-white text-lg font-bold mb-10 uppercase tracking-[0.2em] flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-white/20"></span> 20+ Years Maritime Excellence
+                </h3>
                 
-                <p class="text-center gold pt-8 font-bold">— Nigel Anthony Thomas </p>
+                <div class="timeline-border">
+                    <h4 class="text-xl font-bold text-white uppercase">Global Operations & Victualling</h4>
+                    <p class="gold italic text-sm mb-4">USA & Global | HAL • RCCL • Carnival • Apollo Ship Chandlers</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Directed multi-outlet maritime operations with revenues exceeding $250k/month. Led international dry dock refurbishments and ensured 100% audit readiness across global routes.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section class="mb-32">
-            <h2 class="text-center gold text-xs tracking-[0.4em] uppercase mb-12">Sea Operations Management</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-                <img src="sea1.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-                <img src="sea2.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-                <img src="sea3.jpg" class="rounded-2xl w-full h-64 object-cover shadow-lg">
-            </div>
-        </section>
-    </main>
-
-    <footer class="text-center py-12 border-t border-gray-900 text-gray-600 text-[10px] tracking-[0.2em] uppercase">
-        © 2026 Nigel Anthony Thomas | Operations Specialist [cite: 37]
-    </footer>
-</body>
-</html>
+        <section id="skills" class="py-20 border-t border-white/5">
+            <h2 class="gold text-xs tracking-[0.4em] uppercase mb-12 text-center">Core Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stat-card">
+                    <h4 class="text-white font-bold text-xs uppercase mb-6 tracking-widest">Compliance</h4>
+                    <div class="flex flex
